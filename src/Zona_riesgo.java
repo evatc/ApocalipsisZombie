@@ -19,5 +19,8 @@ public class Zona_riesgo {
     public void entrar(int id,int zona){ //esta función depende del tunel
 
     }
-    public void ataque(){}
+
+    public boolean ataque(){
+        return false; //He puesto esto solo para que no de error
+    }
 }
