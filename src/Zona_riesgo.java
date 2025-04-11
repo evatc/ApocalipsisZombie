@@ -95,11 +95,11 @@ public class Zona_riesgo {
                 int probabilidad = random.nextInt(3);
                 if(probabilidad == 0){
                     lh1.remove(humano);
-                    String id = humano.getId();
+                    //String id = humano.getId();
                     humano.setVivo(false);
                     int muertes = zombie.getCont_muertes();
                     zombie.setCont_muertes(muertes + 1);
-                    Zombie zombie1 = new Zombie(id);
+                    //Zombie zombie1 = new Zombie(id);
                 }
             }
         }

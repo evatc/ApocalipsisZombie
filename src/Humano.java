@@ -88,7 +88,7 @@ public class Humano extends Thread{
         this.vivo = vivo;
     }
 
-    public String getId() {
+    /*public String getId() {
         return id;
-    }
+    }*/
 }

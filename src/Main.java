@@ -1,29 +1,47 @@
-import static java.lang.Thread.sleep;
+import java.io.IOException;
 
-public class Main {
+import static java.lang.Thread.sleep;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class Main extends Application {
+    //c
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("apocalipsis-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        stage.setTitle("Juego de la vida");
+        stage.setScene(scene);
+        stage.show();
+    }
     public static void main(String[] args) {
+        launch();
         //Instanciar elementos comunes
         Refugio refugio = new Refugio();
         Tunel tunel = new Tunel();
         Zona_riesgo zonaRiesgo = new Zona_riesgo();
 
         //Istanciar el zombie
-        //Zombie zombie = new Zombie("Z0000", refugio, tunel, zonaRiesgo);
-        //zombie.start();
+        Zombie zombie = new Zombie("Z0000");
+        zombie.start();
         //Instanciar los humanos de forma escalonada
         for (int i = 1; i <= 10000; i++)
         {
             try
             {
-                //Hay que ver si el id es mejor que sea string o int
-                //String humanoid = String.format("H%04d",i);
-                //Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo);
-                //humano.start();
+                String humanoid = String.format("H%04d",i);
+                Humano humano = new Humano(humanoid, refugio);
+                humano.start();
                 sleep((int)(1500*Math.random() + 500));
             }catch(InterruptedException e)
             {
                 System.out.println("Error al crear los clientes");
             }
         }
+
     }
 }

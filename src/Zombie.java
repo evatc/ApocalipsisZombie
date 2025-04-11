@@ -19,7 +19,7 @@ public class Zombie extends Thread{
             }
             int n_zonariesgo = (int) (Math.random() * 4) + 1;
             zonaRiesgo.entrar_zombie(this,n_zonariesgo);
-            boolean atacar = zonaRiesgo.ataque();
+            //boolean atacar = zonaRiesgo.ataque();
             try{
                 sleep((int)(1000*Math.random() + 2000));
             }catch(Exception e){}
