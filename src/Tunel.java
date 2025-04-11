@@ -21,21 +21,21 @@ public class Tunel {
     //yo esto lo haría con conditions creo
     public void entrar_zona_riesgo1(List humanos){
     }
-    public void entrar1_zona_descanso(int id){
+    public void entrar1_zona_descanso(String id){
     }
 
     public void entrar_zona_riesgo2(List humanos){
     }
-    public void entrar2_zona_descanso(int id){
+    public void entrar2_zona_descanso(String id){
     }
 
     public void entrar_zona_riesgo3(List humanos){
     }
-    public void entrar3_zona_descanso(int id){
+    public void entrar3_zona_descanso(String id){
     }
 
     public void entrar_zona_riesgo4(List humanos){
     }
-    public void entrar4_zona_descanso(int id){
+    public void entrar4_zona_descanso(String id){
     }
 }
