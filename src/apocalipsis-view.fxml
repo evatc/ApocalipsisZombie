@@ -1,8 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="320" prefHeight="240">
-    <Label text="¡Hola, mundo!" layoutX="100" layoutY="100"/>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1215.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="20.0" layoutY="100.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="174.0" layoutY="14.0" text="Descanso">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="470.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
+      <Pane layoutX="830.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
+      <Pane layoutX="20.0" layoutY="280.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="99.0" layoutY="30.0" text="Comedor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="258.0" layoutY="30.0" text="Comida">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="258.0" layoutY="79.0" prefHeight="60.0" prefWidth="130.0" />
+         </children></Pane>
+      <Pane layoutX="20.0" layoutY="460.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="188.0" layoutY="27.0" text="Zona Común">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="470.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
+      <Pane layoutX="470.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
+      <Pane layoutX="470.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
+      <Pane layoutX="830.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
+      <Pane layoutX="830.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
+      <Pane layoutX="830.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
+      <Button layoutX="187.0" layoutY="658.0" mnemonicParsing="false" text="Pausar/Reanudar" />
+      <Label layoutX="175.0" layoutY="34.0" prefHeight="43.0" prefWidth="151.0" text="REFUGIO">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="36.0" text="TÚNELES">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="895.0" layoutY="36.0" text="ZONA DE RIESGO">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
