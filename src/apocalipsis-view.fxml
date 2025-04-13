@@ -28,7 +28,6 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextArea layoutX="258.0" layoutY="79.0" prefHeight="60.0" prefWidth="130.0" />
          </children></Pane>
       <Pane layoutX="20.0" layoutY="460.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>
