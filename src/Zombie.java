@@ -9,14 +9,8 @@ public class Zombie extends Thread{
     }
 
     public void run(){
-        Scanner sc = new Scanner(System.in);
 
         while (true) {
-            String texto = sc.nextLine();
-
-            if (texto.equals("salir")) {
-                break;
-            }
             int n_zonariesgo = (int) (Math.random() * 4) + 1;
             zonaRiesgo.entrar_zombie(this,n_zonariesgo);
             //boolean atacar = zonaRiesgo.ataque();
@@ -25,7 +19,6 @@ public class Zombie extends Thread{
             }catch(Exception e){}
             zonaRiesgo.salir_zombie(this,n_zonariesgo);
         }
-        sc.close();
     }
 
     public int getCont_muertes() {
@@ -34,5 +27,9 @@ public class Zombie extends Thread{
 
     public void setCont_muertes(int cont_muertes) {
         this.cont_muertes = cont_muertes;
+    }
+
+    public String getzombieId() {
+        return id;
     }
 }

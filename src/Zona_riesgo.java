@@ -17,7 +17,11 @@ public class Zona_riesgo {
     private List<Zombie> lz2;
     private List<Zombie> lz3;
     private List<Zombie> lz4;
-    private Lock cerrojo= new ReentrantLock();
+    private Lock cerrojo1= new ReentrantLock();
+    private Lock cerrojo2= new ReentrantLock();
+    private Lock cerrojo3= new ReentrantLock();
+    private Lock cerrojo4= new ReentrantLock();
+    private Tunel tunel;
 
     public Zona_riesgo() {
         this.zona1 = 1;
@@ -85,24 +89,123 @@ public class Zona_riesgo {
         return b;
     }
 
-    public boolean ataque(Zombie zombie, int zona){
+    public void ataque(Zombie zombie, int zona){
         if(zona == 1){
-            cerrojo.lock();
-            if(buscar_humano(lh1)){
-                Random random = new Random();
-                int posicion = random.nextInt(lh1.size());
-                Humano humano = lh1.get(posicion);
-                int probabilidad = random.nextInt(3);
-                if(probabilidad == 0){
-                    lh1.remove(humano);
-                    //String id = humano.getId();
-                    humano.setVivo(false);
-                    int muertes = zombie.getCont_muertes();
-                    zombie.setCont_muertes(muertes + 1);
-                    //Zombie zombie1 = new Zombie(id);
+            cerrojo1.lock();
+            try{
+                if(buscar_humano(lh1)){
+                    Random random = new Random();
+                    int posicion = random.nextInt(lh1.size());
+                    Humano humano = lh1.get(posicion);
+                    double tiempo2 = (0.5 + Math.random())*1000;
+                    System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
+                    try{
+                        Thread.sleep((long) tiempo2);
+                    }catch(Exception e){}
+                    int probabilidad = random.nextInt(3);
+                    if(probabilidad == 0){
+                        lh1.remove(humano);
+                        //String id = humano.getId();
+                        humano.setVivo(false);
+                        int muertes = zombie.getCont_muertes();
+                        zombie.setCont_muertes(muertes + 1);
+                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        tunel.entrar1_zona_descanso(humano.gethumanoId());
+                    }else{
+                        humano.setHerido(true);
+                    }
                 }
+            }catch(Exception e){}
+            finally {
+                cerrojo1.unlock();
+            }
+        }else if(zona == 2){
+            cerrojo2.lock();
+            try{
+                if(buscar_humano(lh2)){
+                    Random random = new Random();
+                    int posicion = random.nextInt(lh2.size());
+                    Humano humano = lh2.get(posicion);
+                    double tiempo2 = (0.5 + Math.random())*1000;
+                    System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
+                    try{
+                        Thread.sleep((long) tiempo2);
+                    }catch(Exception e){}
+                    int probabilidad = random.nextInt(3);
+                    if(probabilidad == 0){
+                        lh2.remove(humano);
+                        //String id = humano.getId();
+                        humano.setVivo(false);
+                        int muertes = zombie.getCont_muertes();
+                        zombie.setCont_muertes(muertes + 1);
+                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        tunel.entrar2_zona_descanso(humano.gethumanoId());
+                    }else{
+                        humano.setHerido(true);
+                    }
+                }
+            }catch(Exception e){}
+            finally {
+                cerrojo2.unlock();
+            }
+        }else if(zona == 3){
+            cerrojo3.lock();
+            try{
+                if(buscar_humano(lh3)){
+                    Random random = new Random();
+                    int posicion = random.nextInt(lh3.size());
+                    Humano humano = lh3.get(posicion);
+                    double tiempo2 = (0.5 + Math.random())*1000;
+                    System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
+                    try{
+                        Thread.sleep((long) tiempo2);
+                    }catch(Exception e){}
+                    int probabilidad = random.nextInt(3);
+                    if(probabilidad == 0){
+                        lh3.remove(humano);
+                        //String id = humano.getId();
+                        humano.setVivo(false);
+                        int muertes = zombie.getCont_muertes();
+                        zombie.setCont_muertes(muertes + 1);
+                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        tunel.entrar3_zona_descanso(humano.gethumanoId());
+                    }else{
+                        humano.setHerido(true);
+                    }
+                }
+            }catch(Exception e){}
+            finally {
+                cerrojo3.unlock();
+            }
+        }else{
+            cerrojo4.lock();
+            try{
+                if(buscar_humano(lh4)){
+                    Random random = new Random();
+                    int posicion = random.nextInt(lh4.size());
+                    Humano humano = lh4.get(posicion);
+                    double tiempo2 = (0.5 + Math.random())*1000;
+                    System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
+                    try{
+                        Thread.sleep((long) tiempo2);
+                    }catch(Exception e){}
+                    int probabilidad = random.nextInt(3);
+                    if(probabilidad == 0){
+                        lh4.remove(humano);
+                        //String id = humano.getId();
+                        humano.setVivo(false);
+                        int muertes = zombie.getCont_muertes();
+                        zombie.setCont_muertes(muertes + 1);
+                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        tunel.entrar4_zona_descanso(humano.gethumanoId());
+                    }else{
+                        humano.setHerido(true);
+                    }
+                }
+            }catch(Exception e){}
+            finally {
+                cerrojo4.unlock();
             }
         }
-        return false; //He puesto esto solo para que no de error
     }
 }

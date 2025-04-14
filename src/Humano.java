@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Humano extends Thread{
     private String id;
     private Refugio refugio;
@@ -88,7 +86,8 @@ public class Humano extends Thread{
         this.vivo = vivo;
     }
 
-    /*public String getId() {
-        return id;
-    }*/
+
+    public String gethumanoId() {
+        return this.id;
+    }
 }

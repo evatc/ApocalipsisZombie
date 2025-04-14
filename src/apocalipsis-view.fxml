@@ -14,8 +14,14 @@
                </font>
             </Label>
          </children></Pane>
-      <Pane layoutX="470.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
-      <Pane layoutX="830.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
+      <Pane layoutX="470.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
+         <children>
+            <Label layoutX="161.0" layoutY="13.0" text="Zona 1" />
+         </children></Pane>
+      <Pane layoutX="830.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
+         <children>
+            <Label layoutX="155.0" layoutY="11.0" text="Zona 1" />
+         </children></Pane>
       <Pane layoutX="20.0" layoutY="280.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>
             <Label layoutX="99.0" layoutY="30.0" text="Comedor">
@@ -37,12 +43,30 @@
                </font>
             </Label>
          </children></Pane>
-      <Pane layoutX="470.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
-      <Pane layoutX="470.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
-      <Pane layoutX="470.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;" />
-      <Pane layoutX="830.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
-      <Pane layoutX="830.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
-      <Pane layoutX="830.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;" />
+      <Pane layoutX="470.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
+         <children>
+            <Label layoutX="165.0" layoutY="14.0" text="Zona 2" />
+         </children></Pane>
+      <Pane layoutX="470.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
+         <children>
+            <Label layoutX="161.0" layoutY="14.0" text="Zona 3" />
+         </children></Pane>
+      <Pane layoutX="470.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
+         <children>
+            <Label layoutX="169.0" layoutY="13.0" text="Zona 4" />
+         </children></Pane>
+      <Pane layoutX="830.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
+         <children>
+            <Label layoutX="169.0" layoutY="15.0" text="Zona 2" />
+         </children></Pane>
+      <Pane layoutX="830.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
+         <children>
+            <Label layoutX="174.0" layoutY="12.0" text="Zona 3" />
+         </children></Pane>
+      <Pane layoutX="830.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
+         <children>
+            <Label layoutX="175.0" layoutY="14.0" text="Zona 4" />
+         </children></Pane>
       <Button layoutX="187.0" layoutY="658.0" mnemonicParsing="false" text="Pausar/Reanudar" />
       <Label layoutX="175.0" layoutY="34.0" prefHeight="43.0" prefWidth="151.0" text="REFUGIO">
          <font>
