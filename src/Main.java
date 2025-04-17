@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-    //c
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("apocalipsis-view.fxml"));
@@ -21,9 +21,7 @@ public class Main extends Application {
         stage.setHeight(750.0);
         stage.setScene(scene);
         stage.show();
-    }
-    public static void main(String[] args) {
-        launch();
+
         //Instanciar elementos comunes
         Refugio refugio = new Refugio();
         Tunel tunel = new Tunel();
@@ -46,6 +44,8 @@ public class Main extends Application {
                 System.out.println("Error al crear los clientes");
             }
         }
-
+    }
+    public static void main(String[] args) {
+        launch();
     }
 }

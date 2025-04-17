@@ -1,3 +1,8 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+import java.util.List;
+
 public class Humano extends Thread{
     private String id;
     private Refugio refugio;
@@ -13,6 +18,7 @@ public class Humano extends Thread{
 
     public void run(){
         while (vivo) {
+            refugio.getlZonaComun().add(this.id);
             double tiempo = (1 + Math.random())*1000;
             System.out.println("El humano " + this.id + " está en el área común");
             try{
@@ -20,6 +26,7 @@ public class Humano extends Thread{
             }catch(Exception e){}
             int n_tunel = (int) (Math.random()*4)+1;
             System.out.println("El humano " + this.id + " ha elegido el tunel " + n_tunel);
+            refugio.getlZonaComun().remove(this.id);
             if(n_tunel == 1){
                 refugio.zona_espera_tunel1(this.id);
             }else if(n_tunel == 2){
@@ -45,6 +52,7 @@ public class Humano extends Thread{
                     }else{
                         tunel.entrar4_zona_descanso(this.id);
                     }
+                    refugio.getlDescanso().add(this.id);
                     System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");
                     int comida = refugio.getComida();
                     refugio.setComida(comida + 2);
@@ -54,14 +62,19 @@ public class Humano extends Thread{
                 try{
                     Thread.sleep((long) tiempo2);
                 }catch(Exception e){}
+                refugio.getlDescanso().remove(this.id);
+                refugio.getlComedor().add(this.id);
                 System.out.println("El humano " + this.id + " está en el comedor");
                 refugio.comedor(this.id);
+                refugio.getlComedor().remove(this.id);
                 if(herido){
+                    refugio.getlDescanso().add(this.id);
                     System.out.println("El humano " + this.id + " ha vuelto al área de descanso para curar sus heridas");
                     double tiempo3 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
                     try{
                         Thread.sleep((long) tiempo1);
                     }catch(Exception e){}
+                    refugio.getlDescanso().remove(this.id);
                 }
             }
 
@@ -90,4 +103,5 @@ public class Humano extends Thread{
     public String gethumanoId() {
         return this.id;
     }
+
 }

@@ -108,9 +108,11 @@ public class Zona_riesgo {
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
-                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        String humanoId = humano.gethumanoId();
+                        String zombieId = "Z" + humanoId.substring(1);
+                        Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
-                        tunel.entrar1_zona_descanso(humano.gethumanoId());
+                        tunel.entrar1_zona_descanso(humano.gethumanoId());  //porque si el humano esta muerte vuelve a entrar?
                     }else{
                         humano.setHerido(true);
                     }
@@ -137,7 +139,9 @@ public class Zona_riesgo {
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
-                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        String humanoId = humano.gethumanoId();
+                        String zombieId = "Z" + humanoId.substring(1);
+                        Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
                         tunel.entrar2_zona_descanso(humano.gethumanoId());
                     }else{
@@ -166,7 +170,9 @@ public class Zona_riesgo {
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
-                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        String humanoId = humano.gethumanoId();
+                        String zombieId = "Z" + humanoId.substring(1);
+                        Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
                         tunel.entrar3_zona_descanso(humano.gethumanoId());
                     }else{
@@ -195,7 +201,9 @@ public class Zona_riesgo {
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
-                        Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        String humanoId = humano.gethumanoId();
+                        String zombieId = "Z" + humanoId.substring(1);
+                        Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
                         tunel.entrar4_zona_descanso(humano.gethumanoId());
                     }else{
