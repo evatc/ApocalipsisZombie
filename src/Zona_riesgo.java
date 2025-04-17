@@ -105,11 +105,11 @@ public class Zona_riesgo {
                     int probabilidad = random.nextInt(3);
                     if(probabilidad == 0){
                         lh1.remove(humano);
-                        //String id = humano.getId();
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
                         Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        zombie1.start();
                         tunel.entrar1_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
@@ -134,11 +134,11 @@ public class Zona_riesgo {
                     int probabilidad = random.nextInt(3);
                     if(probabilidad == 0){
                         lh2.remove(humano);
-                        //String id = humano.getId();
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
                         Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        zombie1.start();
                         tunel.entrar2_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
@@ -163,11 +163,11 @@ public class Zona_riesgo {
                     int probabilidad = random.nextInt(3);
                     if(probabilidad == 0){
                         lh3.remove(humano);
-                        //String id = humano.getId();
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
                         Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        zombie1.start();
                         tunel.entrar3_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
@@ -192,11 +192,11 @@ public class Zona_riesgo {
                     int probabilidad = random.nextInt(3);
                     if(probabilidad == 0){
                         lh4.remove(humano);
-                        //String id = humano.getId();
                         humano.setVivo(false);
                         int muertes = zombie.getCont_muertes();
                         zombie.setCont_muertes(muertes + 1);
                         Zombie zombie1 = new Zombie(humano.gethumanoId());
+                        zombie1.start();
                         tunel.entrar4_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
