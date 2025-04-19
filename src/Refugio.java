@@ -27,7 +27,8 @@ public class Refugio {
         this.comida.set(0);
     }
     //He utilizado una cola porque si no hay comida tienen que
-    //esperar de forma ordenada pero estoyy viendo como ponerlo bien
+    //esperar de forma ordenada y monitores para la exclusión mutua
+    // pero ns si estará bien
     public synchronized void dejarComida(){
         int comida = getComida();
         setComida(comida + 2);
@@ -37,8 +38,10 @@ public class Refugio {
         try{
             filaComedor.put(humano); //Añade al humano a la fila
             while (comida.get() == 0 || filaComedor.peek() != humano) {
+                System.out.println(humano.gethumanoId() + " esta esperando en la cola.");
                 wait();
             }
+            System.out.println(humano.gethumanoId() + " ha comido.");
             comida.set(comida.get() - 1);
             filaComedor.poll(); //Saca la primer humano de la fila
             double tiempo1 = (3 + Math.random()*2)*1000;
