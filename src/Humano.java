@@ -54,8 +54,7 @@ public class Humano extends Thread{
                     }
                     refugio.getlDescanso().add(this.id);
                     System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");
-                    int comida = refugio.getComida();
-                    refugio.setComida(comida + 2);
+                    refugio.dejarComida();
                 }
                 double tiempo2 = (2 + Math.random()*2)*1000;
                 System.out.println("El humano " + this.id + " está en el área de descanso");
@@ -65,7 +64,7 @@ public class Humano extends Thread{
                 refugio.getlDescanso().remove(this.id);
                 refugio.getlComedor().add(this.id);
                 System.out.println("El humano " + this.id + " está en el comedor");
-                refugio.comedor(this.id);
+                refugio.comer(this);
                 refugio.getlComedor().remove(this.id);
                 if(herido){
                     refugio.getlDescanso().add(this.id);
