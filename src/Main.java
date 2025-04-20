@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("apocalipsis-view.fxml"));
+        /*FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("apocalipsis-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Apocalipsis zombie");
         stage.setMinWidth(1215.0);
@@ -20,7 +20,7 @@ public class Main extends Application {
         stage.setWidth(1215.0);
         stage.setHeight(750.0);
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
 
         //Instanciar elementos comunes
         Refugio refugio = new Refugio();

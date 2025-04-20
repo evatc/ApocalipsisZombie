@@ -4,11 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Refugio {
+    private Tunel tunel;
     private int zona_descanso;
     private int comedor;
     private int zona_comun;
@@ -18,6 +20,10 @@ public class Refugio {
     private ObservableList<String> ldescanso = FXCollections.observableArrayList();
     private ObservableList<String> lcomedor = FXCollections.observableArrayList();
     private ObservableList<String> lzonaComun = FXCollections.observableArrayList();
+    private CyclicBarrier barrera1 = new CyclicBarrier(3);
+    private CyclicBarrier barrera2 = new CyclicBarrier(3);
+    private CyclicBarrier barrera3 = new CyclicBarrier(3);
+    private CyclicBarrier barrera4 = new CyclicBarrier(3);
 
 
     public Refugio() {
@@ -49,17 +55,45 @@ public class Refugio {
             notifyAll();
         }catch(Exception e){}
     }
-    public void zona_espera_tunel1(String id){ //este sería con el q se bloquea hasta q llegan tantos hilos y crea la lista que manda a entrar_zona_riesgo
-
+    public void zona_espera_tunel1(Humano humano){
+        try{
+            System.out.println(humano.gethumanoId() + "espera ha que haya 3 humanos en el túnel 1.");
+            barrera1.await();
+            tunel.getLr1().add(humano);
+            System.out.println("El túnel 1 tiene ya 3 humanos.");
+            tunel.entrar_zona_riesgo1(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
     }
-    public void zona_espera_tunel2(String id){ //este sería con el q se bloquea hasta q llegan tantos hilos y crea la lista que manda a entrar_zona_riesgo
-
+    public void zona_espera_tunel2(Humano humano){
+        try{
+            System.out.println(humano.gethumanoId() + "espera ha que haya 3 humanos en el túnel 2.");
+            barrera2.await();
+            tunel.getLr2().add(humano);
+            System.out.println("El túnel 2 tiene ya 3 humanos.");
+            tunel.entrar_zona_riesgo2(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
     }
-    public void zona_espera_tunel3(String id){ //este sería con el q se bloquea hasta q llegan tantos hilos y crea la lista que manda a entrar_zona_riesgo
-
+    public void zona_espera_tunel3(Humano humano){
+        try{
+            System.out.println(humano.gethumanoId() + "espera ha que haya 3 humanos en el túnel 3.");
+            barrera3.await();
+            tunel.getLr3().add(humano);
+            System.out.println("El túnel 3 tiene ya 3 humanos.");
+            tunel.entrar_zona_riesgo3(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
     }
-    public void zona_espera_tunel4(String id){ //este sería con el q se bloquea hasta q llegan tantos hilos y crea la lista que manda a entrar_zona_riesgo
-
+    public void zona_espera_tunel4(Humano humano){
+        try{
+            System.out.println(humano.gethumanoId() + "espera ha que haya 3 humanos en el túnel 4.");
+            barrera1.await();
+            tunel.getLr4().add(humano);
+            System.out.println("El túnel 4 tiene ya 3 humanos.");
+            tunel.entrar_zona_riesgo4(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
     }
 
     public int getComida() {

@@ -28,13 +28,13 @@ public class Humano extends Thread{
             System.out.println("El humano " + this.id + " ha elegido el tunel " + n_tunel);
             refugio.getlZonaComun().remove(this.id);
             if(n_tunel == 1){
-                refugio.zona_espera_tunel1(this.id);
+                refugio.zona_espera_tunel1(this);
             }else if(n_tunel == 2){
-                refugio.zona_espera_tunel2(this.id);
+                refugio.zona_espera_tunel2(this);
             }else if(n_tunel == 3){
-                refugio.zona_espera_tunel3(this.id);
+                refugio.zona_espera_tunel3(this);
             }else{
-                refugio.zona_espera_tunel4(this.id);
+                refugio.zona_espera_tunel4(this);
             }
             double tiempo1 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
             try{
