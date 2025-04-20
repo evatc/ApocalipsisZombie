@@ -112,9 +112,12 @@ public class Zona_riesgo {
                         String zombieId = "Z" + humanoId.substring(1);
                         Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
-                        tunel.entrar1_zona_descanso(humano.gethumanoId());  //porque si el humano esta muerte vuelve a entrar?
                     }else{
                         humano.setHerido(true);
+                        tunel.entrar1_zona_descanso(humano.gethumanoId());
+                        List<Humano> humanos = tunel.getLzr1();
+                        humanos.add(humano);
+                        tunel.setLzr1(humanos);
                     }
                 }
             }catch(Exception e){}
@@ -143,9 +146,12 @@ public class Zona_riesgo {
                         String zombieId = "Z" + humanoId.substring(1);
                         Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
-                        tunel.entrar2_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
+                        tunel.entrar2_zona_descanso(humano.gethumanoId());
+                        List<Humano> humanos = tunel.getLzr2();
+                        humanos.add(humano);
+                        tunel.setLzr2(humanos);
                     }
                 }
             }catch(Exception e){}
@@ -174,9 +180,12 @@ public class Zona_riesgo {
                         String zombieId = "Z" + humanoId.substring(1);
                         Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
-                        tunel.entrar3_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
+                        tunel.entrar3_zona_descanso(humano.gethumanoId());
+                        List<Humano> humanos = tunel.getLzr3();
+                        humanos.add(humano);
+                        tunel.setLzr3(humanos);
                     }
                 }
             }catch(Exception e){}
@@ -205,9 +214,12 @@ public class Zona_riesgo {
                         String zombieId = "Z" + humanoId.substring(1);
                         Zombie zombie1 = new Zombie(zombieId);
                         zombie1.start();
-                        tunel.entrar4_zona_descanso(humano.gethumanoId());
                     }else{
                         humano.setHerido(true);
+                        tunel.entrar4_zona_descanso(humano.gethumanoId());
+                        List<Humano> humanos = tunel.getLzr4();
+                        humanos.add(humano);
+                        tunel.setLzr4(humanos);
                     }
                 }
             }catch(Exception e){}
@@ -215,5 +227,37 @@ public class Zona_riesgo {
                 cerrojo4.unlock();
             }
         }
+    }
+
+    public List<Humano> getLh1() {
+        return lh1;
+    }
+
+    public void setLh1(List<Humano> lh1) {
+        this.lh1 = lh1;
+    }
+
+    public List<Humano> getLh2() {
+        return lh2;
+    }
+
+    public void setLh2(List<Humano> lh2) {
+        this.lh2 = lh2;
+    }
+
+    public List<Humano> getLh3() {
+        return lh3;
+    }
+
+    public void setLh3(List<Humano> lh3) {
+        this.lh3 = lh3;
+    }
+
+    public List<Humano> getLh4() {
+        return lh4;
+    }
+
+    public void setLh4(List<Humano> lh4) {
+        this.lh4 = lh4;
     }
 }
