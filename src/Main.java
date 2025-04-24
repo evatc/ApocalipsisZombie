@@ -28,7 +28,7 @@ public class Main extends Application {
         Zona_riesgo zonaRiesgo = new Zona_riesgo();
 
         //Istanciar el zombie
-        Zombie zombie = new Zombie("Z0000");
+        Zombie zombie = new Zombie("Z0000", zonaRiesgo);
         zombie.start();
         //Instanciar los humanos de forma escalonada
         for (int i = 1; i <= 10000; i++)
@@ -36,16 +36,17 @@ public class Main extends Application {
             try
             {
                 String humanoid = String.format("H%04d",i);
-                Humano humano = new Humano(humanoid, refugio);
+                Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo);
                 humano.start();
                 sleep((int)(1500*Math.random() + 500));
             }catch(InterruptedException e)
             {
-                System.out.println("Error al crear los clientes");
+                System.out.println("Error al crear los humanos");
             }
         }
     }
     public static void main(String[] args) {
+
         launch();
     }
 }

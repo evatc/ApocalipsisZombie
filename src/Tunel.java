@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -31,6 +32,10 @@ public class Tunel {
     private Lock cerrojo4 = new ReentrantLock();
     private Condition refugio4 = cerrojo4.newCondition();
     private Condition zona_riesgo4 = cerrojo4.newCondition();
+    private CyclicBarrier barrera1 = new CyclicBarrier(3);
+    private CyclicBarrier barrera2 = new CyclicBarrier(3);
+    private CyclicBarrier barrera3 = new CyclicBarrier(3);
+    private CyclicBarrier barrera4 = new CyclicBarrier(3);
 
     public Tunel() {
         this.tunel1 = 1;
@@ -163,6 +168,47 @@ public class Tunel {
             cerrojo4.unlock();
         }
     }
+    public void zona_espera_tunel1(Humano humano){
+        try{
+            System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 1.");
+            barrera1.await();
+            lr1.add(humano);
+            System.out.println("El túnel 1 tiene ya 3 humanos.");
+            entrar_zona_riesgo1(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
+    }
+    public void zona_espera_tunel2(Humano humano){
+        try{
+            System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 2.");
+            barrera2.await();
+            lr2.add(humano);
+            System.out.println("El túnel 2 tiene ya 3 humanos.");
+            entrar_zona_riesgo2(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
+    }
+    public void zona_espera_tunel3(Humano humano){
+        try{
+            System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 3.");
+            barrera3.await();
+            lr3.add(humano);
+            System.out.println("El túnel 3 tiene ya 3 humanos.");
+            entrar_zona_riesgo3(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
+    }
+    public void zona_espera_tunel4(Humano humano){
+        try{
+            System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 4.");
+            barrera4.await();
+            lr4.add(humano);
+            System.out.println("El túnel 4 tiene ya 3 humanos.");
+            entrar_zona_riesgo4(humano.gethumanoId());
+            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+        }catch (Exception e){}
+    }
+
 
     public List<Humano> getLzr1() {
         return lzr1;

@@ -4,8 +4,9 @@ public class Zombie extends Thread{
     private String id;
     private int cont_muertes = 0;
     private Zona_riesgo zonaRiesgo;
-    public Zombie(String id){
+    public Zombie(String id, Zona_riesgo zonaRiesgo){
         this.id = id;
+        this.zonaRiesgo = zonaRiesgo;
     }
 
     public void run(){

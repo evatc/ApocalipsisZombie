@@ -110,7 +110,7 @@ public class Zona_riesgo {
                         zombie.setCont_muertes(muertes + 1);
                         String humanoId = humano.gethumanoId();
                         String zombieId = "Z" + humanoId.substring(1);
-                        Zombie zombie1 = new Zombie(zombieId);
+                        Zombie zombie1 = new Zombie(zombieId, this);
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
@@ -144,7 +144,7 @@ public class Zona_riesgo {
                         zombie.setCont_muertes(muertes + 1);
                         String humanoId = humano.gethumanoId();
                         String zombieId = "Z" + humanoId.substring(1);
-                        Zombie zombie1 = new Zombie(zombieId);
+                        Zombie zombie1 = new Zombie(zombieId, this);
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
@@ -178,7 +178,7 @@ public class Zona_riesgo {
                         zombie.setCont_muertes(muertes + 1);
                         String humanoId = humano.gethumanoId();
                         String zombieId = "Z" + humanoId.substring(1);
-                        Zombie zombie1 = new Zombie(zombieId);
+                        Zombie zombie1 = new Zombie(zombieId, this);
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
@@ -212,7 +212,7 @@ public class Zona_riesgo {
                         zombie.setCont_muertes(muertes + 1);
                         String humanoId = humano.gethumanoId();
                         String zombieId = "Z" + humanoId.substring(1);
-                        Zombie zombie1 = new Zombie(zombieId);
+                        Zombie zombie1 = new Zombie(zombieId, this);
                         zombie1.start();
                     }else{
                         humano.setHerido(true);

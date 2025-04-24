@@ -11,9 +11,11 @@ public class Humano extends Thread{
     private boolean herido = false;
     private boolean vivo = true;
 
-    public Humano(String id, Refugio refugio){
+    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo){
         this.id = id;
         this.refugio = refugio;
+        this.tunel = tunel;
+        this.zonaRiesgo = zonaRiesgo;
     }
 
     public void run(){
@@ -28,13 +30,13 @@ public class Humano extends Thread{
             System.out.println("El humano " + this.id + " ha elegido el tunel " + n_tunel);
             refugio.getlZonaComun().remove(this.id);
             if(n_tunel == 1){
-                refugio.zona_espera_tunel1(this);
+                tunel.zona_espera_tunel1(this);
             }else if(n_tunel == 2){
-                refugio.zona_espera_tunel2(this);
+                tunel.zona_espera_tunel2(this);
             }else if(n_tunel == 3){
-                refugio.zona_espera_tunel3(this);
+                tunel.zona_espera_tunel3(this);
             }else{
-                refugio.zona_espera_tunel4(this);
+                tunel.zona_espera_tunel4(this);
             }
             double tiempo1 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
             try{
@@ -54,7 +56,7 @@ public class Humano extends Thread{
                     }
                     refugio.getlDescanso().add(this.id);
                     System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");
-                    refugio.dejarComida();
+                    refugio.dejarComida(this);
                 }
                 double tiempo2 = (2 + Math.random()*2)*1000;
                 System.out.println("El humano " + this.id + " está en el área de descanso");
