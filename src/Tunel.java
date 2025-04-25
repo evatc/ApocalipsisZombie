@@ -7,7 +7,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Tunel {
-    private Zona_riesgo zonaRiesgo;
+    private Zona_riesgo zonaRiesgo = new Zona_riesgo();
     private int tunel1;
     private int tunel2;
     private int tunel3;
@@ -44,30 +44,29 @@ public class Tunel {
         this.tunel4 = 4;
     }
 
-    public void entrar_zona_riesgo1(String id){
+    public void entrar_zona_riesgo1(Humano humano){
         cerrojo1.lock();
         try{
             while(!lzr1.isEmpty()){
                 refugio1.await();
             }
-            List<Humano> humanos_entrarzr = zonaRiesgo.getLh1();
-            humanos_entrarzr.add(lr1.getFirst());
-            zonaRiesgo.setLh1(humanos_entrarzr);
-            lr1.removeFirst();
-            System.out.println("El humano " + id + " ha entrado en la zona de riesgo 1");
+            lr1.remove(humano);
+            Thread.sleep(1000);
+            zonaRiesgo.getLh1().add(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 1");
             zona_riesgo1.signal();
         }catch (Exception e){}
         finally {
             cerrojo1.unlock();
         }
     }
-    public void entrar1_zona_descanso(String id){
+    public void entrar1_zona_descanso(Humano humano){
         cerrojo1.lock();
         try{
             while(lzr1.isEmpty()){
                 zona_riesgo1.await();
             }
-            System.out.println("El humano " + id + " ha entrado en el refugio");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             refugio1.signal();
         }catch (Exception e){}
         finally{
@@ -75,17 +74,16 @@ public class Tunel {
         }
     }
 
-    public void entrar_zona_riesgo2(String id){
+    public void entrar_zona_riesgo2(Humano humano){
         cerrojo2.lock();
         try{
             while(!lzr2.isEmpty()){
                 refugio2.await();
             }
-            List<Humano> humanos_entrarzr = zonaRiesgo.getLh2();
-            humanos_entrarzr.add(lr2.getFirst());
-            zonaRiesgo.setLh2(humanos_entrarzr);
-            lr2.removeFirst();
-            System.out.println("El humano " + id + " ha entrado en la zona de riesgo 2");
+            lr2.remove(humano);
+            Thread.sleep(1000);
+            zonaRiesgo.getLh2().add(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 2");
             zona_riesgo2.signal();
         }catch (Exception e){}
         finally {
@@ -93,13 +91,13 @@ public class Tunel {
         }
 
     }
-    public void entrar2_zona_descanso(String id){
+    public void entrar2_zona_descanso(Humano humano){
         cerrojo2.lock();
         try{
             while(lzr2.isEmpty()){
                 zona_riesgo2.await();
             }
-            System.out.println("El humano " + id + " ha entrado en el refugio");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             refugio2.signal();
         }catch (Exception e){}
         finally{
@@ -107,30 +105,29 @@ public class Tunel {
         }
     }
 
-    public void entrar_zona_riesgo3(String id){
+    public void entrar_zona_riesgo3(Humano humano){
         cerrojo3.lock();
         try{
             while(!lzr3.isEmpty()){
                 refugio3.await();
             }
-            List<Humano> humanos_entrarzr = zonaRiesgo.getLh3();
-            humanos_entrarzr.add(lr3.getFirst());
-            zonaRiesgo.setLh3(humanos_entrarzr);
-            lr3.removeFirst();
-            System.out.println("El humano " + id + " ha entrado en la zona de riesgo 3");
+            lr3.remove(humano);
+            Thread.sleep(1000);
+            zonaRiesgo.getLh3().add(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 3");
             zona_riesgo3.signal();
         }catch (Exception e){}
         finally {
             cerrojo3.unlock();
         }
     }
-    public void entrar3_zona_descanso(String id){
+    public void entrar3_zona_descanso(Humano humano){
         cerrojo3.lock();
         try{
             while(lzr3.isEmpty()){
                 zona_riesgo3.await();
             }
-            System.out.println("El humano " + id + " ha entrado en el refugio");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             refugio3.signal();
         }catch (Exception e){}
         finally{
@@ -138,30 +135,29 @@ public class Tunel {
         }
     }
 
-    public void entrar_zona_riesgo4(String id){
+    public void entrar_zona_riesgo4(Humano humano){
         cerrojo4.lock();
         try{
             while(!lzr4.isEmpty()){
                 refugio4.await();
             }
-            List<Humano> humanos_entrarzr = zonaRiesgo.getLh4();
-            humanos_entrarzr.add(lr4.getFirst());
-            zonaRiesgo.setLh4(humanos_entrarzr);
-            lr4.removeFirst();
-            System.out.println("El humano " + id + " ha entrado en la zona de riesgo 4");
+            lr4.remove(humano);
+            Thread.sleep(1000);
+            zonaRiesgo.getLh4().add(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 4");
             zona_riesgo4.signal();
         }catch (Exception e){}
         finally {
             cerrojo4.unlock();
         }
     }
-    public void entrar4_zona_descanso(String id){
+    public void entrar4_zona_descanso(Humano humano){
         cerrojo4.lock();
         try{
             while(lzr4.isEmpty()){
                 zona_riesgo4.await();
             }
-            System.out.println("El humano " + id + " ha entrado en el refugio");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             refugio4.signal();
         }catch (Exception e){}
         finally{
@@ -174,8 +170,7 @@ public class Tunel {
             barrera1.await();
             lr1.add(humano);
             System.out.println("El túnel 1 tiene ya 3 humanos.");
-            entrar_zona_riesgo1(humano.gethumanoId());
-            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+            entrar_zona_riesgo1(humano);
         }catch (Exception e){}
     }
     public void zona_espera_tunel2(Humano humano){
@@ -184,8 +179,7 @@ public class Tunel {
             barrera2.await();
             lr2.add(humano);
             System.out.println("El túnel 2 tiene ya 3 humanos.");
-            entrar_zona_riesgo2(humano.gethumanoId());
-            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+            entrar_zona_riesgo2(humano);
         }catch (Exception e){}
     }
     public void zona_espera_tunel3(Humano humano){
@@ -194,8 +188,7 @@ public class Tunel {
             barrera3.await();
             lr3.add(humano);
             System.out.println("El túnel 3 tiene ya 3 humanos.");
-            entrar_zona_riesgo3(humano.gethumanoId());
-            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+            entrar_zona_riesgo3(humano);
         }catch (Exception e){}
     }
     public void zona_espera_tunel4(Humano humano){
@@ -204,8 +197,7 @@ public class Tunel {
             barrera4.await();
             lr4.add(humano);
             System.out.println("El túnel 4 tiene ya 3 humanos.");
-            entrar_zona_riesgo4(humano.gethumanoId());
-            Thread.sleep(1000);//Es el tiempo que tardan en cruzar el túnel pero ns si ponerlo aqui
+            entrar_zona_riesgo4(humano);
         }catch (Exception e){}
     }
 

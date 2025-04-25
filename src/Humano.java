@@ -46,13 +46,13 @@ public class Humano extends Thread{
                 if(!herido){ //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
                     zonaRiesgo.salir_humano(this,n_tunel);
                     if(n_tunel == 1){
-                        tunel.entrar1_zona_descanso(this.id);
+                        tunel.entrar1_zona_descanso(this);
                     }else if(n_tunel == 2){
-                        tunel.entrar2_zona_descanso(this.id);
+                        tunel.entrar2_zona_descanso(this);
                     }else if(n_tunel == 3){
-                        tunel.entrar3_zona_descanso(this.id);
+                        tunel.entrar3_zona_descanso(this);
                     }else{
-                        tunel.entrar4_zona_descanso(this.id);
+                        tunel.entrar4_zona_descanso(this);
                     }
                     refugio.getlDescanso().add(this.id);
                     System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");

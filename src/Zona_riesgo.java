@@ -51,12 +51,16 @@ public class Zona_riesgo {
     public void entrar_zombie(Zombie zombie, int zona){
         if(zona == 1){
             lz1.add(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 1");
         }else if(zona == 2){
             lz2.add(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 2");
         }else if(zona == 3){
             lz3.add(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 3");
         }else{
             lz4.add(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 4");
         }
     }
     public void salir_humano(Humano humano, int zona){
@@ -73,12 +77,16 @@ public class Zona_riesgo {
     public void salir_zombie(Zombie zombie, int zona){
         if(zona == 1){
             lz1.remove(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 1");
         }else if(zona == 2){
             lz2.remove(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 2");
         }else if(zona == 3){
             lz3.remove(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 3");
         }else{
             lz4.remove(zombie);
+            System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 4");
         }
     }
     public boolean buscar_humano(List humanos){
@@ -114,7 +122,7 @@ public class Zona_riesgo {
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
-                        tunel.entrar1_zona_descanso(humano.gethumanoId());
+                        tunel.entrar1_zona_descanso(humano);
                         List<Humano> humanos = tunel.getLzr1();
                         humanos.add(humano);
                         tunel.setLzr1(humanos);
@@ -148,7 +156,7 @@ public class Zona_riesgo {
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
-                        tunel.entrar2_zona_descanso(humano.gethumanoId());
+                        tunel.entrar2_zona_descanso(humano);
                         List<Humano> humanos = tunel.getLzr2();
                         humanos.add(humano);
                         tunel.setLzr2(humanos);
@@ -182,7 +190,7 @@ public class Zona_riesgo {
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
-                        tunel.entrar3_zona_descanso(humano.gethumanoId());
+                        tunel.entrar3_zona_descanso(humano);
                         List<Humano> humanos = tunel.getLzr3();
                         humanos.add(humano);
                         tunel.setLzr3(humanos);
@@ -216,7 +224,7 @@ public class Zona_riesgo {
                         zombie1.start();
                     }else{
                         humano.setHerido(true);
-                        tunel.entrar4_zona_descanso(humano.gethumanoId());
+                        tunel.entrar4_zona_descanso(humano);
                         List<Humano> humanos = tunel.getLzr4();
                         humanos.add(humano);
                         tunel.setLzr4(humanos);
