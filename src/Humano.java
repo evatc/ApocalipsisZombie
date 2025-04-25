@@ -43,7 +43,9 @@ public class Humano extends Thread{
                 Thread.sleep((long) tiempo1);
             }catch(Exception e){}
             if(vivo){//si no le ha matado un zombie sigue con la rutina
+                System.out.println("a");
                 if(!herido){ //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
+                    System.out.println("b");
                     zonaRiesgo.salir_humano(this,n_tunel);
                     if(n_tunel == 1){
                         tunel.entrar1_zona_descanso(this);

@@ -47,6 +47,7 @@ public class Tunel {
     public void entrar_zona_riesgo1(Humano humano){
         cerrojo1.lock();
         try{
+            lr1.add(humano);
             while(!lzr1.isEmpty()){
                 refugio1.await();
             }
@@ -63,6 +64,7 @@ public class Tunel {
     public void entrar1_zona_descanso(Humano humano){
         cerrojo1.lock();
         try{
+            lzr1.add(humano);
             while(lzr1.isEmpty()){
                 zona_riesgo1.await();
             }
@@ -77,6 +79,7 @@ public class Tunel {
     public void entrar_zona_riesgo2(Humano humano){
         cerrojo2.lock();
         try{
+            lr2.add(humano);
             while(!lzr2.isEmpty()){
                 refugio2.await();
             }
@@ -94,6 +97,7 @@ public class Tunel {
     public void entrar2_zona_descanso(Humano humano){
         cerrojo2.lock();
         try{
+            lzr2.add(humano);
             while(lzr2.isEmpty()){
                 zona_riesgo2.await();
             }
@@ -108,6 +112,7 @@ public class Tunel {
     public void entrar_zona_riesgo3(Humano humano){
         cerrojo3.lock();
         try{
+            lr3.add(humano);
             while(!lzr3.isEmpty()){
                 refugio3.await();
             }
@@ -124,6 +129,7 @@ public class Tunel {
     public void entrar3_zona_descanso(Humano humano){
         cerrojo3.lock();
         try{
+            lzr3.add(humano);
             while(lzr3.isEmpty()){
                 zona_riesgo3.await();
             }
@@ -138,6 +144,7 @@ public class Tunel {
     public void entrar_zona_riesgo4(Humano humano){
         cerrojo4.lock();
         try{
+            lr4.add(humano);
             while(!lzr4.isEmpty()){
                 refugio4.await();
             }
@@ -154,6 +161,7 @@ public class Tunel {
     public void entrar4_zona_descanso(Humano humano){
         cerrojo4.lock();
         try{
+            lzr4.add(humano);
             while(lzr4.isEmpty()){
                 zona_riesgo4.await();
             }
@@ -168,7 +176,6 @@ public class Tunel {
         try{
             System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 1.");
             barrera1.await();
-            lr1.add(humano);
             System.out.println("El túnel 1 tiene ya 3 humanos.");
             entrar_zona_riesgo1(humano);
         }catch (Exception e){}
@@ -177,7 +184,6 @@ public class Tunel {
         try{
             System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 2.");
             barrera2.await();
-            lr2.add(humano);
             System.out.println("El túnel 2 tiene ya 3 humanos.");
             entrar_zona_riesgo2(humano);
         }catch (Exception e){}
@@ -186,7 +192,6 @@ public class Tunel {
         try{
             System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 3.");
             barrera3.await();
-            lr3.add(humano);
             System.out.println("El túnel 3 tiene ya 3 humanos.");
             entrar_zona_riesgo3(humano);
         }catch (Exception e){}
@@ -195,7 +200,6 @@ public class Tunel {
         try{
             System.out.println("El humano " + humano.gethumanoId() + " está esperando en la barrera del túnel 4.");
             barrera4.await();
-            lr4.add(humano);
             System.out.println("El túnel 4 tiene ya 3 humanos.");
             entrar_zona_riesgo4(humano);
         }catch (Exception e){}

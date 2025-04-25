@@ -65,12 +65,16 @@ public class Zona_riesgo {
     }
     public void salir_humano(Humano humano, int zona){
         if(zona == 1){
+            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 1");
             lh1.remove(humano);
         }else if(zona == 2){
+            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 2");
             lh2.remove(humano);
         }else if(zona == 3){
+            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 3");
             lh3.remove(humano);
         }else{
+            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 4");
             lh4.remove(humano);
         }
     }
