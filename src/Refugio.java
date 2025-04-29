@@ -2,6 +2,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TextField;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -11,22 +12,28 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Refugio {
+    private  ListaThreads lDescanso, lComedor, lZonaComun;
     private Tunel tunel;
+    private Zona_riesgo zonaRiesgo;
     private int zona_descanso;
     private int comedor;
     private int zona_comun;
     private IntegerProperty comida = new SimpleIntegerProperty(0);
     private Lock cerrojo = new ReentrantLock();
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
-    private ObservableList<String> ldescanso = FXCollections.observableArrayList();
-    private ObservableList<String> lcomedor = FXCollections.observableArrayList();
-    private ObservableList<String> lzonaComun = FXCollections.observableArrayList();
+    //private ObservableList<String> ldescanso = FXCollections.observableArrayList();
+    //private ObservableList<String> lcomedor = FXCollections.observableArrayList();
+    //private ObservableList<String> lzonaComun = FXCollections.observableArrayList();
 
-    public Refugio() {
+    public Refugio(TextField c1, TextField c2, TextField c3) {
+        lDescanso = new ListaThreads(c1);
+        lComedor = new ListaThreads(c2);
+        lZonaComun = new ListaThreads(c3);
         this.zona_descanso = 1;
         this.comedor = 2;
         this.zona_comun = 3;
         this.comida.set(0);
+
     }
     //He utilizado una cola porque si no hay comida tienen que
     //esperar de forma ordenada y monitores para la exclusión mutua
@@ -66,7 +73,7 @@ public class Refugio {
     public IntegerProperty comidaProperty(){
         return comida;
     }
-    public ObservableList<String> getlDescanso(){
+    /*public ObservableList<String> getlDescanso(){
         return ldescanso;
     }
     public ObservableList<String> getlComedor(){
@@ -74,5 +81,20 @@ public class Refugio {
     }
     public ObservableList<String> getlZonaComun(){
         return lzonaComun;
+    }*/
+
+    public ListaThreads getlDescanso() {
+        return lDescanso;
     }
+
+
+    public ListaThreads getlComedor() {
+        return lComedor;
+    }
+
+
+    public ListaThreads getlZonaComun() {
+        return lZonaComun;
+    }
+
 }

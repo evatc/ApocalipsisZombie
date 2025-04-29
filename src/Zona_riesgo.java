@@ -1,10 +1,15 @@
+import java.awt.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import javafx.scene.control.TextField;
 
 public class Zona_riesgo {
+    private ListaThreads riesgoHumanos1, riesgoHumanos2, riesgoHumanos3, riesgoHumanos4,
+                            riesgoZombies1, riesgoZombies2, riesgoZombies3, riesgoZombies4;
     private int zona1;
     private int zona2;
     private int zona3;
@@ -23,7 +28,16 @@ public class Zona_riesgo {
     private Lock cerrojo4= new ReentrantLock();
     private Tunel tunel;
 
-    public Zona_riesgo() {
+    public Zona_riesgo(TextField c1, TextField c2, TextField c3, TextField c4,
+                       TextField c5, TextField c6, TextField c7, TextField c8) {
+        riesgoHumanos1 = new ListaThreads(c1);
+        riesgoHumanos2 = new ListaThreads(c2);
+        riesgoHumanos3 = new ListaThreads(c3);
+        riesgoHumanos4 = new ListaThreads(c4);
+        riesgoZombies1 = new ListaThreads(c5);
+        riesgoZombies2 = new ListaThreads(c6);
+        riesgoZombies3 = new ListaThreads(c7);
+        riesgoZombies4 = new ListaThreads(c8);
         this.zona1 = 1;
         this.zona2 = 2;
         this.zona3 = 3;
@@ -37,58 +51,102 @@ public class Zona_riesgo {
         this.lz3 = new ArrayList<>();
         this.lz4 = new ArrayList<>();
     }
+
+    //public Zona_riesgo(javafx.scene.control.TextField txtRiesgoHumanos1, javafx.scene.control.TextField txtRiesgoHumanos2, javafx.scene.control.TextField txtRiesgoHumanos3, javafx.scene.control.TextField txtRiesgoHumanos4, javafx.scene.control.TextField txtRiesgoZombies1, javafx.scene.control.TextField txtRiesgoZombies2, javafx.scene.control.TextField txtRiesgoZombies3, javafx.scene.control.TextField txtRiesgoZombies4) {
+    //}
+
     public void entrar_humano(Humano humano,int zona){ //esta función depende del tunel
         if(zona == 1){
-            lh1.add(humano);
+            try {
+                cerrojo1.lock();
+                riesgoHumanos1.meterh(humano);
+                lh1.add(humano);
+                System.out.println("Lista humanos1: " + lh1);
+            }finally {
+                cerrojo1.unlock();
+            }
         }else if(zona == 2){
-            lh2.add(humano);
+            try {
+                cerrojo2.lock();
+                riesgoHumanos2.meterh(humano);
+                lh2.add(humano);
+                System.out.println("Lista humanos2: " + lh2);
+            }finally {
+                cerrojo2.unlock();
+            }
         }else if(zona == 3){
-            lh3.add(humano);
+            try {
+                cerrojo3.lock();
+                riesgoHumanos3.meterh(humano);
+                lh3.add(humano);
+                System.out.println("Lista humanos3: " + lh3);
+            }finally {
+                cerrojo3.unlock();
+            }
         }else{
-            lh4.add(humano);
+            try {
+                cerrojo4.lock();
+                riesgoHumanos4.meterh(humano);
+                lh4.add(humano);
+                System.out.println("Lista humanos4: " + lh4);
+            }finally {
+                cerrojo4.unlock();
+            }
         }
     }
     public void entrar_zombie(Zombie zombie, int zona){
         if(zona == 1){
+            riesgoZombies1.meterz(zombie);
             lz1.add(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 1");
         }else if(zona == 2){
+            riesgoZombies2.meterz(zombie);
             lz2.add(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 2");
         }else if(zona == 3){
+            riesgoZombies3.meterz(zombie);
             lz3.add(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 3");
         }else{
+            riesgoZombies4.meterz(zombie);
             lz4.add(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha entrado a la zona 4");
         }
     }
     public void salir_humano(Humano humano, int zona){
         if(zona == 1){
+            riesgoHumanos1.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 1");
             lh1.remove(humano);
         }else if(zona == 2){
+            riesgoHumanos2.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 2");
             lh2.remove(humano);
         }else if(zona == 3){
+            riesgoHumanos3.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 3");
             lh3.remove(humano);
         }else{
+            riesgoHumanos4.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 4");
             lh4.remove(humano);
         }
     }
     public void salir_zombie(Zombie zombie, int zona){
         if(zona == 1){
+            riesgoZombies1.sacarz(zombie);
             lz1.remove(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 1");
         }else if(zona == 2){
+            riesgoZombies2.sacarz(zombie);
             lz2.remove(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 2");
         }else if(zona == 3){
+            riesgoZombies3.sacarz(zombie);
             lz3.remove(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 3");
         }else{
+            riesgoZombies4.sacarz(zombie);
             lz4.remove(zombie);
             System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 4");
         }
@@ -104,6 +162,14 @@ public class Zona_riesgo {
     public void ataque(Zombie zombie, int zona){
         if(zona == 1){
             cerrojo1.lock();
+            System.out.println("Lista humanos1: " + lh1);
+            System.out.println("Lista humanos2: " + lh2);
+            System.out.println("Lista humanos3: " + lh3);
+            System.out.println("Lista humanos4: " + lh4);
+            System.out.println("Lista zombi1: " + lz1);
+            System.out.println("Lista humanos2: " + lz2);
+            System.out.println("Lista humanos3: " + lz3);
+            System.out.println("Lista humanos4: " + lz4);
             try{
                 if(buscar_humano(lh1)){
                     Random random = new Random();
@@ -138,6 +204,10 @@ public class Zona_riesgo {
             }
         }else if(zona == 2){
             cerrojo2.lock();
+            System.out.println("Lista humanos1: " + lh1);
+            System.out.println("Lista humanos2: " + lh2);
+            System.out.println("Lista humanos3: " + lh3);
+            System.out.println("Lista humanos4: " + lh4);
             try{
                 if(buscar_humano(lh2)){
                     Random random = new Random();
@@ -172,6 +242,10 @@ public class Zona_riesgo {
             }
         }else if(zona == 3){
             cerrojo3.lock();
+            System.out.println("Lista humanos1: " + lh1);
+            System.out.println("Lista humanos2: " + lh2);
+            System.out.println("Lista humanos3: " + lh3);
+            System.out.println("Lista humanos4: " + lh4);
             try{
                 if(buscar_humano(lh3)){
                     Random random = new Random();
@@ -206,6 +280,10 @@ public class Zona_riesgo {
             }
         }else{
             cerrojo4.lock();
+            System.out.println("Lista humanos1: " + lh1);
+            System.out.println("Lista humanos2: " + lh2);
+            System.out.println("Lista humanos3: " + lh3);
+            System.out.println("Lista humanos4: " + lh4);
             try{
                 if(buscar_humano(lh4)){
                     Random random = new Random();
@@ -271,5 +349,12 @@ public class Zona_riesgo {
 
     public void setLh4(List<Humano> lh4) {
         this.lh4 = lh4;
+    }
+    public void setTunel(Tunel tunel) {
+        this.tunel = tunel;
+    }
+
+    public Tunel getTunel() {
+        return tunel;
     }
 }
