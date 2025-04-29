@@ -122,6 +122,11 @@ public class VentanaController implements Initializable {
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
             System.out.println("Inicializando controlador..."); // Verifica que esto aparece
+            // Verifica que el labelComida no sea null
+            if (labelComida == null) {
+                System.out.println("ERROR: labelComida es null");
+                return;
+            }
 
             // Mueve la lógica pesada a un hilo separado
             new Thread(() -> {

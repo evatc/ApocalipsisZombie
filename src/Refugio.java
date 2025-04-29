@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
@@ -39,10 +40,12 @@ public class Refugio {
     //esperar de forma ordenada y monitores para la exclusión mutua
     // pero ns si estará bien
     public synchronized void dejarComida(Humano humano){
-        int comida = getComida();
-        setComida(comida + 2);
-        System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + getComida() + ".");
-        notifyAll();
+        Platform.runLater(()-> {
+            int comida = getComida();
+            setComida(comida + 2);
+            System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + getComida() + ".");
+            notifyAll();
+        });
     }
     public synchronized void comer(Humano humano){
         try{
