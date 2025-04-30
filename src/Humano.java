@@ -2,6 +2,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 public class Humano extends Thread{
     private String id;
@@ -10,12 +11,24 @@ public class Humano extends Thread{
     private Zona_riesgo zonaRiesgo;
     private boolean herido = false;
     private boolean vivo = true;
+    private boolean ataque = false;
+    private CountDownLatch tiempo_ataque1;
+    private CountDownLatch tiempo_ataque2;
+    private CountDownLatch tiempo_ataque3;
+    private CountDownLatch tiempo_ataque4;
+    public Humano(){}
 
-    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo){
+    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo,
+                  CountDownLatch tiempo_ataque1, CountDownLatch tiempo_ataque2,
+                  CountDownLatch tiempo_ataque3, CountDownLatch tiempo_ataque4){
         this.id = id;
         this.refugio = refugio;
         this.tunel = tunel;
         this.zonaRiesgo = zonaRiesgo;
+        this.tiempo_ataque1 = tiempo_ataque1;
+        this.tiempo_ataque2 = tiempo_ataque2;
+        this.tiempo_ataque3 = tiempo_ataque3;
+        this.tiempo_ataque4 = tiempo_ataque4;
     }
 
     public void run(){
@@ -27,7 +40,9 @@ public class Humano extends Thread{
             System.out.println("El humano " + this.id + " está en el área común");
             try{
                 Thread.sleep((long) tiempo);
-            }catch(Exception e){}
+            }catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
             int n_tunel = (int) (Math.random()*4)+1;
             System.out.println("El humano " + this.id + " ha elegido el tunel " + n_tunel);
             refugio.getlZonaComun().sacarh(this);
@@ -43,17 +58,61 @@ public class Humano extends Thread{
             double tiempo1 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
             try{
                 Thread.sleep((long) tiempo1);
-            }catch(Exception e){}
+            }catch(InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            //mira si hay algún zombie buscando victima
+            if (n_tunel == 1) {
+                try {
+                    zonaRiesgo.getLock1().acquire();
+                    if(ataque == true){
+                        tiempo_ataque1.await();
+                    }
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }else if(n_tunel == 2){
+                try {
+                    zonaRiesgo.getLock2().acquire();
+                    if(ataque == true){
+                        tiempo_ataque2.await();
+                    }
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }else if (n_tunel == 3){
+                try {
+                    zonaRiesgo.getLock3().acquire();
+                    if(ataque == true){
+                        tiempo_ataque3.await();
+                    }
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }else{
+                try {
+                    zonaRiesgo.getLock4().acquire();
+                    if(ataque == true){
+                        tiempo_ataque4.await();
+                    }
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
             if(vivo){//si no le ha matado un zombie sigue con la rutina
                 if(!herido){ //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
                     zonaRiesgo.salir_humano(this,n_tunel);
                     if(n_tunel == 1){
+                        zonaRiesgo.getLock1().release();
                         tunel.entrar1_zona_descanso(this);
                     }else if(n_tunel == 2){
+                        zonaRiesgo.getLock2().release();
                         tunel.entrar2_zona_descanso(this);
                     }else if(n_tunel == 3){
+                        zonaRiesgo.getLock3().release();
                         tunel.entrar3_zona_descanso(this);
                     }else{
+                        zonaRiesgo.getLock4().release();
                         tunel.entrar4_zona_descanso(this);
                     }
                     refugio.getlDescanso().meterh(this);
@@ -64,7 +123,9 @@ public class Humano extends Thread{
                 System.out.println("El humano " + this.id + " está en el área de descanso");
                 try{
                     Thread.sleep((long) tiempo2);
-                }catch(Exception e){}
+                }catch(InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
                 refugio.getlDescanso().sacarh(this);
                 refugio.getlComedor().meterh(this);
                 System.out.println("El humano " + this.id + " está en el comedor");
@@ -76,7 +137,9 @@ public class Humano extends Thread{
                     double tiempo3 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
                     try{
                         Thread.sleep((long) tiempo1);
-                    }catch(Exception e){}
+                    }catch(InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
                     refugio.getlDescanso().sacarh(this);
                 }
             }
@@ -107,5 +170,7 @@ public class Humano extends Thread{
     public String gethumanoId() {
         return this.id;
     }
+
+
 
 }

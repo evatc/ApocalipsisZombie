@@ -27,7 +27,7 @@ public class ListaThreads {
         imprimirh();
     }
 
-    public void imprimirh()
+    public synchronized void imprimirh()
     {
         String contenido="";
         for(int i=0; i<listah.size(); i++)

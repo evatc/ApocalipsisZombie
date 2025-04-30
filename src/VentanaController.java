@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.CountDownLatch;
 
 import static java.lang.Thread.sleep;
 
@@ -141,7 +142,11 @@ public class VentanaController implements Initializable {
                         txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,
                         txtRefugioARiesgo3, txtTunel3, txtRiesgoARefugio3,
                         txtRefugioARiesgo4, txtTunel4, txtRiesgoARefugio4);
-                Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3, txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4);
+                CountDownLatch tiempo_ataque = new CountDownLatch(1);
+                CountDownLatch tiempo_ataque2 = new CountDownLatch(1);
+                CountDownLatch tiempo_ataque3 = new CountDownLatch(1);
+                CountDownLatch tiempo_ataque4 = new CountDownLatch(1);
+                Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3, txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4, tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4);
 
                 tunel.setZonaRiesgo(zonaRiesgo);
                 zonaRiesgo.setTunel(tunel);
@@ -155,7 +160,7 @@ public class VentanaController implements Initializable {
                 for (int i = 1; i <= 10000; i++) { // Reduce a 10 para pruebas
                     try {
                         String humanoid = String.format("H%04d", i);
-                        Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo);
+                        Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,tiempo_ataque2,tiempo_ataque3,tiempo_ataque4);
                         humano.start();
                         System.out.println("Humano iniciado: " + humanoid);
                         Thread.sleep((int)(500 * Math.random() + 200)); // Reduce el tiempo

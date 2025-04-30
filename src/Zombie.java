@@ -33,4 +33,6 @@ public class Zombie extends Thread{
     public String getzombieId() {
         return id;
     }
+
+
 }

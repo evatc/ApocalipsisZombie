@@ -3,8 +3,14 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import javafx.scene.control.TextField;
 
 public class Zona_riesgo {
@@ -14,22 +20,32 @@ public class Zona_riesgo {
     private int zona2;
     private int zona3;
     private int zona4;
-    private List<Humano> lh1;
-    private List<Humano> lh2;
-    private List<Humano> lh3;
-    private List<Humano> lh4;
-    private List<Zombie> lz1;
-    private List<Zombie> lz2;
-    private List<Zombie> lz3;
-    private List<Zombie> lz4;
+    private ConcurrentLinkedQueue<Humano> lh1;
+    private ConcurrentLinkedQueue<Humano> lh2;
+    private ConcurrentLinkedQueue<Humano> lh3;
+    private ConcurrentLinkedQueue<Humano> lh4;
+    private ConcurrentLinkedQueue<Zombie> lz1;
+    private ConcurrentLinkedQueue<Zombie> lz2;
+    private ConcurrentLinkedQueue<Zombie> lz3;
+    private ConcurrentLinkedQueue<Zombie> lz4;
     private Lock cerrojo1= new ReentrantLock();
     private Lock cerrojo2= new ReentrantLock();
     private Lock cerrojo3= new ReentrantLock();
     private Lock cerrojo4= new ReentrantLock();
     private Tunel tunel;
+    private Semaphore lock1;
+    private Semaphore lock2;
+    private Semaphore lock3;
+    private Semaphore lock4;
+    private CountDownLatch tiempo_ataque1;
+    private CountDownLatch tiempo_ataque2;
+    private CountDownLatch tiempo_ataque3;
+    private CountDownLatch tiempo_ataque4;
 
     public Zona_riesgo(TextField c1, TextField c2, TextField c3, TextField c4,
-                       TextField c5, TextField c6, TextField c7, TextField c8) {
+                       TextField c5, TextField c6, TextField c7, TextField c8,
+                       CountDownLatch tiempo_ataque, CountDownLatch tiempo_ataque2,
+                       CountDownLatch tiempo_ataque3, CountDownLatch tiempo_ataque4) {
         riesgoHumanos1 = new ListaThreads(c1);
         riesgoHumanos2 = new ListaThreads(c2);
         riesgoHumanos3 = new ListaThreads(c3);
@@ -42,14 +58,22 @@ public class Zona_riesgo {
         this.zona2 = 2;
         this.zona3 = 3;
         this.zona4 = 4;
-        this.lh1 = new ArrayList<>();
-        this.lh2 = new ArrayList<>();
-        this.lh3 = new ArrayList<>();
-        this.lh4 = new ArrayList<>();
-        this.lz1 = new ArrayList<>();
-        this.lz2 = new ArrayList<>();
-        this.lz3 = new ArrayList<>();
-        this.lz4 = new ArrayList<>();
+        this.lh1 = new ConcurrentLinkedQueue<>();
+        this.lh2 = new ConcurrentLinkedQueue<>();
+        this.lh3 = new ConcurrentLinkedQueue<>();
+        this.lh4 = new ConcurrentLinkedQueue<>();
+        this.lz1 = new ConcurrentLinkedQueue<>();
+        this.lz2 = new ConcurrentLinkedQueue<>();
+        this.lz3 = new ConcurrentLinkedQueue<>();
+        this.lz4 = new ConcurrentLinkedQueue<>();
+        this.lock1 = new Semaphore(1);
+        this.lock2 = new Semaphore(1);
+        this.lock3 = new Semaphore(1);
+        this.lock4 = new Semaphore(1);
+        this.tiempo_ataque1 = tiempo_ataque;
+        this.tiempo_ataque2 = tiempo_ataque2;
+        this.tiempo_ataque3 = tiempo_ataque3;
+        this.tiempo_ataque4 = tiempo_ataque4;
     }
 
     //public Zona_riesgo(javafx.scene.control.TextField txtRiesgoHumanos1, javafx.scene.control.TextField txtRiesgoHumanos2, javafx.scene.control.TextField txtRiesgoHumanos3, javafx.scene.control.TextField txtRiesgoHumanos4, javafx.scene.control.TextField txtRiesgoZombies1, javafx.scene.control.TextField txtRiesgoZombies2, javafx.scene.control.TextField txtRiesgoZombies3, javafx.scene.control.TextField txtRiesgoZombies4) {
@@ -151,7 +175,7 @@ public class Zona_riesgo {
             System.out.println("El zombie " + zombie.getzombieId() + " ha salido de la zona 4");
         }
     }
-    public boolean buscar_humano(List humanos){
+    public boolean buscar_humano(ConcurrentLinkedQueue humanos){
         boolean b = true;
         if(humanos.isEmpty()){
             b = false;
@@ -162,19 +186,21 @@ public class Zona_riesgo {
     public void ataque(Zombie zombie, int zona){
         if(zona == 1){
             cerrojo1.lock();
-            System.out.println("Lista humanos1: " + lh1);
-            System.out.println("Lista humanos2: " + lh2);
-            System.out.println("Lista humanos3: " + lh3);
-            System.out.println("Lista humanos4: " + lh4);
-            System.out.println("Lista zombi1: " + lz1);
-            System.out.println("Lista humanos2: " + lz2);
-            System.out.println("Lista humanos3: " + lz3);
-            System.out.println("Lista humanos4: " + lz4);
             try{
+                lock1.acquire(); //para que los humanos no se muevan de la zona
                 if(buscar_humano(lh1)){
                     Random random = new Random();
                     int posicion = random.nextInt(lh1.size());
-                    Humano humano = lh1.get(posicion);
+                    ConcurrentLinkedQueue<Humano> lista = lh1;
+                    Humano humano = new Humano();
+                    for(int i=0; i<posicion; i++){
+                        if(i == posicion-1){
+                            humano = lista.peek();
+                            break;
+                        }
+                        lista.poll();
+                    }
+                    lock1.release(); //los humanos ya se pueden mover
                     double tiempo2 = (0.5 + Math.random())*1000;
                     System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                     try{
@@ -197,6 +223,7 @@ public class Zona_riesgo {
                         humanos.add(humano);
                         tunel.setLzr1(humanos);
                     }
+                    tiempo_ataque1.countDown();
                 }
             }catch(Exception e){}
             finally {
@@ -204,15 +231,21 @@ public class Zona_riesgo {
             }
         }else if(zona == 2){
             cerrojo2.lock();
-            System.out.println("Lista humanos1: " + lh1);
-            System.out.println("Lista humanos2: " + lh2);
-            System.out.println("Lista humanos3: " + lh3);
-            System.out.println("Lista humanos4: " + lh4);
             try{
+                lock2.acquire(); //para que los humanos no se muevan de la zona
                 if(buscar_humano(lh2)){
                     Random random = new Random();
                     int posicion = random.nextInt(lh2.size());
-                    Humano humano = lh2.get(posicion);
+                    ConcurrentLinkedQueue<Humano> lista = lh2;
+                    Humano humano = new Humano();
+                    for(int i=0; i<posicion; i++){
+                        if(i == posicion-1){
+                            humano = lista.peek();
+                            break;
+                        }
+                        lista.poll();
+                    }
+                    lock2.release(); //los humanos ya se pueden mover
                     double tiempo2 = (0.5 + Math.random())*1000;
                     System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                     try{
@@ -235,6 +268,7 @@ public class Zona_riesgo {
                         humanos.add(humano);
                         tunel.setLzr2(humanos);
                     }
+                    tiempo_ataque2.countDown();
                 }
             }catch(Exception e){}
             finally {
@@ -242,15 +276,21 @@ public class Zona_riesgo {
             }
         }else if(zona == 3){
             cerrojo3.lock();
-            System.out.println("Lista humanos1: " + lh1);
-            System.out.println("Lista humanos2: " + lh2);
-            System.out.println("Lista humanos3: " + lh3);
-            System.out.println("Lista humanos4: " + lh4);
             try{
+                lock3.acquire(); //para que los humanos no se muevan de la zona
                 if(buscar_humano(lh3)){
                     Random random = new Random();
                     int posicion = random.nextInt(lh3.size());
-                    Humano humano = lh3.get(posicion);
+                    ConcurrentLinkedQueue<Humano> lista = lh3;
+                    Humano humano = new Humano();
+                    for(int i=0; i<posicion; i++){
+                        if(i == posicion-1){
+                            humano = lista.peek();
+                            break;
+                        }
+                        lista.poll();
+                    }
+                    lock3.release(); //los humanos ya se pueden mover
                     double tiempo2 = (0.5 + Math.random())*1000;
                     System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                     try{
@@ -273,6 +313,7 @@ public class Zona_riesgo {
                         humanos.add(humano);
                         tunel.setLzr3(humanos);
                     }
+                    tiempo_ataque3.countDown();
                 }
             }catch(Exception e){}
             finally {
@@ -280,15 +321,21 @@ public class Zona_riesgo {
             }
         }else{
             cerrojo4.lock();
-            System.out.println("Lista humanos1: " + lh1);
-            System.out.println("Lista humanos2: " + lh2);
-            System.out.println("Lista humanos3: " + lh3);
-            System.out.println("Lista humanos4: " + lh4);
             try{
+                lock4.acquire(); //para que los humanos no se muevan de la zona
                 if(buscar_humano(lh4)){
                     Random random = new Random();
                     int posicion = random.nextInt(lh4.size());
-                    Humano humano = lh4.get(posicion);
+                    ConcurrentLinkedQueue<Humano> lista = lh4;
+                    Humano humano = new Humano();
+                    for(int i=0; i<posicion; i++){
+                        if(i == posicion-1){
+                            humano = lista.peek();
+                            break;
+                        }
+                        lista.poll();
+                    }
+                    lock4.release(); //los humanos ya se pueden mover
                     double tiempo2 = (0.5 + Math.random())*1000;
                     System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                     try{
@@ -311,6 +358,7 @@ public class Zona_riesgo {
                         humanos.add(humano);
                         tunel.setLzr4(humanos);
                     }
+                    tiempo_ataque4.countDown();
                 }
             }catch(Exception e){}
             finally {
@@ -319,35 +367,35 @@ public class Zona_riesgo {
         }
     }
 
-    public List<Humano> getLh1() {
+    public ConcurrentLinkedQueue<Humano> getLh1() {
         return lh1;
     }
 
-    public void setLh1(List<Humano> lh1) {
+    public void setLh1(ConcurrentLinkedQueue<Humano> lh1) {
         this.lh1 = lh1;
     }
 
-    public List<Humano> getLh2() {
+    public ConcurrentLinkedQueue<Humano> getLh2() {
         return lh2;
     }
 
-    public void setLh2(List<Humano> lh2) {
+    public void setLh2(ConcurrentLinkedQueue<Humano> lh2) {
         this.lh2 = lh2;
     }
 
-    public List<Humano> getLh3() {
+    public ConcurrentLinkedQueue<Humano> getLh3() {
         return lh3;
     }
 
-    public void setLh3(List<Humano> lh3) {
+    public void setLh3(ConcurrentLinkedQueue<Humano> lh3) {
         this.lh3 = lh3;
     }
 
-    public List<Humano> getLh4() {
+    public ConcurrentLinkedQueue<Humano> getLh4() {
         return lh4;
     }
 
-    public void setLh4(List<Humano> lh4) {
+    public void setLh4(ConcurrentLinkedQueue<Humano> lh4) {
         this.lh4 = lh4;
     }
     public void setTunel(Tunel tunel) {
@@ -356,5 +404,37 @@ public class Zona_riesgo {
 
     public Tunel getTunel() {
         return tunel;
+    }
+
+    public ConcurrentLinkedQueue<Zombie> getLz1() {
+        return lz1;
+    }
+
+    public ConcurrentLinkedQueue<Zombie> getLz2() {
+        return lz2;
+    }
+
+    public ConcurrentLinkedQueue<Zombie> getLz3() {
+        return lz3;
+    }
+
+    public ConcurrentLinkedQueue<Zombie> getLz4() {
+        return lz4;
+    }
+
+    public Semaphore getLock1() {
+        return lock1;
+    }
+
+    public Semaphore getLock2() {
+        return lock2;
+    }
+
+    public Semaphore getLock3() {
+        return lock3;
+    }
+
+    public Semaphore getLock4() {
+        return lock4;
     }
 }

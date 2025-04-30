@@ -177,12 +177,12 @@ public class Tunel {
                 zona_riesgo3.await();
             }
             esperanRiesgoARefugio1.sacarh(humano);
-            lzr1.remove(humano);
-            dentroTunel1.meterh(humano);
+            lzr3.remove(humano);
+            dentroTunel3.meterh(humano);
             Thread.sleep(1000);
-            dentroTunel1.sacarh(humano);
+            dentroTunel3.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
-            refugio1.signal();
+            refugio3.signal();
         }catch (Exception e){}
         finally{
             cerrojo3.unlock();
