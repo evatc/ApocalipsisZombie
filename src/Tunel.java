@@ -80,6 +80,7 @@ public class Tunel {
             zonaRiesgo.entrar_humano(humano,1);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 1");
             zona_riesgo1.signal();
+            refugio1.signal();
         }catch (Exception e){}
         finally {
             cerrojo1.unlock();
@@ -90,7 +91,7 @@ public class Tunel {
         try{
             esperanRiesgoARefugio1.meterh(humano);
             lzr1.add(humano);
-            while(lzr1.isEmpty()){
+            while(!lzr1.isEmpty()){
                 zona_riesgo1.await();
             }
             esperanRiesgoARefugio1.sacarh(humano);
@@ -99,6 +100,7 @@ public class Tunel {
             Thread.sleep(1000);
             dentroTunel1.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
+            zona_riesgo1.signal();
             refugio1.signal();
         }catch (Exception e){}
         finally{
@@ -121,6 +123,7 @@ public class Tunel {
             zonaRiesgo.entrar_humano(humano,2);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 2");
             zona_riesgo2.signal();
+            refugio2.signal();
         }catch (Exception e){}
         finally {
             cerrojo2.unlock();
@@ -141,6 +144,7 @@ public class Tunel {
             Thread.sleep(1000);
             dentroTunel2.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
+            zona_riesgo2.signal();
             refugio2.signal();
         }catch (Exception e){}
         finally{
@@ -163,6 +167,7 @@ public class Tunel {
             zonaRiesgo.entrar_humano(humano,3);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 3");
             zona_riesgo3.signal();
+            refugio3.signal();
         }catch (Exception e){}
         finally {
             cerrojo3.unlock();
@@ -182,6 +187,7 @@ public class Tunel {
             Thread.sleep(1000);
             dentroTunel3.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
+            zona_riesgo3.signal();
             refugio3.signal();
         }catch (Exception e){}
         finally{
@@ -204,6 +210,7 @@ public class Tunel {
             zonaRiesgo.entrar_humano(humano,4);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 4");
             zona_riesgo4.signal();
+            refugio4.signal();
         }catch (Exception e){}
         finally {
             cerrojo4.unlock();
@@ -223,6 +230,7 @@ public class Tunel {
             Thread.sleep(1000);
             dentroTunel4.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
+            zona_riesgo4.signal();
             refugio4.signal();
         }catch (Exception e){}
         finally{

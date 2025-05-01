@@ -44,24 +44,28 @@ public class Refugio {
             int comida = getComida();
             setComida(comida + 2);
             System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + getComida() + ".");
-            notifyAll();
         });
+        notifyAll();
+
     }
     public synchronized void comer(Humano humano){
         try{
-
             filaComedor.offer(humano); //Añade al humano a la fila
 
             while (comida.get() == 0 || filaComedor.peek() != humano) {
                 System.out.println(humano.gethumanoId() + " esta esperando en la cola.");
                 wait();
             }
-            comida.set(comida.get() - 1);
+            Platform.runLater(()->{
+                comida.set(comida.get() - 1);
+            });
+
             filaComedor.poll(); //Saca la primer humano de la fila
             System.out.println(humano.gethumanoId() + " ha comido.");
             double tiempo1 = (3 + Math.random()*2)*1000;
             Thread.sleep((long)tiempo1);
             notifyAll();
+
         }catch(Exception e){}
     }
 

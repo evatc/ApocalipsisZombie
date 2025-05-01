@@ -8,42 +8,42 @@
    <children>
       <Pane layoutX="20.0" layoutY="100.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>
-            <Label layoutX="174.0" layoutY="14.0" text="Descanso">
+            <Label layoutX="184.0" layoutY="14.0" text="Descanso">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtDescanso" layoutX="40.0" layoutY="41.0" prefHeight="112.0" prefWidth="307.0" />
+            <TextField fx:id="txtDescanso" layoutX="49.0" layoutY="44.0" prefHeight="110.0" prefWidth="345.0" />
          </children></Pane>
       <Pane layoutX="470.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
          <children>
-            <TextField fx:id="txtRefugioARiesgo1" layoutX="23.0" layoutY="50.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtTunel1" layoutX="123.0" layoutY="71.0" prefHeight="26.0" prefWidth="106.0" />
-            <TextField fx:id="txtRiesgoARefugio1" layoutX="239.0" layoutY="54.0" prefHeight="67.0" prefWidth="94.0" />
+            <TextField fx:id="txtRefugioARiesgo1" layoutX="14.0" layoutY="32.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtTunel1" layoutX="128.0" layoutY="59.0" prefHeight="20.0" prefWidth="95.0" />
+            <TextField fx:id="txtRiesgoARefugio1" layoutX="226.0" layoutY="32.0" prefHeight="80.0" prefWidth="110.0" />
          </children></Pane>
       <Pane layoutX="830.0" layoutY="100.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
          <children>
-            <TextField fx:id="txtRiesgoHumanos1" layoutX="25.0" layoutY="45.0" prefHeight="78.0" prefWidth="135.0" />
-            <TextField fx:id="txtRiesgoZombies1" layoutX="173.0" layoutY="45.0" prefHeight="78.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoHumanos1" layoutX="28.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoZombies1" layoutX="183.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
          </children></Pane>
-      <Pane layoutX="20.0" layoutY="280.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
+      <Pane layoutX="20.0" layoutY="281.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>
-            <Label layoutX="99.0" layoutY="30.0" text="Comedor">
+            <Label layoutX="134.0" layoutY="30.0" text="Comedor">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="258.0" layoutY="30.0" text="Comida">
+            <Label layoutX="308.0" layoutY="30.0" text="Comida">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Pane layoutX="220.0" layoutY="65.0" prefHeight="56.0" prefWidth="151.0" style="-fx-background-color: white;">
+            <Pane layoutX="292.0" layoutY="64.0" prefHeight="67.0" prefWidth="80.0" style="-fx-background-color: white;">
                <children>
-                  <Label fx:id="labelComida" layoutX="76.0" layoutY="14.0" text="0" />
+                  <Label fx:id="labelComida" layoutX="40.0" layoutY="25.0" text="0" />
                </children>
             </Pane>
-            <TextField fx:id="txtComedor" layoutX="42.0" layoutY="73.0" />
+            <TextField fx:id="txtComedor" layoutX="38.0" layoutY="80.0" prefHeight="34.0" prefWidth="238.0" />
          </children></Pane>
       <Pane layoutX="20.0" layoutY="460.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>
@@ -52,42 +52,42 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtZonaComun" layoutX="82.0" layoutY="44.0" prefHeight="112.0" prefWidth="276.0" />
+            <TextField fx:id="txtZonaComun" layoutX="48.0" layoutY="40.0" prefHeight="110.0" prefWidth="345.0" />
          </children></Pane>
       <Pane layoutX="470.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
          <children>
-            <TextField fx:id="txtRefugioARiesgo2" layoutX="24.0" layoutY="43.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtRiesgoARefugio2" layoutX="234.0" layoutY="43.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtTunel2" layoutX="122.0" layoutY="64.0" prefHeight="26.0" prefWidth="106.0" />
+            <TextField fx:id="txtRefugioARiesgo2" layoutX="14.0" layoutY="30.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtRiesgoARefugio2" layoutX="226.0" layoutY="30.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtTunel2" layoutX="128.0" layoutY="57.0" prefHeight="20.0" prefWidth="95.0" />
          </children></Pane>
       <Pane layoutX="470.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
          <children>
-            <TextField fx:id="txtRefugioARiesgo3" layoutX="39.0" layoutY="34.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtRiesgoARefugio3" layoutX="251.0" layoutY="24.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtTunel3" layoutX="151.0" layoutY="55.0" prefHeight="25.0" prefWidth="94.0" />
+            <TextField fx:id="txtRefugioARiesgo3" layoutX="14.0" layoutY="30.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtRiesgoARefugio3" layoutX="226.0" layoutY="30.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtTunel3" layoutX="128.0" layoutY="58.0" prefHeight="20.0" prefWidth="95.0" />
          </children></Pane>
       <Pane layoutX="470.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: #e0d883;">
          <children>
-            <TextField fx:id="txtRefugioARiesgo4" layoutX="37.0" layoutY="45.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtRiesgoARefugio4" layoutX="250.0" layoutY="49.0" prefHeight="67.0" prefWidth="94.0" />
-            <TextField fx:id="txtTunel4" layoutX="144.0" layoutY="66.0" prefHeight="25.0" prefWidth="94.0" />
+            <TextField fx:id="txtRefugioARiesgo4" layoutX="14.0" layoutY="30.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtRiesgoARefugio4" layoutX="226.0" layoutY="30.0" prefHeight="80.0" prefWidth="110.0" />
+            <TextField fx:id="txtTunel4" layoutX="128.0" layoutY="58.0" prefHeight="20.0" prefWidth="95.0" />
          </children></Pane>
       <Pane layoutX="830.0" layoutY="250.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
          <children>
-            <TextField fx:id="txtRiesgoHumanos2" layoutX="34.0" layoutY="42.0" prefHeight="78.0" prefWidth="135.0" />
-            <TextField fx:id="txtRiesgoZombies2" layoutX="187.0" layoutY="42.0" prefHeight="78.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoHumanos2" layoutX="32.0" layoutY="36.0" prefHeight="80.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoZombies2" layoutX="183.0" layoutY="36.0" prefHeight="80.0" prefWidth="135.0" />
          </children></Pane>
       <Pane layoutX="830.0" layoutY="400.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
          <children>
-            <TextField fx:id="txtRiesgoHumanos3" layoutX="13.0" layoutY="30.0" prefHeight="78.0" prefWidth="135.0" />
-            <TextField fx:id="txtRiesgoZombies3" layoutX="192.0" layoutY="41.0" prefHeight="78.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoHumanos3" layoutX="31.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoZombies3" layoutX="185.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
          </children></Pane>
       <Pane layoutX="830.0" layoutY="550.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: lightsalmon;">
          <children>
-            <TextField fx:id="txtRiesgoHumanos4" layoutX="36.0" layoutY="34.0" prefHeight="78.0" prefWidth="135.0" />
-            <TextField fx:id="txtRiesgoZombies4" layoutX="193.0" layoutY="34.0" prefHeight="78.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoHumanos4" layoutX="33.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
+            <TextField fx:id="txtRiesgoZombies4" layoutX="186.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
          </children></Pane>
-      <Button layoutX="187.0" layoutY="658.0" mnemonicParsing="false" text="Pausar/Reanudar" />
+      <Button layoutX="135.0" layoutY="666.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" text="Pausar" />
       <Label layoutX="175.0" layoutY="34.0" prefHeight="43.0" prefWidth="151.0" text="REFUGIO">
          <font>
             <Font size="28.0" />
@@ -103,5 +103,7 @@
             <Font size="28.0" />
          </font>
       </Label>
+      <Button layoutX="251.0" layoutY="666.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" text="Reanudar" />
+      <Label layoutX="184.0" layoutY="642.0" text="Apocalipsis pausado." />
    </children>
 </AnchorPane>
