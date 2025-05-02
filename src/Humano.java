@@ -3,6 +3,8 @@ import javafx.collections.ObservableList;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 public class Humano extends Thread{
     private String id;
@@ -12,23 +14,27 @@ public class Humano extends Thread{
     private boolean herido = false;
     private boolean vivo = true;
     private boolean ataque = false;
-    private CountDownLatch tiempo_ataque1;
-    private CountDownLatch tiempo_ataque2;
-    private CountDownLatch tiempo_ataque3;
-    private CountDownLatch tiempo_ataque4;
+    //private CountDownLatch tiempo_ataque1 = new CountDownLatch(1);
+    //private CountDownLatch tiempo_ataque2 = new CountDownLatch(1);
+    //private CountDownLatch tiempo_ataque3 = new CountDownLatch(1);
+    //private CountDownLatch tiempo_ataque4 = new CountDownLatch(1);
+    private Semaphore ataqueEnCurso1 = new Semaphore(1);
+    private Semaphore ataqueEnCurso2 = new Semaphore(1);
+    private Semaphore ataqueEnCurso3 = new Semaphore(1);
+    private Semaphore ataqueEnCurso4 = new Semaphore(1);
     public Humano(){}
 
-    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo,
+    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo/*,
                   CountDownLatch tiempo_ataque1, CountDownLatch tiempo_ataque2,
-                  CountDownLatch tiempo_ataque3, CountDownLatch tiempo_ataque4){
+                  CountDownLatch tiempo_ataque3, CountDownLatch tiempo_ataque4*/){
         this.id = id;
         this.refugio = refugio;
         this.tunel = tunel;
         this.zonaRiesgo = zonaRiesgo;
-        this.tiempo_ataque1 = tiempo_ataque1;
-        this.tiempo_ataque2 = tiempo_ataque2;
-        this.tiempo_ataque3 = tiempo_ataque3;
-        this.tiempo_ataque4 = tiempo_ataque4;
+        //this.tiempo_ataque1 = tiempo_ataque1;
+        //this.tiempo_ataque2 = tiempo_ataque2;
+        //this.tiempo_ataque3 = tiempo_ataque3;
+        //this.tiempo_ataque4 = tiempo_ataque4;
     }
 
     public void run(){
@@ -63,41 +69,68 @@ public class Humano extends Thread{
                 System.out.println("Humano " + this.id + " ha terminado de ser atacado");*/
 
                 //mira si hay algún zombie buscando victima
-                if (n_tunel == 1) {
-                    try {
-                        zonaRiesgo.getLock1().acquire();
-                        if(ataque == true){
-                            tiempo_ataque1.await();
+                if (n_tunel == 1){
+                    try{
+                        if (zonaRiesgo.getLock1().tryAcquire(100,TimeUnit.MILLISECONDS)){
+                            // Si le están atacando espera a que termine el ataque
+                            if (ataque){
+                                while (ataque){
+                                    Thread.sleep(10);
+                                }
+                            }
                         }
-                    } catch (InterruptedException e) {
+                    }catch (InterruptedException e){
                         Thread.currentThread().interrupt();
+                    } finally {
+                        zonaRiesgo.getLock1().release();
                     }
-                }else if(n_tunel == 2){
-                    try {
-                        zonaRiesgo.getLock2().acquire();
-                        if(ataque == true){
-                            tiempo_ataque2.await();
+
+                } else if (n_tunel == 2){
+                    try{
+                        if (zonaRiesgo.getLock2().tryAcquire(100,TimeUnit.MILLISECONDS)){
+                            // Si le están atacando espera a que termine el ataque
+                            if (ataque){
+                                while (ataque){
+                                    Thread.sleep(10);
+                                }
+                            }
                         }
-                    } catch (InterruptedException e) {
+                    }catch (InterruptedException e){
                         Thread.currentThread().interrupt();
+                    } finally {
+                        zonaRiesgo.getLock2().release();
                     }
-                }else if (n_tunel == 3){
-                    try {
-                        zonaRiesgo.getLock3().acquire();
-                        if(ataque == true){
-                            tiempo_ataque3.await();
+
+                } else if (n_tunel == 3){
+                    try{
+                        if (zonaRiesgo.getLock3().tryAcquire(100,TimeUnit.MILLISECONDS)){
+                            // Si le están atacando espera a que termine el ataque
+                            if (ataque){
+                                while (ataque){
+                                    Thread.sleep(10);
+                                }
+                            }
                         }
-                    } catch (InterruptedException e) {
+                    }catch (InterruptedException e){
                         Thread.currentThread().interrupt();
+                    } finally {
+                        zonaRiesgo.getLock3().release();
                     }
-                }else{
-                    try {
-                        zonaRiesgo.getLock4().acquire();
-                        if(ataque == true){
-                            tiempo_ataque4.await();
+
+                } else if (n_tunel == 4){
+                    try{
+                        if (zonaRiesgo.getLock4().tryAcquire(100,TimeUnit.MILLISECONDS)){
+                            // Si le están atacando espera a que termine el ataque
+                            if (ataque){
+                                while (ataque){
+                                    Thread.sleep(10);
+                                }
+                            }
                         }
-                    } catch (InterruptedException e) {
+                    }catch (InterruptedException e){
                         Thread.currentThread().interrupt();
+                    } finally {
+                        zonaRiesgo.getLock4().release();
                     }
                 }
 

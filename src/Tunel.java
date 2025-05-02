@@ -91,9 +91,9 @@ public class Tunel {
         try{
             esperanRiesgoARefugio1.meterh(humano);
             lzr1.add(humano);
-            /*while(!lzr1.isEmpty()){
+            while(!lzr1.isEmpty()){
                 zona_riesgo1.await();
-            }*/
+            }
             esperanRiesgoARefugio1.sacarh(humano);
             lzr1.remove(humano);
             dentroTunel1.meterh(humano);
@@ -135,9 +135,9 @@ public class Tunel {
         try{
             esperanRiesgoARefugio2.meterh(humano);
             lzr2.add(humano);
-            /*while(lzr2.isEmpty()){
+            while(!lzr2.isEmpty()){
                 zona_riesgo2.await();
-            }*/
+            }
             esperanRiesgoARefugio2.sacarh(humano);
             lzr2.remove(humano);
             dentroTunel2.meterh(humano);
@@ -178,9 +178,9 @@ public class Tunel {
         try{
             esperanRiesgoARefugio3.meterh(humano);
             lzr3.add(humano);
-            /*while(lzr3.isEmpty()){
+            while(!lzr3.isEmpty()){
                 zona_riesgo3.await();
-            }*/
+            }
             esperanRiesgoARefugio3.sacarh(humano);
             lzr3.remove(humano);
             dentroTunel3.meterh(humano);
@@ -221,9 +221,9 @@ public class Tunel {
         try{
             esperanRiesgoARefugio4.meterh(humano);
             lzr4.add(humano);
-            /*while(lzr4.isEmpty()){
+            while(!lzr4.isEmpty()){
                 zona_riesgo4.await();
-            }*/
+            }
             esperanRiesgoARefugio4.sacarh(humano);
             lzr4.remove(humano);
             dentroTunel4.meterh(humano);
@@ -347,4 +347,19 @@ public class Tunel {
         return zonaRiesgo;
     }
 
+    public ListaThreads getEsperanRiesgoARefugio1() {
+        return esperanRiesgoARefugio1;
+    }
+
+    public ListaThreads getEsperanRiesgoARefugio2() {
+        return esperanRiesgoARefugio2;
+    }
+
+    public ListaThreads getEsperanRiesgoARefugio3() {
+        return esperanRiesgoARefugio3;
+    }
+
+    public ListaThreads getEsperanRiesgoARefugio4() {
+        return esperanRiesgoARefugio4;
+    }
 }
