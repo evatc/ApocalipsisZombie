@@ -54,20 +54,16 @@ public class Humano extends Thread{
                 }
                 double tiempo1 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
                 Thread.sleep((long) tiempo1);
-                if (ataque){
+                /*if (ataque){
                     System.out.println("Humano " + this.id + " está siendo atacado");
                     while (ataque){
                         Thread.sleep(1);
                     }
                 }
-                System.out.println("Humano " + this.id + " ha terminado de ser atacado");
-
-                if (!vivo) {
-                    break; // Terminar el hilo si el humano ha muerto
-                }
+                System.out.println("Humano " + this.id + " ha terminado de ser atacado");*/
 
                 //mira si hay algún zombie buscando victima
-                /*if (n_tunel == 1) {
+                if (n_tunel == 1) {
                     try {
                         zonaRiesgo.getLock1().acquire();
                         if(ataque == true){
@@ -103,25 +99,26 @@ public class Humano extends Thread{
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
-                }*/
+                }
 
-                if(vivo){//si no le ha matado un zombie sigue con la rutina
+                if (!vivo) {
+                    break; // Terminar el hilo si el humano ha muerto
+                }else{//si no le ha matado un zombie sigue con la rutina
                     zonaRiesgo.salir_humano(this,n_tunel);
+                    if(n_tunel == 1){
+                        zonaRiesgo.getLock1().release();
+                        tunel.entrar1_zona_descanso(this);
+                    }else if(n_tunel == 2){
+                        zonaRiesgo.getLock2().release();
+                        tunel.entrar2_zona_descanso(this);
+                    }else if(n_tunel == 3){
+                        zonaRiesgo.getLock3().release();
+                        tunel.entrar3_zona_descanso(this);
+                    }else{
+                        zonaRiesgo.getLock4().release();
+                        tunel.entrar4_zona_descanso(this);
+                    }
                     if(!herido){ //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
-                        //zonaRiesgo.salir_humano(this,n_tunel);
-                        if(n_tunel == 1){
-                            zonaRiesgo.getLock1().release();
-                            tunel.entrar1_zona_descanso(this);
-                        }else if(n_tunel == 2){
-                            zonaRiesgo.getLock2().release();
-                            tunel.entrar2_zona_descanso(this);
-                        }else if(n_tunel == 3){
-                            zonaRiesgo.getLock3().release();
-                            tunel.entrar3_zona_descanso(this);
-                        }else{
-                            zonaRiesgo.getLock4().release();
-                            tunel.entrar4_zona_descanso(this);
-                        }
                         refugio.getlDescanso().meterh(this);
                         System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");
                         refugio.dejarComida(this);
