@@ -20,7 +20,6 @@ public class Refugio {
     private int comedor;
     private int zona_comun;
     private IntegerProperty comida = new SimpleIntegerProperty(0);
-    private Lock cerrojo = new ReentrantLock();
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
     //private ObservableList<String> ldescanso = FXCollections.observableArrayList();
     //private ObservableList<String> lcomedor = FXCollections.observableArrayList();

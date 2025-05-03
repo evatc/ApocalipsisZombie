@@ -278,7 +278,7 @@ public class Tunel {
             refugio4.signal();
         }catch (Exception e){}
         finally {
-            cerrojo1.unlock();
+            cerrojo4.unlock();
         }
     }
     public void entrar4_zona_descanso(Humano humano) throws InterruptedException {
