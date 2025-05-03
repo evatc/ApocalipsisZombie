@@ -141,22 +141,18 @@ public class Zona_riesgo {
             riesgoHumanos1.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 1");
             lh1.remove(humano);
-            //tunel.getEsperanRiesgoARefugio1().meterh(humano);
         }else if(zona == 2){
             riesgoHumanos2.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 2");
             lh2.remove(humano);
-            //tunel.getEsperanRiesgoARefugio2().meterh(humano);
         }else if(zona == 3){
             riesgoHumanos3.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 3");
             lh3.remove(humano);
-            //tunel.getEsperanRiesgoARefugio3().meterh(humano);
         }else{
             riesgoHumanos4.sacarh(humano);
             System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 4");
             lh4.remove(humano);
-            //tunel.getEsperanRiesgoARefugio4().meterh(humano);
         }
     }
     public void salir_zombie(Zombie zombie, int zona){
@@ -613,6 +609,7 @@ public class Zona_riesgo {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
+                                humano.setAtaque(false);
 
                             }
                         } else {
@@ -652,7 +649,7 @@ public class Zona_riesgo {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-
+                                humano.setAtaque(false);
                             }
                         } else {
                             lock2.release();
@@ -691,7 +688,7 @@ public class Zona_riesgo {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-
+                                humano.setAtaque(false);
                             }
                         } else {
                             lock3.release();
@@ -730,7 +727,7 @@ public class Zona_riesgo {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-
+                                humano.setAtaque(false);
                             }
                         } else {
                             lock4.release();

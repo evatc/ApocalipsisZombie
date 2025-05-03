@@ -18,6 +18,19 @@ public class Tunel {
     private int tunel2;
     private int tunel3;
     private int tunel4;
+    private int enTunel1;
+    private int refugioARiesgo1;
+    private int riesgoARefugio1;
+    private int enTunel2;
+    private int refugioARiesgo2;
+    private int riesgoARefugio2;
+    private int enTunel3;
+    private int refugioARiesgo3;
+    private int riesgoARefugio3;
+    private int enTunel4;
+    private int refugioARiesgo4;
+    private int riesgoARefugio4;
+
     private List<Humano> lzr1 = new ArrayList<>();
     private List<Humano> lzr2 = new ArrayList<>();
     private List<Humano> lzr3 = new ArrayList<>();
@@ -65,18 +78,26 @@ public class Tunel {
     //public Tunel(javafx.scene.control.TextField txtRefugioARiesgo1, javafx.scene.control.TextField txtTunel1, javafx.scene.control.TextField txtRiesgoARefugio1, javafx.scene.control.TextField txtRefugioARiesgo2, javafx.scene.control.TextField txtTunel2, javafx.scene.control.TextField txtRiesgoARefugio2, javafx.scene.control.TextField txtRefugioARiesgo3, javafx.scene.control.TextField txtTunel3, javafx.scene.control.TextField txtRiesgoARefugio3, javafx.scene.control.TextField txtRefugioARiesgo4, javafx.scene.control.TextField txtTunel4, javafx.scene.control.TextField txtRiesgoARefugio4) {
     //}
 
-    public void entrar_zona_riesgo1(Humano humano){
+    public void entrar_zona_riesgo1(Humano humano) throws InterruptedException {
         cerrojo1.lock();
         try{
-            lr1.add(humano);
-            while(!lzr1.isEmpty()){
+            refugioARiesgo1++;
+            while(riesgoARefugio1>0 || enTunel1>0){
                 refugio1.await();
             }
             esperanRefugioARiesgo1.sacarh(humano);
-            lr1.remove(humano);
+            refugioARiesgo1--;
+            enTunel1++;
             dentroTunel1.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo1.unlock();
+        }
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo1.lock();
+        try{
             dentroTunel1.sacarh(humano);
+            enTunel1--;
             zonaRiesgo.entrar_humano(humano,1);
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 1");
             zona_riesgo1.signal();
@@ -86,19 +107,26 @@ public class Tunel {
             cerrojo1.unlock();
         }
     }
-    public void entrar1_zona_descanso(Humano humano){
+    public void entrar1_zona_descanso(Humano humano) throws InterruptedException {
         cerrojo1.lock();
         try{
+            riesgoARefugio1++;
             esperanRiesgoARefugio1.meterh(humano);
-            lzr1.add(humano);
-            while(!lzr1.isEmpty()){
+            while(enTunel1>0){
                 zona_riesgo1.await();
             }
             esperanRiesgoARefugio1.sacarh(humano);
-            lzr1.remove(humano);
+            riesgoARefugio1--;
+            enTunel1++;
             dentroTunel1.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo1.unlock();}
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo1.lock();
+        try{
             dentroTunel1.sacarh(humano);
+            enTunel1--;
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             zona_riesgo1.signal();
             refugio1.signal();
@@ -108,41 +136,55 @@ public class Tunel {
         }
     }
 
-    public void entrar_zona_riesgo2(Humano humano){
+    public void entrar_zona_riesgo2(Humano humano) throws InterruptedException {
         cerrojo2.lock();
         try{
-            lr2.add(humano);
-            while(!lzr2.isEmpty()){
+            refugioARiesgo2++;
+            while(riesgoARefugio2>0 || enTunel2>0){
                 refugio2.await();
             }
             esperanRefugioARiesgo2.sacarh(humano);
-            lr2.remove(humano);
+            refugioARiesgo2--;
+            enTunel2++;
             dentroTunel2.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo2.unlock();
+        }
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo2.lock();
+        try{
             dentroTunel2.sacarh(humano);
+            enTunel2--;
             zonaRiesgo.entrar_humano(humano,2);
-            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 2");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 1");
             zona_riesgo2.signal();
             refugio2.signal();
         }catch (Exception e){}
         finally {
             cerrojo2.unlock();
         }
-
     }
-    public void entrar2_zona_descanso(Humano humano){
+    public void entrar2_zona_descanso(Humano humano) throws InterruptedException {
         cerrojo2.lock();
         try{
+            riesgoARefugio2++;
             esperanRiesgoARefugio2.meterh(humano);
-            lzr2.add(humano);
-            while(!lzr2.isEmpty()){
+            while(enTunel2>0){
                 zona_riesgo2.await();
             }
             esperanRiesgoARefugio2.sacarh(humano);
-            lzr2.remove(humano);
+            riesgoARefugio2--;
+            enTunel2++;
             dentroTunel2.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo2.unlock();}
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo2.lock();
+        try{
             dentroTunel2.sacarh(humano);
+            enTunel2--;
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             zona_riesgo2.signal();
             refugio2.signal();
@@ -152,20 +194,28 @@ public class Tunel {
         }
     }
 
-    public void entrar_zona_riesgo3(Humano humano){
+    public void entrar_zona_riesgo3(Humano humano)throws InterruptedException {
         cerrojo3.lock();
         try{
-            lr3.add(humano);
-            while(!lzr3.isEmpty()){
+            refugioARiesgo3++;
+            while(riesgoARefugio3>0 || enTunel3>0){
                 refugio3.await();
             }
             esperanRefugioARiesgo3.sacarh(humano);
-            lr3.remove(humano);
+            refugioARiesgo3--;
+            enTunel3++;
             dentroTunel3.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo3.unlock();
+        }
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo3.lock();
+        try{
             dentroTunel3.sacarh(humano);
+            enTunel3--;
             zonaRiesgo.entrar_humano(humano,3);
-            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 3");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 1");
             zona_riesgo3.signal();
             refugio3.signal();
         }catch (Exception e){}
@@ -173,19 +223,26 @@ public class Tunel {
             cerrojo3.unlock();
         }
     }
-    public void entrar3_zona_descanso(Humano humano){
+    public void entrar3_zona_descanso(Humano humano) throws InterruptedException {
         cerrojo3.lock();
         try{
+            riesgoARefugio3++;
             esperanRiesgoARefugio3.meterh(humano);
-            lzr3.add(humano);
-            while(!lzr3.isEmpty()){
+            while(enTunel3>0){
                 zona_riesgo3.await();
             }
             esperanRiesgoARefugio3.sacarh(humano);
-            lzr3.remove(humano);
+            riesgoARefugio3--;
+            enTunel3++;
             dentroTunel3.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo3.unlock();}
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo3.lock();
+        try{
             dentroTunel3.sacarh(humano);
+            enTunel3--;
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             zona_riesgo3.signal();
             refugio3.signal();
@@ -195,40 +252,55 @@ public class Tunel {
         }
     }
 
-    public void entrar_zona_riesgo4(Humano humano){
+    public void entrar_zona_riesgo4(Humano humano)throws InterruptedException {
         cerrojo4.lock();
         try{
-            lr4.add(humano);
-            while(!lzr4.isEmpty()){
+            refugioARiesgo4++;
+            while(riesgoARefugio4>0 || enTunel4>0){
                 refugio4.await();
             }
             esperanRefugioARiesgo4.sacarh(humano);
-            lr4.remove(humano);
+            refugioARiesgo4--;
+            enTunel4++;
             dentroTunel4.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo4.unlock();
+        }
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo4.lock();
+        try{
             dentroTunel4.sacarh(humano);
+            enTunel4--;
             zonaRiesgo.entrar_humano(humano,4);
-            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 4");
+            System.out.println("El humano " + humano.gethumanoId() + " ha entrado en la zona de riesgo 1");
             zona_riesgo4.signal();
             refugio4.signal();
         }catch (Exception e){}
         finally {
-            cerrojo4.unlock();
+            cerrojo1.unlock();
         }
     }
-    public void entrar4_zona_descanso(Humano humano){
+    public void entrar4_zona_descanso(Humano humano) throws InterruptedException {
         cerrojo4.lock();
         try{
+            riesgoARefugio4++;
             esperanRiesgoARefugio4.meterh(humano);
-            lzr4.add(humano);
-            while(!lzr4.isEmpty()){
+            while(enTunel4>0){
                 zona_riesgo4.await();
             }
             esperanRiesgoARefugio4.sacarh(humano);
-            lzr4.remove(humano);
+            riesgoARefugio4--;
+            enTunel4++;
             dentroTunel4.meterh(humano);
-            Thread.sleep(1000);
+        }finally {cerrojo4.unlock();}
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel
+        // otros humanos puedan entrar en las zonas de espera
+        Thread.sleep(1000); // Atraviesa el túnel
+        cerrojo4.lock();
+        try{
             dentroTunel4.sacarh(humano);
+            enTunel4--;
             System.out.println("El humano " + humano.gethumanoId() + " ha entrado en el refugio");
             zona_riesgo4.signal();
             refugio4.signal();

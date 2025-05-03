@@ -151,8 +151,9 @@ public class Humano extends Thread{
                         zonaRiesgo.getLock4().release();
                         tunel.entrar4_zona_descanso(this);
                     }
+                    refugio.getlDescanso().meterh(this);
                     if(!herido){ //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
-                        refugio.getlDescanso().meterh(this);
+                        //refugio.getlDescanso().meterh(this);
                         System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");
                         refugio.dejarComida(this);
                     }
