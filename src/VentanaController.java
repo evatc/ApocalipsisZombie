@@ -152,7 +152,6 @@ public class VentanaController implements Initializable {
             // Zombie
             Zombie zombie = new Zombie("Z0000", zonaRiesgo);
             zombie.start();
-            System.out.println("Zombie iniciado: " + zombie.getName());
 
             // Humanos
             for (int i = 1; i <= 10000; i++) { // Reduce a 10 para pruebas
@@ -160,7 +159,6 @@ public class VentanaController implements Initializable {
                     String humanoid = String.format("H%04d", i);
                     Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo/*,tiempo_ataque,tiempo_ataque2,tiempo_ataque3,tiempo_ataque4*/);
                     humano.start();
-                    System.out.println("Humano iniciado: " + humanoid);
                     Thread.sleep((int)(500 * Math.random() + 200)); // Reduce el tiempo
                 } catch (InterruptedException e) {
                     System.out.println("Error al crear humanos: " + e.getMessage());

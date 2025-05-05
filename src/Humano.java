@@ -38,14 +38,13 @@ public class Humano extends Thread{
     }
 
     public void run(){
-        System.out.println("Humano " + this.id + " iniciado");
+        System.out.println("Humano " + this.id + " iniciado.");
         while (vivo) {
             try{
-                System.out.println("Humano " + this.id + " entrando a zona común");
                 refugio.getlZonaComun().meterh(this);
-                double tiempo = (1000 + Math.random() * 1000); //Entre 1 y 2 segundos
+                int tiempo = (int)(1000 + Math.random() * 1000); //Entre 1 y 2 segundos
                 System.out.println("El humano " + this.id + " está en el área común");
-                Thread.sleep((long) tiempo);
+                Thread.sleep(tiempo);
                 int n_tunel = (int) (Math.random() * 4) + 1;
                 System.out.println("El humano " + this.id + " ha elegido el tunel " + n_tunel);
                 refugio.getlZonaComun().sacarh(this);
@@ -58,8 +57,8 @@ public class Humano extends Thread{
                 } else {
                     tunel.zona_espera_tunel4(this);
                 }
-                double tiempo1 = (3 + Math.random()*2)*1000; // ns si ponerlo aquí o dentro de un método
-                Thread.sleep((long) tiempo1);
+                int tiempoEnZonaRiesgo = (int)((Math.random()*2000)+5000); // Entre 3 y 5 segundos
+                Thread.sleep(tiempoEnZonaRiesgo);
                 /*if (ataque){
                     System.out.println("Humano " + this.id + " está siendo atacado");
                     while (ataque){
@@ -157,10 +156,10 @@ public class Humano extends Thread{
                         System.out.println("El humano " + this.id + " ha recolectado 2 piezas de comida");
                         refugio.dejarComida(this);
                     }
-                    double tiempo2 = (2 + Math.random()*2)*1000; //Entre 2 y 4 segundos
+                    int tiempoEnzonaDescanso = (int)(Math.random()*2000)+2000; //Entre 2 y 4 segundos
                     System.out.println("El humano " + this.id + " está en el área de descanso");
                     try{
-                        Thread.sleep((long) tiempo2);
+                        Thread.sleep(tiempoEnzonaDescanso);
                     }catch(InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
@@ -172,8 +171,8 @@ public class Humano extends Thread{
                     if(herido){
                         refugio.getlDescanso().meterh(this);
                         System.out.println("El humano " + this.id + " ha vuelto al área de descanso para curar sus heridas");
-                        double tiempo3 = (3 + Math.random()*2)*1000; // Entre 3 y 5 segundos
-                        Thread.sleep((long) tiempo3);
+                        int tiempoEnzonaDescanso2 = (int)(Math.random()*2000)+3000; // Entre 3 y 5 segundos
+                        Thread.sleep(tiempoEnzonaDescanso2);
                         refugio.getlDescanso().sacarh(this);
                         herido = false;
                     }

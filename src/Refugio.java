@@ -5,10 +5,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -20,7 +18,9 @@ public class Refugio {
     private int comedor;
     private int zona_comun;
     private IntegerProperty comida = new SimpleIntegerProperty(0);
+    //private AtomicInteger comida = new AtomicInteger(0);
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
+    private Semaphore semaforoComida = new Semaphore(1, true);
     //private ObservableList<String> ldescanso = FXCollections.observableArrayList();
     //private ObservableList<String> lcomedor = FXCollections.observableArrayList();
     //private ObservableList<String> lzonaComun = FXCollections.observableArrayList();
@@ -60,14 +60,51 @@ public class Refugio {
             });
 
             filaComedor.poll(); //Saca la primer humano de la fila
-            System.out.println(humano.gethumanoId() + " ha comido.");
-            double tiempo1 = (3 + Math.random()*2)*1000;
-            Thread.sleep((long)tiempo1);
+            System.out.println(humano.gethumanoId() + " ha comido. Comida total: " + getComida() + ".");
+            int tiempoComer = (int)(Math.random()*2000)+3000; //Entre 3 y 5 segundos
+            Thread.sleep(tiempoComer);
             notifyAll();
 
         }catch(Exception e){}
     }
 
+    /*public void dejarComida(Humano humano) {
+        int nuevaCantidad = comida.addAndGet(2);
+        Platform.runLater(() -> {
+            System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + nuevaCantidad + ".");
+        });
+    }
+
+    public void comer(Humano humano) {
+        filaComedor.offer(humano);
+
+        try {
+            while (true) {
+                int comidaActual = comida.get();
+
+                // Si no hay comida o no es nuestro turno, esperar
+                if (comidaActual <= 0 || filaComedor.peek() != humano) {
+                    Thread.sleep(100); // Pequeña espera para no saturar la CPU
+                    continue;
+                }
+
+                // Intentar decrementar la comida
+                if (comida.compareAndSet(comidaActual, comidaActual - 1)) {
+                    // Éxito: podemos comer
+                    Platform.runLater(() -> {
+                        System.out.println(humano.gethumanoId() + " ha comido. Comida total: " + (comidaActual - 1) + ".");
+                    });
+
+                    filaComedor.poll(); // Salir de la fila
+                    int tiempoComer = (int)(Math.random()*2000)+3000; // Entre 3 y 5 segundos
+                    Thread.sleep(tiempoComer);
+                    break;
+                }
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }*/
 
     public int getComida() {
         return comida.get();
@@ -79,6 +116,27 @@ public class Refugio {
     public IntegerProperty comidaProperty(){
         return comida;
     }
+    /*public IntegerProperty comidaProperty() {
+        IntegerProperty property = new SimpleIntegerProperty();
+        property.set(comida.get());
+        // Actualizar la propiedad cuando cambie el AtomicInteger
+        new Thread(() -> {
+            int lastValue = comida.get();
+            while (true) {
+                int currentValue = comida.get();
+                if (currentValue != lastValue) {
+                    Platform.runLater(() -> property.set(currentValue));
+                    lastValue = currentValue;
+                }
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    break;
+                }
+            }
+        }).start();
+        return property;
+    }*/
     /*public ObservableList<String> getlDescanso(){
         return ldescanso;
     }

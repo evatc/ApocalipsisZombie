@@ -4,21 +4,30 @@ public class Zombie extends Thread{
     private String id;
     private int cont_muertes = 0;
     private Zona_riesgo zonaRiesgo;
+    private boolean convertido = false;
+    private int n_zonaRiesgo;
     public Zombie(String id, Zona_riesgo zonaRiesgo){
         this.id = id;
         this.zonaRiesgo = zonaRiesgo;
     }
 
     public void run(){
+        System.out.println("Zombie " + this.id + " iniciado.");
 
         while (true) {
-            int n_zonariesgo = (int) (Math.random() * 4) + 1;
-            zonaRiesgo.entrar_zombie(this,n_zonariesgo);
-            zonaRiesgo.ataque(this,n_zonariesgo);
+            // Si un humano se convierte en zombie tiene que empezar en la zona en la que murió
+            if (convertido){
+                convertido = false;
+            }
+            else{
+                n_zonaRiesgo = (int) (Math.random() * 4) + 1;
+            }
+            zonaRiesgo.entrar_zombie(this,n_zonaRiesgo);
+            zonaRiesgo.ataque(this,n_zonaRiesgo);
             try{
-                sleep((int)(1000*Math.random() + 2000));
+                sleep((int)(1000*Math.random() + 2000)); //Entre 2 y 3 segundos
             }catch(Exception e){}
-            zonaRiesgo.salir_zombie(this,n_zonariesgo);
+            zonaRiesgo.salir_zombie(this,n_zonaRiesgo);
         }
     }
 
@@ -34,5 +43,15 @@ public class Zombie extends Thread{
         return id;
     }
 
+    public boolean isConvertido() {
+        return convertido;
+    }
 
+    public void setConvertido(boolean convertido) {
+        this.convertido = convertido;
+    }
+
+    public void setN_zonaRiesgo(int n_zonaRiesgo) {
+        this.n_zonaRiesgo = n_zonaRiesgo;
+    }
 }

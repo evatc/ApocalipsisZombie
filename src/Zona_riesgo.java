@@ -43,6 +43,7 @@ public class Zona_riesgo {
     private CountDownLatch tiempo_ataque2;
     private CountDownLatch tiempo_ataque3;
     private CountDownLatch tiempo_ataque4;
+    private int n_zonaRiesgo;
 
     public Zona_riesgo(TextField c1, TextField c2, TextField c3, TextField c4,
                        TextField c5, TextField c6, TextField c7, TextField c8
@@ -81,39 +82,35 @@ public class Zona_riesgo {
     public void entrar_humano(Humano humano,int zona){ //esta función depende del tunel
         if(zona == 1){
             try {
-                cerrojo1.lock();
+               // cerrojo1.lock();
                 riesgoHumanos1.meterh(humano);
                 lh1.add(humano);
-                System.out.println("Lista humanos1: " + lh1);
             }finally {
-                cerrojo1.unlock();
+                //cerrojo1.unlock();
             }
         }else if(zona == 2){
             try {
-                cerrojo2.lock();
+                //cerrojo2.lock();
                 riesgoHumanos2.meterh(humano);
                 lh2.add(humano);
-                System.out.println("Lista humanos2: " + lh2);
             }finally {
-                cerrojo2.unlock();
+                //cerrojo2.unlock();
             }
         }else if(zona == 3){
             try {
-                cerrojo3.lock();
+                //cerrojo3.lock();
                 riesgoHumanos3.meterh(humano);
                 lh3.add(humano);
-                System.out.println("Lista humanos3: " + lh3);
             }finally {
-                cerrojo3.unlock();
+                //cerrojo3.unlock();
             }
         }else{
             try {
-                cerrojo4.lock();
+                //cerrojo4.lock();
                 riesgoHumanos4.meterh(humano);
                 lh4.add(humano);
-                System.out.println("Lista humanos4: " + lh4);
             }finally {
-                cerrojo4.unlock();
+                //cerrojo4.unlock();
             }
         }
     }
@@ -139,20 +136,24 @@ public class Zona_riesgo {
     public void salir_humano(Humano humano, int zona){
         if(zona == 1){
             riesgoHumanos1.sacarh(humano);
-            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 1");
             lh1.remove(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha salido de la zona de riesgo 1");
+
         }else if(zona == 2){
             riesgoHumanos2.sacarh(humano);
-            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 2");
             lh2.remove(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha salido de la zona de riesgo 2");
+
         }else if(zona == 3){
             riesgoHumanos3.sacarh(humano);
-            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 3");
             lh3.remove(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha salido de la zona de riesgo 3");
+
         }else{
             riesgoHumanos4.sacarh(humano);
-            System.out.println("El humano " + humano.gethumanoId() + "ha salido de la zona de riesgo 4");
             lh4.remove(humano);
+            System.out.println("El humano " + humano.gethumanoId() + " ha salido de la zona de riesgo 4");
+
         }
     }
     public void salir_zombie(Zombie zombie, int zona){
@@ -589,7 +590,7 @@ public class Zona_riesgo {
                             humano.setAtaque(true);
                             lock1.release();
                             System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
-                            int tiempoAtaque = (int)(Math.random()*1000)+500;
+                            int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
@@ -599,19 +600,22 @@ public class Zona_riesgo {
                                 riesgoHumanos1.sacarh(humano);
                                 int muertes = zombie.getCont_muertes();
                                 zombie.setCont_muertes(muertes+1);
+                                System.out.println("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
+                                System.out.println("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
                                 Zombie zombie1 = new Zombie(zombieId, this);
-                                System.out.println("El humano " + humano.gethumanoId() + " ha muerto y se ha convertido en zombie");
+                                System.out.println("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
+                                zombie1.setConvertido(true);
+                                zombie1.setN_zonaRiesgo(1);
                                 zombie1.start();
                             } else{
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-                                humano.setAtaque(false);
-
                             }
+                            humano.setAtaque(false);
                         } else {
                             lock1.release();
                         }
@@ -629,7 +633,7 @@ public class Zona_riesgo {
                             humano.setAtaque(true);
                             lock2.release();
                             System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
-                            int tiempoAtaque = (int)(Math.random()*1000)+500;
+                            int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
@@ -639,18 +643,22 @@ public class Zona_riesgo {
                                 riesgoHumanos2.sacarh(humano);
                                 int muertes = zombie.getCont_muertes();
                                 zombie.setCont_muertes(muertes+1);
+                                System.out.println("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
+                                System.out.println("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
                                 Zombie zombie1 = new Zombie(zombieId, this);
-                                System.out.println("El humano " + humano.gethumanoId() + " ha muerto y se ha convertido en zombie");
+                                System.out.println("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
+                                zombie1.setConvertido(true);
+                                zombie1.setN_zonaRiesgo(2);
                                 zombie1.start();
                             } else{
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-                                humano.setAtaque(false);
                             }
+                            humano.setAtaque(false);
                         } else {
                             lock2.release();
                         }
@@ -668,7 +676,7 @@ public class Zona_riesgo {
                             humano.setAtaque(true);
                             lock3.release();
                             System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
-                            int tiempoAtaque = (int)(Math.random()*1000)+500;
+                            int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
@@ -678,18 +686,22 @@ public class Zona_riesgo {
                                 riesgoHumanos3.sacarh(humano);
                                 int muertes = zombie.getCont_muertes();
                                 zombie.setCont_muertes(muertes+1);
+                                System.out.println("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
+                                System.out.println("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
                                 Zombie zombie1 = new Zombie(zombieId, this);
-                                System.out.println("El humano " + humano.gethumanoId() + " ha muerto y se ha convertido en zombie");
+                                System.out.println("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
+                                zombie1.setConvertido(true);
+                                zombie1.setN_zonaRiesgo(3);
                                 zombie1.start();
                             } else{
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-                                humano.setAtaque(false);
                             }
+                            humano.setAtaque(false);
                         } else {
                             lock3.release();
                         }
@@ -707,7 +719,7 @@ public class Zona_riesgo {
                             humano.setAtaque(true);
                             lock4.release();
                             System.out.println("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
-                            int tiempoAtaque = (int)(Math.random()*1000)+500;
+                            int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
@@ -717,18 +729,22 @@ public class Zona_riesgo {
                                 riesgoHumanos4.sacarh(humano);
                                 int muertes = zombie.getCont_muertes();
                                 zombie.setCont_muertes(muertes+1);
+                                System.out.println("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
+                                System.out.println("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
                                 Zombie zombie1 = new Zombie(zombieId, this);
-                                System.out.println("El humano " + humano.gethumanoId() + " ha muerto y se ha convertido en zombie");
+                                System.out.println("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
+                                zombie1.setConvertido(true);
+                                zombie1.setN_zonaRiesgo(4);
                                 zombie1.start();
                             } else{
                                 // El humano está herido
                                 humano.setHerido(true);
                                 System.out.println("El humano " + humano.gethumanoId() + " ha sido herido");
-                                humano.setAtaque(false);
                             }
+                            humano.setAtaque(false);
                         } else {
                             lock4.release();
                         }
@@ -819,5 +835,9 @@ public class Zona_riesgo {
 
     public Semaphore getLock4() {
         return lock4;
+    }
+
+    public int getN_zonaRiesgo() {
+        return n_zonaRiesgo;
     }
 }
