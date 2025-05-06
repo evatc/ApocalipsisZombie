@@ -12,26 +12,14 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Refugio {
     private  ListaThreads lDescanso, lComedor, lZonaComun;
-    private Tunel tunel;
-    private Zona_riesgo zonaRiesgo;
-    private int zona_descanso;
-    private int comedor;
-    private int zona_comun;
     //private IntegerProperty comida = new SimpleIntegerProperty(0);
     private AtomicInteger comida = new AtomicInteger(0);
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
-    private Semaphore semaforoComida = new Semaphore(1, true);
-    //private ObservableList<String> ldescanso = FXCollections.observableArrayList();
-    //private ObservableList<String> lcomedor = FXCollections.observableArrayList();
-    //private ObservableList<String> lzonaComun = FXCollections.observableArrayList();
 
     public Refugio(TextField c1, TextField c2, TextField c3) {
         lDescanso = new ListaThreads(c1);
         lComedor = new ListaThreads(c2);
         lZonaComun = new ListaThreads(c3);
-        this.zona_descanso = 1;
-        this.comedor = 2;
-        this.zona_comun = 3;
         this.comida.set(0);
 
     }
@@ -137,15 +125,6 @@ public class Refugio {
         }).start();
         return property;
     }
-    /*public ObservableList<String> getlDescanso(){
-        return ldescanso;
-    }
-    public ObservableList<String> getlComedor(){
-        return lcomedor;
-    }
-    public ObservableList<String> getlZonaComun(){
-        return lzonaComun;
-    }*/
 
     public ListaThreads getlDescanso() {
         return lDescanso;

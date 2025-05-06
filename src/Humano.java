@@ -14,27 +14,23 @@ public class Humano extends Thread{
     private boolean herido = false;
     private boolean vivo = true;
     private boolean ataque = false;
-    //private CountDownLatch tiempo_ataque1 = new CountDownLatch(1);
-    //private CountDownLatch tiempo_ataque2 = new CountDownLatch(1);
-    //private CountDownLatch tiempo_ataque3 = new CountDownLatch(1);
-    //private CountDownLatch tiempo_ataque4 = new CountDownLatch(1);
-    private Semaphore ataqueEnCurso1 = new Semaphore(1);
-    private Semaphore ataqueEnCurso2 = new Semaphore(1);
-    private Semaphore ataqueEnCurso3 = new Semaphore(1);
-    private Semaphore ataqueEnCurso4 = new Semaphore(1);
+    private Semaphore tiempo_ataque1;
+    private Semaphore tiempo_ataque2;
+    private Semaphore tiempo_ataque3;
+    private Semaphore tiempo_ataque4;
     public Humano(){}
 
-    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo/*,
-                  CountDownLatch tiempo_ataque1, CountDownLatch tiempo_ataque2,
-                  CountDownLatch tiempo_ataque3, CountDownLatch tiempo_ataque4*/){
+    public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo,
+                  Semaphore tiempo_ataque1, Semaphore tiempo_ataque2,
+                  Semaphore tiempo_ataque3, Semaphore tiempo_ataque4){
         this.id = id;
         this.refugio = refugio;
         this.tunel = tunel;
         this.zonaRiesgo = zonaRiesgo;
-        //this.tiempo_ataque1 = tiempo_ataque1;
-        //this.tiempo_ataque2 = tiempo_ataque2;
-        //this.tiempo_ataque3 = tiempo_ataque3;
-        //this.tiempo_ataque4 = tiempo_ataque4;
+        this.tiempo_ataque1 = tiempo_ataque1;
+        this.tiempo_ataque2 = tiempo_ataque2;
+        this.tiempo_ataque3 = tiempo_ataque3;
+        this.tiempo_ataque4 = tiempo_ataque4;
     }
 
     public void run(){
@@ -59,13 +55,6 @@ public class Humano extends Thread{
                 }
                 int tiempoEnZonaRiesgo = (int)((Math.random()*2000)+5000); // Entre 3 y 5 segundos
                 Thread.sleep(tiempoEnZonaRiesgo);
-                /*if (ataque){
-                    System.out.println("Humano " + this.id + " está siendo atacado");
-                    while (ataque){
-                        Thread.sleep(1);
-                    }
-                }
-                System.out.println("Humano " + this.id + " ha terminado de ser atacado");*/
 
                 //mira si hay algún zombie buscando victima
                 if (n_tunel == 1){
@@ -74,8 +63,9 @@ public class Humano extends Thread{
                             // Si le están atacando espera a que termine el ataque
                             if (ataque){
                                 while (ataque){
-                                    Thread.sleep(10);
+                                    tiempo_ataque1.acquire();
                                 }
+                                tiempo_ataque1.release();
                             }
                         }
                     }catch (InterruptedException e){
@@ -90,8 +80,9 @@ public class Humano extends Thread{
                             // Si le están atacando espera a que termine el ataque
                             if (ataque){
                                 while (ataque){
-                                    Thread.sleep(10);
+                                    tiempo_ataque2.acquire();
                                 }
+                                tiempo_ataque2.release();
                             }
                         }
                     }catch (InterruptedException e){
@@ -106,8 +97,9 @@ public class Humano extends Thread{
                             // Si le están atacando espera a que termine el ataque
                             if (ataque){
                                 while (ataque){
-                                    Thread.sleep(10);
+                                    tiempo_ataque3.acquire();
                                 }
+                                tiempo_ataque3.release();
                             }
                         }
                     }catch (InterruptedException e){
@@ -122,8 +114,9 @@ public class Humano extends Thread{
                             // Si le están atacando espera a que termine el ataque
                             if (ataque){
                                 while (ataque){
-                                    Thread.sleep(10);
+                                    tiempo_ataque4.acquire();
                                 }
+                                tiempo_ataque4.release();
                             }
                         }
                     }catch (InterruptedException e){

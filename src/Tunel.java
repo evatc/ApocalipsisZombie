@@ -1,8 +1,6 @@
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -13,11 +11,7 @@ public class Tunel {
     private ListaThreads esperanRefugioARiesgo2, dentroTunel2, esperanRiesgoARefugio2;
     private ListaThreads esperanRefugioARiesgo3, dentroTunel3, esperanRiesgoARefugio3;
     private ListaThreads esperanRefugioARiesgo4, dentroTunel4, esperanRiesgoARefugio4;
-    private Zona_riesgo zonaRiesgo /*= new Zona_riesgo()*/;
-    private int tunel1;
-    private int tunel2;
-    private int tunel3;
-    private int tunel4;
+    private Zona_riesgo zonaRiesgo;
     private int enTunel1;
     private int refugioARiesgo1;
     private int riesgoARefugio1;
@@ -69,14 +63,7 @@ public class Tunel {
         esperanRefugioARiesgo4 = new ListaThreads(c14);
         dentroTunel4 = new ListaThreads(c24);
         esperanRiesgoARefugio4 = new ListaThreads(c34);
-        this.tunel1 = 1;
-        this.tunel2 = 2;
-        this.tunel3 = 3;
-        this.tunel4 = 4;
     }
-
-    //public Tunel(javafx.scene.control.TextField txtRefugioARiesgo1, javafx.scene.control.TextField txtTunel1, javafx.scene.control.TextField txtRiesgoARefugio1, javafx.scene.control.TextField txtRefugioARiesgo2, javafx.scene.control.TextField txtTunel2, javafx.scene.control.TextField txtRiesgoARefugio2, javafx.scene.control.TextField txtRefugioARiesgo3, javafx.scene.control.TextField txtTunel3, javafx.scene.control.TextField txtRiesgoARefugio3, javafx.scene.control.TextField txtRefugioARiesgo4, javafx.scene.control.TextField txtTunel4, javafx.scene.control.TextField txtRiesgoARefugio4) {
-    //}
 
     public void entrar_zona_riesgo1(Humano humano) throws InterruptedException {
         cerrojo1.lock();
@@ -92,8 +79,7 @@ public class Tunel {
             dentroTunel1.meterh(humano);
         }finally {cerrojo1.unlock();
         }
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 1.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo1.lock();
@@ -123,8 +109,7 @@ public class Tunel {
             enTunel1++;
             dentroTunel1.meterh(humano);
         }finally {cerrojo1.unlock();}
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 1.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo1.lock();
@@ -154,8 +139,7 @@ public class Tunel {
             dentroTunel2.meterh(humano);
         }finally {cerrojo2.unlock();
         }
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 2.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo2.lock();
@@ -185,8 +169,7 @@ public class Tunel {
             enTunel2++;
             dentroTunel2.meterh(humano);
         }finally {cerrojo2.unlock();}
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 2.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo2.lock();
@@ -216,8 +199,7 @@ public class Tunel {
             dentroTunel3.meterh(humano);
         }finally {cerrojo3.unlock();
         }
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 3.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo3.lock();
@@ -247,8 +229,7 @@ public class Tunel {
             enTunel3++;
             dentroTunel3.meterh(humano);
         }finally {cerrojo3.unlock();}
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 3.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo3.lock();
@@ -278,8 +259,7 @@ public class Tunel {
             dentroTunel4.meterh(humano);
         }finally {cerrojo4.unlock();
         }
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 4.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo4.lock();
@@ -309,8 +289,7 @@ public class Tunel {
             enTunel4++;
             dentroTunel4.meterh(humano);
         }finally {cerrojo4.unlock();}
-        // Hay dos cerrojo para que mientras un humano este pasando el túnel
-        // otros humanos puedan entrar en las zonas de espera
+        // Hay dos cerrojo para que mientras un humano este pasando el túnel otros humanos puedan entrar en las zonas de espera
         System.out.println("El humano " + humano.gethumanoId() + " está atravesando el túnel 4.");
         Thread.sleep(1000); // Atraviesa el túnel
         cerrojo4.lock();
