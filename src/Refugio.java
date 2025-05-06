@@ -17,8 +17,8 @@ public class Refugio {
     private int zona_descanso;
     private int comedor;
     private int zona_comun;
-    private IntegerProperty comida = new SimpleIntegerProperty(0);
-    //private AtomicInteger comida = new AtomicInteger(0);
+    //private IntegerProperty comida = new SimpleIntegerProperty(0);
+    private AtomicInteger comida = new AtomicInteger(0);
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
     private Semaphore semaforoComida = new Semaphore(1, true);
     //private ObservableList<String> ldescanso = FXCollections.observableArrayList();
@@ -38,7 +38,7 @@ public class Refugio {
     //He utilizado una cola porque si no hay comida tienen que
     //esperar de forma ordenada y monitores para la exclusión mutua
     // pero ns si estará bien
-    public synchronized void dejarComida(Humano humano){
+    /*public synchronized void dejarComida(Humano humano){
         Platform.runLater(()-> {
             int comida = getComida();
             setComida(comida + 2);
@@ -66,9 +66,9 @@ public class Refugio {
             notifyAll();
 
         }catch(Exception e){}
-    }
+    }*/
 
-    /*public void dejarComida(Humano humano) {
+    public void dejarComida(Humano humano) {
         int nuevaCantidad = comida.addAndGet(2);
         Platform.runLater(() -> {
             System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + nuevaCantidad + ".");
@@ -104,7 +104,7 @@ public class Refugio {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-    }*/
+    }
 
     public int getComida() {
         return comida.get();
@@ -113,10 +113,10 @@ public class Refugio {
     public void setComida(int comida) {
         this.comida.set(comida);
     }
-    public IntegerProperty comidaProperty(){
+    /*public IntegerProperty comidaProperty(){
         return comida;
-    }
-    /*public IntegerProperty comidaProperty() {
+    }*/
+    public IntegerProperty comidaProperty() {
         IntegerProperty property = new SimpleIntegerProperty();
         property.set(comida.get());
         // Actualizar la propiedad cuando cambie el AtomicInteger
@@ -136,7 +136,7 @@ public class Refugio {
             }
         }).start();
         return property;
-    }*/
+    }
     /*public ObservableList<String> getlDescanso(){
         return ldescanso;
     }
