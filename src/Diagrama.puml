@@ -1,0 +1,237 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Tunel{
+-esperanRefugioARiesgo1: ListaThreads
+-dentroTunel1: ListaThreads
+-esperanRiesgoARefugio1: ListaThreads
+-esperanRefugioARiesgo2: ListaThreads
+-dentroTunel2: ListaThreads
+-esperanRiesgoARefugio2: ListaThreads
+-esperanRefugioARiesgo3: ListaThreads
+-dentroTunel3: ListaThreads
+-esperanRiesgoARefugio3: ListaThreads
+-esperanRefugioARiesgo4: ListaThreads
+-dentroTunel4: ListaThreads
+-esperanRiesgoARefugio4: ListaThreads
+-zonaRiesgo: Zona_riesgo
+-enTunel1: int
+-refugioARiesgo1: int
+-riesgoARefugio1: int
+-enTunel2: int
+-refugioARiesgo2: int
+-riesgoARefugio2: int
+-enTunel3: int
+-refugioARiesgo3: int
+-riesgoARefugio3: int
+-enTunel4: int
+-refugioARiesgo4: int
+-riesgoARefugio4: int
+-lzr1: List<Humano>
+-lzr2: List<Humano>
+-lrz3: List<Humano>
+-lrz4: List<Humano>
+-lr1: List<Humano>
+-lr2: List<Humano>
+-lr3: List<Humano>
+-lr4: List<Humano>
+-cerrojo1: Lock
+-refugio1: Condition
+-zona_riesgo1: Condition
+-cerrojo2: Lock
+-refugio2: Condition
+-zona_riesgo2: Condition
+-cerrojo3: Lock
+-refugio3: Condition
+-zona_riesgo3: Condition
+-cerrojo4: Lock
+-refugio4: Condition
+-zona_riesgo4: Condition
+-barrera1: CyclicBarrier
+-barrera2: CyclicBarrier
+-barrera3: CyclicBarrier
+-barrera4: CyclicBarrier
+-log: Logs
++entrar_zona_riesgo1(humano: Humano): void
++entrar1_zona_descanso(humano: Humano): void
++entrar_zona_riesgo2(humano: Humano): void
++entrar2_zona_descanso(humano: Humano): void
++entrar_zona_riesgo3(humano: Humano): void
++entrar3_zona_descanso(humano: Humano): void
++entrar_zona_riesgo4(humano: Humano): void
++entrar4_zona_descanso(humano: Humano): void
++zona_espera_tunel1(humano: Humano): void
++zona_espera_tunel2(humano: Humano): void
++zona_espera_tunel3(humano: Humano): void
++zona_espera_tunel4(humano: Humano): void
+}
+
+class Refugio{
+-lDescanso: ListaThreads
+-lComedor: ListaThreads
+-lZonaComun: ListaThreads
+-comida: AtomicInteger
+-filaComedor: ConcurrentLinkedQueue<Humano>
+-log: Logs
++dejarComida(humano: Humano): void
++comer(humano: Humano): void
+}
+
+class Zona_riesgo{
+-riesgoHumanos1: ListaThreads
+-riesgoHumanos2: ListaThreads
+-riesgoHumanos3: ListaThreads
+-riesgoHumanos4: ListaThreads
+-riesgoZombies1: ListaThreads
+-riesgoZombies2: ListaThreads
+-riesgoZombies3: ListaThreads
+-riesgoZombies4: ListaThreads
+-lh1: ConcurrentLinkedQueue<Humano>
+-lh2: ConcurrentLinkedQueue<Humano>
+-lh3: ConcurrentLinkedQueue<Humano>
+-lh4: ConcurrentLinkedQueue<Humano>
+-lz1: ConcurrentLinkedQueue<Zombie>
+-lz2: ConcurrentLinkedQueue<Zombie>
+-lz3: ConcurrentLinkedQueue<Zombie>
+-lz4: ConcurrentLinkedQueue<Zombie>
+-cerrojo1: Lock
+-cerrojo2: Lock
+-cerrojo3: Lock
+-cerrojo4: Lock
+-tunel: Tunel
+-lock1: Semaphore
+-lock2: Semaphore
+-lock3: Semaphore
+-lock4: Semaphore
+-tiempo_ataque1: Semaphore
+-tiempo_ataque2: Semaphore
+-tiempo_ataque3: Semaphore
+-tiempo_ataque4: Semaphore
+-log: Logs
++entrar_humano(humano: Humano, zona: int): void
++entrar_zombie(zombie: Zombie, zona: int): void
++salir_humano(humano: Humano, zona: int): void
++salir_zombie(zombie: Zombie, zona: int): void
++ataque(zombie: Zombie, zona: int): void
+-seleccionarHumano(cola: ConcurrentLinkedQueue<Humano>): Humano
+}
+
+class Logs{
+-fichero: File
+-escritor: BufferedWriter
+-formato: DateTimeFormatter
+-fecha_hora: String
++abrir(append: boolean): void
++escribir(contenido: String): void
++cerrar(): void
+}
+
+class Zombie{
+-id: String
+-cont_muertes: int
+-zonaRiesgo: Zona_riesgo
+-convertido: boolean
+-n_zonaRiesgo: int
+-log: Logs
++run()
+}
+
+class ListaThreads{
+-listah: ArrayList<Humano>
+-listaz: ArrayList<Zombie>
+-txtfield: TextField
++meterh(t: Humano): void
++sacarh(t: Humano): void
++imprimirh(): void
++meterz(t: Zombie): void
++sacarz(t: Zombie): void
++imprimirz(): void
+}
+
+class Humano{
+-id: String
+-refugio: Refugio
+-tunel: Tunel
+-zonaRiesgo: Zona_riesgo
+-herido: boolean
+-vivo: boolean
+-ataque: boolean
+-tiempo_ataque1: Semaphore
+-tiempo_ataque2: Semaphore
+-tiempo_ataque3: Semaphore
+-tiempo_ataque4: Semaphore
+-log: Logs
++run()
+}
+
+class VentanaController{
+-labelComida: Label
+-txtDescanso: TextField
+-txtComedor: TextField
+-txtZonaComun: TextField
+-txtRefugioARiesgo1: TextField
+-txtTunel1: TextField
+-txtRiesgoARefugio1: TextField
+-txtRefugioARiesgo2: TextField
+-txtTunel2: TextField
+-txtRiesgoARefugio2: TextField
+-txtRefugioARiesgo3: TextField
+-txtTunel3: TextField
+-txtRiesgoARefugio3: TextField
+-txtRefugioARiesgo4: TextField
+-txtTunel4: TextField
+-txtRiesgoARefugio4: TextField
+-txtRiesgoHumanos1: TextField
+-txtRiesgoZombies1: TextField
+-txtRiesgoHumanos2: TextField
+-txtRiesgoZombies2: TextField
+-txtRiesgoHumanos3: TextField
+-txtRiesgoZombies3: TextField
+-txtRiesgoHumanos4: TextField
+-txtRiesgoZombies4: TextField
++initialize(url: URL, resourceBundle: ResourceBundle): void
+}
+
+class Main{
++start(stage: Stage): void
++(static) main(args: String[]): void
+}
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam dpi 150
+
+VentanaController *-- Refugio
+VentanaController *-- Tunel
+VentanaController *-- Zona_riesgo
+
+Humano *-- Logs
+Zombie *-- Logs
+
+Refugio o-- ListaThreads
+Tunel o-- ListaThreads
+Zona_riesgo o-- ListaThreads
+
+Tunel o-- Zona_riesgo
+Zona_riesgo o-- Tunel
+
+Main ..> VentanaController
+Main ..> Logs
+VentanaController ..> Logs
+Refugio ..> Logs
+Tunel ..> Logs
+Zona_riesgo ..> Logs
+
+Humano ..> Logs
+Zombie ..> Logs
+Humano --> Refugio
+Humano --> Tunel
+Humano --> Zona_riesgo
+Zombie --> Refugio
+Zombie --> Tunel
+Zombie --> Zona_riesgo
+
+Refugio --> Humano
+
+Zona_riesgo -[hidden]--> Tunel
+@enduml

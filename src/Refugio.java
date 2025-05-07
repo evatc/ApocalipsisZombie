@@ -15,13 +15,14 @@ public class Refugio {
     //private IntegerProperty comida = new SimpleIntegerProperty(0);
     private AtomicInteger comida = new AtomicInteger(0);
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
+    private Logs log;
 
-    public Refugio(TextField c1, TextField c2, TextField c3) {
+    public Refugio(TextField c1, TextField c2, TextField c3, Logs log) {
         lDescanso = new ListaThreads(c1);
         lComedor = new ListaThreads(c2);
         lZonaComun = new ListaThreads(c3);
         this.comida.set(0);
-
+        this.log = log;
     }
     //He utilizado una cola porque si no hay comida tienen que
     //esperar de forma ordenada y monitores para la exclusión mutua
@@ -30,7 +31,7 @@ public class Refugio {
         Platform.runLater(()-> {
             int comida = getComida();
             setComida(comida + 2);
-            System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + getComida() + ".");
+            log.escribir(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + getComida() + ".");
         });
         notifyAll();
 
@@ -40,7 +41,7 @@ public class Refugio {
             filaComedor.offer(humano); //Añade al humano a la fila
 
             while (comida.get() == 0 || filaComedor.peek() != humano) {
-                System.out.println(humano.gethumanoId() + " esta esperando en la cola.");
+                log.escribir(humano.gethumanoId() + " esta esperando en la cola.");
                 wait();
             }
             Platform.runLater(()->{
@@ -48,7 +49,7 @@ public class Refugio {
             });
 
             filaComedor.poll(); //Saca la primer humano de la fila
-            System.out.println(humano.gethumanoId() + " ha comido. Comida total: " + getComida() + ".");
+            log.escribir(humano.gethumanoId() + " ha comido. Comida total: " + getComida() + ".");
             int tiempoComer = (int)(Math.random()*2000)+3000; //Entre 3 y 5 segundos
             Thread.sleep(tiempoComer);
             notifyAll();
@@ -59,7 +60,7 @@ public class Refugio {
     public void dejarComida(Humano humano) {
         int nuevaCantidad = comida.addAndGet(2);
         Platform.runLater(() -> {
-            System.out.println(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + nuevaCantidad + ".");
+            log.escribir(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + nuevaCantidad + ".");
         });
     }
 
@@ -80,7 +81,7 @@ public class Refugio {
                 if (comida.compareAndSet(comidaActual, comidaActual - 1)) {
                     // Éxito: podemos comer
                     Platform.runLater(() -> {
-                        System.out.println(humano.gethumanoId() + " ha comido. Comida total: " + (comidaActual - 1) + ".");
+                        log.escribir(humano.gethumanoId() + " ha comido. Comida total: " + (comidaActual - 1) + ".");
                     });
 
                     filaComedor.poll(); // Salir de la fila

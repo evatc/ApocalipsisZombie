@@ -6,13 +6,15 @@ public class Zombie extends Thread{
     private Zona_riesgo zonaRiesgo;
     private boolean convertido = false;
     private int n_zonaRiesgo;
-    public Zombie(String id, Zona_riesgo zonaRiesgo){
+    private Logs log;
+    public Zombie(String id, Zona_riesgo zonaRiesgo, Logs log){
         this.id = id;
         this.zonaRiesgo = zonaRiesgo;
+        this.log = log;
     }
 
     public void run(){
-        System.out.println("Zombie " + this.id + " iniciado.");
+        log.escribir("Zombie " + this.id + " iniciado.");
 
         while (true) {
             // Si un humano se convierte en zombie tiene que empezar en la zona en la que murió

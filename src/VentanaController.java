@@ -6,6 +6,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.CountDownLatch;
@@ -16,12 +18,6 @@ import static java.lang.Thread.sleep;
 public class VentanaController implements Initializable {
     @FXML
     private Label labelComida;
-    /*@FXML
-    private ListView<String> descanso;
-    @FXML
-    private ListView<String> zonaComun;
-    @FXML
-    private ListView<String> comedor;*/
     @FXML
     private TextField txtDescanso;
     @FXML
@@ -69,59 +65,18 @@ public class VentanaController implements Initializable {
     @FXML
     private TextField txtRiesgoZombies4;
 
-
-    /* @Override
-     public void initialize(URL url, ResourceBundle resourceBundle) {
-         Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun);
-         labelComida.textProperty().bind(refugio.comidaProperty().asString());
-
-         //Instanciar elementos comunes
-         Tunel tunel = new Tunel(txtRefugioARiesgo1, txtTunel1, txtRiesgoARefugio1,
-                 txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,
-                 txtRefugioARiesgo3, txtTunel3, txtRiesgoARefugio3,
-                 txtRefugioARiesgo4, txtTunel4, txtRiesgoARefugio4);
-         Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3, txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4);
-
-         tunel.setZonaRiesgo(zonaRiesgo);
-         zonaRiesgo.setTunel(tunel);
-
-
-         //Istanciar el zombie
-         Zombie zombie = new Zombie("Z0000", zonaRiesgo);
-         zombie.start();
-         //Instanciar los humanos de forma escalonada
-         for (int i = 1; i <= 10000; i++) {
-             try {
-                 String humanoid = String.format("H%04d", i);
-                 Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo);
-                 humano.start();
-                 sleep((int) (1500 * Math.random() + 500));
-             } catch (InterruptedException e) {
-                 System.out.println("Error al crear los humanos");
-             }
-         }
-         // Crear hilo para inicialización
-         /*new Thread(() -> {
-             // Instanciar el zombie
-             Zombie zombie = new Zombie("Z0000", zonaRiesgo);
-             zombie.start();
-
-             // Instanciar los humanos
-             for (int i = 1; i <= 10000; i++) {
-                 try {
-                     String humanoid = String.format("H%04d", i);
-                     Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo);
-                     humano.start();
-                     Thread.sleep((int)(1500 * Math.random() + 500));
-                 } catch (InterruptedException e) {
-                     System.out.println("Error al crear los humanos");
-                 }
-             }
-         }).start();
-     }*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("Inicializando controlador..."); // Verifica que esto aparece
+        //Logs
+        File fichero = new File("apocalipsis.txt");
+        Logs log;
+        try {
+            log = new Logs(fichero); // La clase Logs ahora maneja la creación del archivo
+        } catch (IOException e) {
+            System.out.println("Error al crear logs: " + e.getMessage());
+            return;
+        }
         // Verifica que el labelComida no sea null
         if (labelComida == null) {
             System.out.println("ERROR: labelComida es null");
@@ -132,33 +87,40 @@ public class VentanaController implements Initializable {
         new Thread(() -> {
             System.out.println("Iniciando simulación...");
 
-            Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun);
+            //Refugio
+            Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun, log);
             Platform.runLater(() -> {
                 labelComida.textProperty().bind(refugio.comidaProperty().asString());
             });
 
+            //Tunel
             Tunel tunel = new Tunel(txtRefugioARiesgo1, txtTunel1, txtRiesgoARefugio1,
-                    txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,
-                    txtRefugioARiesgo3, txtTunel3, txtRiesgoARefugio3,
-                    txtRefugioARiesgo4, txtTunel4, txtRiesgoARefugio4);
+                    txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,txtRefugioARiesgo3,
+                    txtTunel3, txtRiesgoARefugio3, txtRefugioARiesgo4, txtTunel4,
+                    txtRiesgoARefugio4, log);
+
+            //Zona riesgo
             Semaphore tiempo_ataque = new Semaphore(1);
             Semaphore tiempo_ataque2 = new Semaphore(1);
             Semaphore tiempo_ataque3 = new Semaphore(1);
             Semaphore tiempo_ataque4 = new Semaphore(1);
-            Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3, txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4, tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4);
+            Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3,
+                    txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4,
+                    tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4, log);
 
             tunel.setZonaRiesgo(zonaRiesgo);
             zonaRiesgo.setTunel(tunel);
 
             // Zombie
-            Zombie zombie = new Zombie("Z0000", zonaRiesgo);
+            Zombie zombie = new Zombie("Z0000", zonaRiesgo, log);
             zombie.start();
 
             // Humanos
             for (int i = 1; i <= 10000; i++) { // Reduce a 10 para pruebas
                 try {
                     String humanoid = String.format("H%04d", i);
-                    Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,tiempo_ataque2,tiempo_ataque3,tiempo_ataque4);
+                    Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,
+                            tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log);
                     humano.start();
                     Thread.sleep((int)(500 * Math.random() + 200)); // Reduce el tiempo
                 } catch (InterruptedException e) {
