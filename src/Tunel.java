@@ -349,4 +349,18 @@ public class Tunel {
     public void setZonaRiesgo(Zona_riesgo zonaRiesgo) {
         this.zonaRiesgo = zonaRiesgo;
     }
+
+    public int getNumHumanos(int n){
+        if (n==1){
+            return (esperanRefugioARiesgo1.sizeh() + dentroTunel1.sizeh() + esperanRiesgoARefugio1.sizeh());
+        } else if (n==2){
+            return (esperanRefugioARiesgo2.sizeh() + dentroTunel2.sizeh() + esperanRiesgoARefugio2.sizeh());
+        }
+        else if (n==3){
+            return (esperanRefugioARiesgo3.sizeh() + dentroTunel3.sizeh() + esperanRiesgoARefugio3.sizeh());
+        }
+        else {
+            return (esperanRefugioARiesgo4.sizeh() + dentroTunel4.sizeh() + esperanRiesgoARefugio4.sizeh());
+        }
+    }
 }

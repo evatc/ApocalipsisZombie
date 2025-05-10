@@ -7,6 +7,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class Humano extends Thread{
+    private Comida comidah;
     private String id;
     private Refugio refugio;
     private Tunel tunel;
@@ -23,7 +24,7 @@ public class Humano extends Thread{
 
     public Humano(String id, Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo,
                   Semaphore tiempo_ataque1, Semaphore tiempo_ataque2,
-                  Semaphore tiempo_ataque3, Semaphore tiempo_ataque4, Logs log){
+                  Semaphore tiempo_ataque3, Semaphore tiempo_ataque4, Logs log, Comida comidah){
         this.id = id;
         this.refugio = refugio;
         this.tunel = tunel;
@@ -33,6 +34,7 @@ public class Humano extends Thread{
         this.tiempo_ataque3 = tiempo_ataque3;
         this.tiempo_ataque4 = tiempo_ataque4;
         this.log = log;
+        this.comidah=comidah;
     }
 
     public void run() {
@@ -61,7 +63,7 @@ public class Humano extends Thread{
                 //mira si hay algún zombie buscando victima
                 if (n_tunel == 1) {
                     try {
-                        if (zonaRiesgo.getLock1().tryAcquire(100, TimeUnit.MILLISECONDS)) {
+                        if (zonaRiesgo.getLock1().tryAcquire()) {
                             // Si le están atacando espera a que termine el ataque
                             if (ataque) {
                                 while (ataque) {
@@ -78,7 +80,7 @@ public class Humano extends Thread{
 
                 } else if (n_tunel == 2) {
                     try {
-                        if (zonaRiesgo.getLock2().tryAcquire(100, TimeUnit.MILLISECONDS)) {
+                        if (zonaRiesgo.getLock2().tryAcquire()) {
                             // Si le están atacando espera a que termine el ataque
                             if (ataque) {
                                 while (ataque) {
@@ -95,7 +97,7 @@ public class Humano extends Thread{
 
                 } else if (n_tunel == 3) {
                     try {
-                        if (zonaRiesgo.getLock3().tryAcquire(100, TimeUnit.MILLISECONDS)) {
+                        if (zonaRiesgo.getLock3().tryAcquire()) {
                             // Si le están atacando espera a que termine el ataque
                             if (ataque) {
                                 while (ataque) {
@@ -112,7 +114,7 @@ public class Humano extends Thread{
 
                 } else if (n_tunel == 4) {
                     try {
-                        if (zonaRiesgo.getLock4().tryAcquire(100, TimeUnit.MILLISECONDS)) {
+                        if (zonaRiesgo.getLock4().tryAcquire()) {
                             // Si le están atacando espera a que termine el ataque
                             if (ataque) {
                                 while (ataque) {
@@ -150,6 +152,7 @@ public class Humano extends Thread{
                         //refugio.getlDescanso().meterh(this);
                         log.escribir("El humano " + this.id + " ha recolectado 2 piezas de comida");
                         refugio.dejarComida(this);
+                        comidah.dejarComida(this);
                     }
                     int tiempoEnzonaDescanso = (int) (Math.random() * 2000) + 2000; //Entre 2 y 4 segundos
                     log.escribir("El humano " + this.id + " está en el área de descanso");
@@ -162,6 +165,7 @@ public class Humano extends Thread{
                     refugio.getlComedor().meterh(this);
                     log.escribir("El humano " + this.id + " está en el comedor");
                     refugio.comer(this);
+                    comidah.comer(this);
                     refugio.getlComedor().sacarh(this);
                     if (herido) {
                         refugio.getlDescanso().meterh(this);

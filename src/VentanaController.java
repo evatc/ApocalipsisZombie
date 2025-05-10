@@ -8,7 +8,12 @@ import javafx.scene.control.TextField;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.ResourceBundle;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
@@ -64,6 +69,8 @@ public class VentanaController implements Initializable {
     private TextField txtRiesgoHumanos4;
     @FXML
     private TextField txtRiesgoZombies4;
+    @FXML
+    private TextField txtcomidah;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -77,55 +84,60 @@ public class VentanaController implements Initializable {
             System.out.println("Error al crear logs: " + e.getMessage());
             return;
         }
-        // Verifica que el labelComida no sea null
-        if (labelComida == null) {
-            System.out.println("ERROR: labelComida es null");
-            return;
-        }
 
         // Mueve la lógica pesada a un hilo separado
         new Thread(() -> {
-            System.out.println("Iniciando simulación...");
+            try {
+                System.out.println("Iniciando simulación...");
+                //No creo que esto esté bien
+                ObjetoApocalipsis obj = new ObjetoApocalipsis();
+                Registry registry = LocateRegistry.createRegistry(1099);
+                Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
 
-            //Refugio
-            Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun, log);
-            Platform.runLater(() -> {
-                labelComida.textProperty().bind(refugio.comidaProperty().asString());
-            });
 
-            //Tunel
-            Tunel tunel = new Tunel(txtRefugioARiesgo1, txtTunel1, txtRiesgoARefugio1,
-                    txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,txtRefugioARiesgo3,
-                    txtTunel3, txtRiesgoARefugio3, txtRefugioARiesgo4, txtTunel4,
-                    txtRiesgoARefugio4, log);
+                //Refugio
+                Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun, txtcomidah,log);
+                Platform.runLater(() -> {
+                    labelComida.textProperty().bind(refugio.comidaProperty().asString());
+                });
 
-            //Zona riesgo
-            Semaphore tiempo_ataque = new Semaphore(1);
-            Semaphore tiempo_ataque2 = new Semaphore(1);
-            Semaphore tiempo_ataque3 = new Semaphore(1);
-            Semaphore tiempo_ataque4 = new Semaphore(1);
-            Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3,
-                    txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4,
-                    tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4, log);
+                //Tunel
+                Tunel tunel = new Tunel(txtRefugioARiesgo1, txtTunel1, txtRiesgoARefugio1,
+                        txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,txtRefugioARiesgo3,
+                        txtTunel3, txtRiesgoARefugio3, txtRefugioARiesgo4, txtTunel4,
+                        txtRiesgoARefugio4, log);
 
-            tunel.setZonaRiesgo(zonaRiesgo);
-            zonaRiesgo.setTunel(tunel);
+                //Zona riesgo
+                Semaphore tiempo_ataque = new Semaphore(1);
+                Semaphore tiempo_ataque2 = new Semaphore(1);
+                Semaphore tiempo_ataque3 = new Semaphore(1);
+                Semaphore tiempo_ataque4 = new Semaphore(1);
+                Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3,
+                        txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4,
+                        tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4, log);
 
-            // Zombie
-            Zombie zombie = new Zombie("Z0000", zonaRiesgo, log);
-            zombie.start();
+                tunel.setZonaRiesgo(zonaRiesgo);
+                zonaRiesgo.setTunel(tunel);
+                Comida comidah = new Comida(txtcomidah);
 
-            // Humanos
-            for (int i = 1; i <= 10000; i++) { // Reduce a 10 para pruebas
-                try {
-                    String humanoid = String.format("H%04d", i);
-                    Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,
-                            tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log);
-                    humano.start();
-                    Thread.sleep((int)(500 * Math.random() + 200)); // Reduce el tiempo
-                } catch (InterruptedException e) {
-                    System.out.println("Error al crear humanos: " + e.getMessage());
+                // Zombie
+                Zombie zombie = new Zombie("Z0000", zonaRiesgo, log);
+                zombie.start();
+
+
+                // Humanos
+                for (int i = 1; i <= 10000; i++) { // Reduce a 10 para pruebas
+                    try {
+                        String humanoid = String.format("H%04d", i);
+                        Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,
+                                tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log, comidah);
+                        humano.start();
+                        Thread.sleep((int)(500 * Math.random() + 200)); // Reduce el tiempo
+                    } catch (InterruptedException e) {
+                        System.out.println("Error al crear humanos: " + e.getMessage());
+                    }
                 }
+            } catch (Exception e) {
             }
         }).start();
     }

@@ -12,15 +12,18 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Refugio {
     private  ListaThreads lDescanso, lComedor, lZonaComun;
+
     //private IntegerProperty comida = new SimpleIntegerProperty(0);
     private AtomicInteger comida = new AtomicInteger(0);
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
     private Logs log;
+    private Comida comidah;
 
-    public Refugio(TextField c1, TextField c2, TextField c3, Logs log) {
+    public Refugio(TextField c1, TextField c2, TextField c3,TextField c,  Logs log) {
         lDescanso = new ListaThreads(c1);
         lComedor = new ListaThreads(c2);
         lZonaComun = new ListaThreads(c3);
+        comidah = new Comida(c);
         this.comida.set(0);
         this.log = log;
     }
@@ -131,14 +134,17 @@ public class Refugio {
         return lDescanso;
     }
 
-
     public ListaThreads getlComedor() {
         return lComedor;
     }
 
-
     public ListaThreads getlZonaComun() {
         return lZonaComun;
+    }
+
+    public int getNumHumanos(){
+        int total = lDescanso.sizeh() +lComedor.sizeh() + lZonaComun.sizeh();
+        return total;
     }
 
 }

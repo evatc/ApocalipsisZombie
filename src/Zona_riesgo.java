@@ -367,5 +367,29 @@ public class Zona_riesgo {
     public Semaphore getLock4() {
         return lock4;
     }
+    public int getNumHumanos(int n){
+        if (n==1){
+            return riesgoHumanos1.sizeh();
+        }
+        else if(n==2){
+            return riesgoHumanos2.sizeh();
+        } else if(n==3){
+            return riesgoHumanos3.sizeh();
+        } else{
+            return riesgoHumanos4.sizeh();
+        }
+    }
+    public int getNumZombies(int n){
+        if (n==1){
+            return riesgoZombies1.sizez();
+        }
+        else if(n==2){
+            return riesgoZombies2.sizez();
+        } else if(n==3){
+            return riesgoZombies3.sizez();
+        } else{
+            return riesgoZombies4.sizez();
+        }
+    }
 
 }

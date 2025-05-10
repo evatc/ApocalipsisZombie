@@ -45,10 +45,6 @@ public class Zombie extends Thread{
         return id;
     }
 
-    public boolean isConvertido() {
-        return convertido;
-    }
-
     public void setConvertido(boolean convertido) {
         this.convertido = convertido;
     }
@@ -56,4 +52,5 @@ public class Zombie extends Thread{
     public void setN_zonaRiesgo(int n_zonaRiesgo) {
         this.n_zonaRiesgo = n_zonaRiesgo;
     }
+
 }

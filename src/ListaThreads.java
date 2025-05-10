@@ -8,6 +8,7 @@ public class ListaThreads {
     private ArrayList<Zombie> listaz;
     private TextField txtfield;
 
+
     public ListaThreads(TextField tf)
     {
         listah=new ArrayList<Humano>();
@@ -53,7 +54,7 @@ public class ListaThreads {
         imprimirz();
     }
 
-    public void imprimirz()
+    public synchronized void imprimirz()
     {
         String contenido="";
         for(int i=0; i<listaz.size(); i++)
@@ -66,6 +67,14 @@ public class ListaThreads {
             txtfield.setText(textoImprimir);
         });
 
+    }
+
+    public synchronized int sizeh(){
+        return listah.size();
+    }
+
+    public synchronized int sizez(){
+        return listaz.size();
     }
 }
 
