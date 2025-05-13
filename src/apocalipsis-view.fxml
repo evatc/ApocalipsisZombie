@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1215.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VentanaController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1215.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VentanaController">
    <children>
       <Pane layoutX="20.0" layoutY="100.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>
@@ -47,7 +44,6 @@
                </children>
             </Pane>
             <TextField fx:id="txtComedor" layoutX="38.0" layoutY="80.0" prefHeight="34.0" prefWidth="238.0" />
-            <TextField fx:id="txtcomidah" layoutX="220.0" layoutY="19.0" prefHeight="57.0" prefWidth="67.0" />
          </children></Pane>
       <Pane layoutX="20.0" layoutY="460.0" prefHeight="170.0" prefWidth="440.0" style="-fx-background-color: lightblue;">
          <children>

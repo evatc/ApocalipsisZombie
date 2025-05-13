@@ -91,10 +91,7 @@ public class VentanaController implements Initializable {
                 System.out.println("Iniciando simulación...");
 
                 //Refugio
-                Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun, txtcomidah,log);
-                Platform.runLater(() -> {
-                    labelComida.textProperty().bind(refugio.comidaProperty().asString());
-                });
+                Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun, log, labelComida);
 
                 //Tunel
                 Tunel tunel = new Tunel(txtRefugioARiesgo1, txtTunel1, txtRiesgoARefugio1,
@@ -113,7 +110,6 @@ public class VentanaController implements Initializable {
 
                 tunel.setZonaRiesgo(zonaRiesgo);
                 zonaRiesgo.setTunel(tunel);
-                Comida comidah = new Comida(txtcomidah);
 
                 // Zombie
                 Zombie zombie = new Zombie("Z0000", zonaRiesgo, log);
@@ -121,13 +117,13 @@ public class VentanaController implements Initializable {
 
 
                 // Humanos
-                for (int i = 1; i <= 10000; i++) { // Reduce a 10 para pruebas
+                for (int i = 1; i <= 10000; i++) {
                     try {
                         String humanoid = String.format("H%04d", i);
                         Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,
-                                tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log, comidah);
+                                tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log);
                         humano.start();
-                        Thread.sleep((int)(500 * Math.random() + 200)); // Reduce el tiempo
+                        Thread.sleep((int)(1500 * Math.random() + 500)); //Entre 0,5 y 2 segundos
                     } catch (InterruptedException e) {
                         System.out.println("Error al crear humanos: " + e.getMessage());
                     }
@@ -139,5 +135,7 @@ public class VentanaController implements Initializable {
             }
         }).start();
     }
-
+    /*public void actualizarComida() {
+        labelComida.setText(String.valueOf(refugio.getComida));
+    }*/
 }

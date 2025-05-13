@@ -37,16 +37,6 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
     }
 
     @Override
-    public Zombie getTop1() throws RemoteException {
-        return null;
-    }
-
-    @Override
-    public Zombie getTop2() throws RemoteException {
-        return null;
-    }
-
-    @Override
     public Zombie getTop3() throws RemoteException {
         return null;
     }

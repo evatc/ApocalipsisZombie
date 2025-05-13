@@ -178,6 +178,7 @@ public class Zona_riesgo implements Serializable {
                                 zombie.setCont_muertes(muertes+1);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
                                 log.escribir("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
+                                //zombie.getMuertesZombies().ordenartop(zombie);
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
@@ -223,6 +224,7 @@ public class Zona_riesgo implements Serializable {
                                 zombie.setCont_muertes(muertes+1);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
                                 log.escribir("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
+                                //zombie.getMuertesZombies().ordenartop(zombie);
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
@@ -268,6 +270,7 @@ public class Zona_riesgo implements Serializable {
                                 zombie.setCont_muertes(muertes+1);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
                                 log.escribir("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
+                                //zombie.getMuertesZombies().ordenartop(zombie);
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
@@ -313,6 +316,7 @@ public class Zona_riesgo implements Serializable {
                                 zombie.setCont_muertes(muertes+1);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido matado por el zombie " + zombie.getzombieId() + ".");
                                 log.escribir("Número de muertes de " + zombie.getzombieId()+ ": " + zombie.getCont_muertes() + ".");
+                                //zombie.getMuertesZombies().ordenartop(zombie);
 
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();

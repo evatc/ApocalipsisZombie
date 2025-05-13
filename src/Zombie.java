@@ -7,6 +7,7 @@ public class Zombie extends Thread{
     private boolean convertido = false;
     private int n_zonaRiesgo;
     private Logs log;
+    private ListaThreads muertesZombies;
     public Zombie(String id, Zona_riesgo zonaRiesgo, Logs log){
         this.id = id;
         this.zonaRiesgo = zonaRiesgo;
@@ -15,6 +16,7 @@ public class Zombie extends Thread{
 
     public void run(){
         log.escribir("Zombie " + this.id + " iniciado.");
+        //muertesZombies.meterTop(this);
 
         while (true) {
             // Si un humano se convierte en zombie tiene que empezar en la zona en la que murió
@@ -53,4 +55,11 @@ public class Zombie extends Thread{
         this.n_zonaRiesgo = n_zonaRiesgo;
     }
 
+    public ListaThreads getMuertesZombies() {
+        return muertesZombies;
+    }
+
+    public void setMuertesZombies(ListaThreads muertesZombies) {
+        this.muertesZombies = muertesZombies;
+    }
 }
