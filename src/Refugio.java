@@ -20,6 +20,7 @@ public class Refugio implements Serializable {
     private Logs log;
     private Comida comidah;
 
+
     public Refugio(TextField c1, TextField c2, TextField c3,TextField c,  Logs log) {
         lDescanso = new ListaThreads(c1);
         lComedor = new ListaThreads(c2);
@@ -98,7 +99,6 @@ public class Refugio implements Serializable {
             Thread.currentThread().interrupt();
         }
     }
-
     public int getComida() {
         return comida.get();
     }

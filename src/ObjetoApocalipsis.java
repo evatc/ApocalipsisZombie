@@ -15,10 +15,6 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
         this.zonaRiesgo = zonaRiesgo;
     }
 
-    @Override
-    public void lanzarVentana() throws RemoteException {
-        Platform.runLater(() -> {VentanaDatos.launch(VentanaDatos.class);});
-    }
 
     @Override
     public int getHumanosRefugio() throws RemoteException {
