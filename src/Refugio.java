@@ -5,12 +5,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 
+import java.io.Serializable;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Refugio {
+public class Refugio implements Serializable {
     private  ListaThreads lDescanso, lComedor, lZonaComun;
 
     //private IntegerProperty comida = new SimpleIntegerProperty(0);

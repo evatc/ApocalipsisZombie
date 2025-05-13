@@ -89,11 +89,6 @@ public class VentanaController implements Initializable {
         new Thread(() -> {
             try {
                 System.out.println("Iniciando simulación...");
-                //No creo que esto esté bien
-                ObjetoApocalipsis obj = new ObjetoApocalipsis();
-                Registry registry = LocateRegistry.createRegistry(1099);
-                Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
-
 
                 //Refugio
                 Refugio refugio = new Refugio(txtDescanso, txtComedor, txtZonaComun, txtcomidah,log);
@@ -137,6 +132,9 @@ public class VentanaController implements Initializable {
                         System.out.println("Error al crear humanos: " + e.getMessage());
                     }
                 }
+                ObjetoApocalipsis obj = new ObjetoApocalipsis(refugio,tunel,zonaRiesgo);
+                Registry registry = LocateRegistry.createRegistry(1099);
+                Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
             } catch (Exception e) {
             }
         }).start();

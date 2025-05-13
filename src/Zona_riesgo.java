@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,7 +11,7 @@ import javafx.scene.control.TextField;
 
 import static java.lang.Thread.sleep;
 
-public class Zona_riesgo {
+public class Zona_riesgo implements Serializable {
     private ListaThreads riesgoHumanos1, riesgoHumanos2, riesgoHumanos3, riesgoHumanos4,
                             riesgoZombies1, riesgoZombies2, riesgoZombies3, riesgoZombies4;
     private ConcurrentLinkedQueue<Humano> lh1;

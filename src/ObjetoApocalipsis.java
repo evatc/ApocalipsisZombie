@@ -1,3 +1,5 @@
+import javafx.application.Platform;
+
 import java.rmi.RemoteException;
 import java.rmi.server.RMIClientSocketFactory;
 import java.rmi.server.RMIServerSocketFactory;
@@ -7,7 +9,15 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
     private Refugio refugio;
     private Tunel tunel;
     private Zona_riesgo zonaRiesgo;
-    public ObjetoApocalipsis() throws RemoteException {
+    public ObjetoApocalipsis(Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo) throws RemoteException {
+        this.refugio = refugio;
+        this.tunel = tunel;
+        this.zonaRiesgo = zonaRiesgo;
+    }
+
+    @Override
+    public void lanzarVentana() throws RemoteException {
+        Platform.runLater(() -> {VentanaDatos.launch(VentanaDatos.class);});
     }
 
     @Override

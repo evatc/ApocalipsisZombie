@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CyclicBarrier;
@@ -7,7 +8,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import javafx.scene.control.TextField;
 
-public class Tunel {
+public class Tunel implements Serializable {
     private ListaThreads esperanRefugioARiesgo1, dentroTunel1, esperanRiesgoARefugio1;
     private ListaThreads esperanRefugioARiesgo2, dentroTunel2, esperanRiesgoARefugio2;
     private ListaThreads esperanRefugioARiesgo3, dentroTunel3, esperanRiesgoARefugio3;
