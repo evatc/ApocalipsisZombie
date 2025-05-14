@@ -97,7 +97,7 @@ public class VentanaController implements Initializable {
                 Tunel tunel = new Tunel(txtRefugioARiesgo1, txtTunel1, txtRiesgoARefugio1,
                         txtRefugioARiesgo2, txtTunel2, txtRiesgoARefugio2,txtRefugioARiesgo3,
                         txtTunel3, txtRiesgoARefugio3, txtRefugioARiesgo4, txtTunel4,
-                        txtRiesgoARefugio4, log);
+                        txtRiesgoARefugio4, log, null);
 
                 //Zona riesgo
                 Semaphore tiempo_ataque = new Semaphore(1);
@@ -106,28 +106,33 @@ public class VentanaController implements Initializable {
                 Semaphore tiempo_ataque4 = new Semaphore(1);
                 Zona_riesgo zonaRiesgo = new Zona_riesgo(txtRiesgoHumanos1, txtRiesgoHumanos2, txtRiesgoHumanos3,
                         txtRiesgoHumanos4, txtRiesgoZombies1, txtRiesgoZombies2, txtRiesgoZombies3, txtRiesgoZombies4,
-                        tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4, log);
+                        tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4, log, null);
 
-                tunel.setZonaRiesgo(zonaRiesgo);
-                zonaRiesgo.setTunel(tunel);
 
                 ObjetoApocalipsis obj = new ObjetoApocalipsis(refugio,tunel,zonaRiesgo);
                 Registry registry = LocateRegistry.createRegistry(1099);
                 Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
                 System.out.println("Servidor RMI listo.");
 
+                tunel.setZonaRiesgo(zonaRiesgo);
+                zonaRiesgo.setTunel(tunel);
+                zonaRiesgo.setApocalipsis(obj);
+                tunel.setApocalipsis(obj);
+
                 // Zombie
-                Zombie zombie = new Zombie("Z0000", zonaRiesgo, log);
+                Zombie zombie = new Zombie("Z0000", zonaRiesgo, log, obj);
                 zombie.start();
 
 
                 // Humanos
                 for (int i = 1; i <= 10000; i++) {
                     try {
+                        obj.esperarSiPausado();
                         String humanoid = String.format("H%04d", i);
                         Humano humano = new Humano(humanoid, refugio, tunel, zonaRiesgo,tiempo_ataque,
-                                tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log);
+                                tiempo_ataque2, tiempo_ataque3,tiempo_ataque4, log, obj);
                         humano.start();
+                        obj.esperarSiPausado();
                         Thread.sleep((int)(1500 * Math.random() + 500)); //Entre 0,5 y 2 segundos
                     } catch (InterruptedException e) {
                         System.out.println("Error al crear humanos: " + e.getMessage());

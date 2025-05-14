@@ -1,5 +1,6 @@
 import javafx.scene.control.TextField;
 
+import java.rmi.RemoteException;
 import java.util.Scanner;
 
 public class Zombie extends Thread{
@@ -11,32 +12,42 @@ public class Zombie extends Thread{
     private Logs log;
     private InterfazApocalipsis apocalipsis;
 
-    public Zombie(String id, Zona_riesgo zonaRiesgo, Logs log){
+    public Zombie(String id, Zona_riesgo zonaRiesgo, Logs log, InterfazApocalipsis apocalipsis){
         this.id = id;
         this.zonaRiesgo = zonaRiesgo;
         this.log = log;
+        this.apocalipsis = apocalipsis;
     }
 
     public void run(){
         log.escribir("Zombie " + this.id + " iniciado.");
         zonaRiesgo.getTopMuertes().add(this);
-        //muertesZombies.meterTop(this);
 
         while (true) {
+            try {
+                apocalipsis.esperarSiPausado();
 
-            // Si un humano se convierte en zombie tiene que empezar en la zona en la que murió
-            if (convertido){
-                convertido = false;
+                // Si un humano se convierte en zombie tiene que empezar en la zona en la que murió
+                if (convertido){
+                    convertido = false;
+                }
+                else{
+                    n_zonaRiesgo = (int) (Math.random() * 4) + 1;
+                }
+                apocalipsis.esperarSiPausado();
+                zonaRiesgo.entrar_zombie(this,n_zonaRiesgo);
+                apocalipsis.esperarSiPausado();
+                zonaRiesgo.ataque(this,n_zonaRiesgo);
+                apocalipsis.esperarSiPausado();
+                try{
+                    sleep((int)(1000*Math.random() + 2000)); //Entre 2 y 3 segundos
+                    apocalipsis.esperarSiPausado();
+                }catch(Exception e){}
+                apocalipsis.esperarSiPausado();
+                zonaRiesgo.salir_zombie(this,n_zonaRiesgo);
+            } catch (RemoteException e) {
+                throw new RuntimeException(e);
             }
-            else{
-                n_zonaRiesgo = (int) (Math.random() * 4) + 1;
-            }
-            zonaRiesgo.entrar_zombie(this,n_zonaRiesgo);
-            zonaRiesgo.ataque(this,n_zonaRiesgo);
-            try{
-                sleep((int)(1000*Math.random() + 2000)); //Entre 2 y 3 segundos
-            }catch(Exception e){}
-            zonaRiesgo.salir_zombie(this,n_zonaRiesgo);
         }
     }
 

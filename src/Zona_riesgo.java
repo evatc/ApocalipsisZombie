@@ -43,7 +43,7 @@ public class Zona_riesgo implements Serializable {
     public Zona_riesgo(TextField c1, TextField c2, TextField c3, TextField c4,
                        TextField c5, TextField c6, TextField c7, TextField c8,
                        Semaphore tiempo_ataque, Semaphore tiempo_ataque2,
-                       Semaphore tiempo_ataque3, Semaphore tiempo_ataque4, Logs log) {
+                       Semaphore tiempo_ataque3, Semaphore tiempo_ataque4, Logs log, InterfazApocalipsis apocalipsis) {
         riesgoHumanos1 = new ListaThreads(c1);
         riesgoHumanos2 = new ListaThreads(c2);
         riesgoHumanos3 = new ListaThreads(c3);
@@ -69,14 +69,15 @@ public class Zona_riesgo implements Serializable {
         this.tiempo_ataque3 = tiempo_ataque3;
         this.tiempo_ataque4 = tiempo_ataque4;
         this.log = log;
+        this.apocalipsis = apocalipsis;
     }
 
     public void entrar_humano(Humano humano,int zona){
-        /*try {
+        try {
             apocalipsis.esperarSiPausado();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         if(zona == 1){
             try {
                 riesgoHumanos1.meterh(humano);
@@ -100,11 +101,11 @@ public class Zona_riesgo implements Serializable {
         }
     }
     public void entrar_zombie(Zombie zombie, int zona){
-        /*try {
+        try {
             apocalipsis.esperarSiPausado();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         if(zona == 1){
             riesgoZombies1.meterz(zombie);
             lz1.add(zombie);
@@ -124,11 +125,11 @@ public class Zona_riesgo implements Serializable {
         }
     }
     public void salir_humano(Humano humano, int zona){
-        /*try {
+        try {
             apocalipsis.esperarSiPausado();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         if(zona == 1){
             riesgoHumanos1.sacarh(humano);
             lh1.remove(humano);
@@ -152,11 +153,11 @@ public class Zona_riesgo implements Serializable {
         }
     }
     public void salir_zombie(Zombie zombie, int zona){
-        /*try {
+        try {
             apocalipsis.esperarSiPausado();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         if(zona == 1){
             riesgoZombies1.sacarz(zombie);
             lz1.remove(zombie);
@@ -178,20 +179,24 @@ public class Zona_riesgo implements Serializable {
 
     public void ataque(Zombie zombie, int zona){
         try{
-            //apocalipsis.esperarSiPausado();
+            apocalipsis.esperarSiPausado();
             if (zona == 1){
                 cerrojo1.lock();
                 try{
+                    apocalipsis.esperarSiPausado();
                     if (!lh1.isEmpty()){
                         lock1.acquire();
+                        apocalipsis.esperarSiPausado();
                         Humano humano = seleccionarHumano(lh1);
                         if (humano!=null){
                             humano.setAtaque(true);
                             lock1.release();
                             tiempo_ataque1.acquire();
+                            apocalipsis.esperarSiPausado();
                             log.escribir("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                             int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
+                            apocalipsis.esperarSiPausado();
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
                                 // Humano muere
@@ -206,7 +211,7 @@ public class Zona_riesgo implements Serializable {
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
-                                Zombie zombie1 = new Zombie(zombieId, this,log);
+                                Zombie zombie1 = new Zombie(zombieId, this,log, apocalipsis);
                                 log.escribir("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
                                 zombie1.setConvertido(true);
                                 zombie1.setN_zonaRiesgo(1);
@@ -229,16 +234,20 @@ public class Zona_riesgo implements Serializable {
             } else if (zona == 2){
                 cerrojo2.lock();
                 try{
+                    apocalipsis.esperarSiPausado();
                     if (!lh2.isEmpty()){
                         lock2.acquire();
+                        apocalipsis.esperarSiPausado();
                         Humano humano = seleccionarHumano(lh2);
                         if (humano!=null){
                             humano.setAtaque(true);
                             lock2.release();
                             tiempo_ataque2.acquire();
+                            apocalipsis.esperarSiPausado();
                             log.escribir("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                             int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
+                            apocalipsis.esperarSiPausado();
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
                                 // Humano muere
@@ -253,7 +262,7 @@ public class Zona_riesgo implements Serializable {
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
-                                Zombie zombie1 = new Zombie(zombieId, this,log);
+                                Zombie zombie1 = new Zombie(zombieId, this,log, apocalipsis);
                                 log.escribir("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
                                 zombie1.setConvertido(true);
                                 zombie1.setN_zonaRiesgo(2);
@@ -276,16 +285,20 @@ public class Zona_riesgo implements Serializable {
             } if (zona == 3){
                 cerrojo3.lock();
                 try{
+                    apocalipsis.esperarSiPausado();
                     if (!lh3.isEmpty()){
                         lock3.acquire();
+                        apocalipsis.esperarSiPausado();
                         Humano humano = seleccionarHumano(lh3);
                         if (humano!=null){
                             humano.setAtaque(true);
                             lock3.release();
                             tiempo_ataque3.acquire();
+                            apocalipsis.esperarSiPausado();
                             log.escribir("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                             int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
+                            apocalipsis.esperarSiPausado();
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
                                 // Humano muere
@@ -300,7 +313,7 @@ public class Zona_riesgo implements Serializable {
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
-                                Zombie zombie1 = new Zombie(zombieId, this,log);
+                                Zombie zombie1 = new Zombie(zombieId, this,log, apocalipsis);
                                 log.escribir("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
                                 zombie1.setConvertido(true);
                                 zombie1.setN_zonaRiesgo(3);
@@ -323,16 +336,20 @@ public class Zona_riesgo implements Serializable {
             } if (zona == 4){
                 cerrojo4.lock();
                 try{
+                    apocalipsis.esperarSiPausado();
                     if (!lh4.isEmpty()){
                         lock4.acquire();
+                        apocalipsis.esperarSiPausado();
                         Humano humano = seleccionarHumano(lh4);
                         if (humano!=null){
                             humano.setAtaque(true);
                             lock4.release();
                             tiempo_ataque4.acquire();
+                            apocalipsis.esperarSiPausado();
                             log.escribir("El ataque entre el zombie " + zombie.getzombieId() + " y el humano " + humano.gethumanoId() + " se está produciendo");
                             int tiempoAtaque = (int)(Math.random()*1000)+500; // Entre 0,5 y 1,5 segundos
                             sleep(tiempoAtaque);
+                            apocalipsis.esperarSiPausado();
                             int probabilidad = (int)(Math.random()*3);
                             if (probabilidad == 0){
                                 // Humano muere
@@ -348,7 +365,7 @@ public class Zona_riesgo implements Serializable {
                                 // Convertimos el humano a zombie
                                 String humanoId = humano.gethumanoId();
                                 String zombieId = "Z" + humanoId.substring(1);
-                                Zombie zombie1 = new Zombie(zombieId, this,log);
+                                Zombie zombie1 = new Zombie(zombieId, this,log, apocalipsis);
                                 log.escribir("El humano " + humano.gethumanoId() + " se ha convertido en zombie");
                                 zombie1.setConvertido(true);
                                 zombie1.setN_zonaRiesgo(4);
@@ -371,7 +388,10 @@ public class Zona_riesgo implements Serializable {
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-        }//catch (RemoteException r){}
+        }
+        catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }
     }
    private Humano seleccionarHumano(ConcurrentLinkedQueue<Humano> cola) {
        if (cola.isEmpty()) {
@@ -430,4 +450,11 @@ public class Zona_riesgo implements Serializable {
         return topMuertes;
     }
 
+    public InterfazApocalipsis getApocalipsis() {
+        return apocalipsis;
+    }
+
+    public void setApocalipsis(InterfazApocalipsis apocalipsis) {
+        this.apocalipsis = apocalipsis;
+    }
 }

@@ -111,7 +111,7 @@ public class ClienteController implements Initializable {
         try {
             apocalipsis.reanudar();
         }catch (RemoteException e){
-            System.out.println("Error al pausar");
+            System.out.println("Error al reanudar");
         }
     }
 

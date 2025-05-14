@@ -68,19 +68,19 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
 
 
     @Override
-    public void pausar() throws RemoteException {
+    public synchronized void pausar() throws RemoteException {
         pausado = true;
-        System.out.println("Apiicalipsis pausado");
+        System.out.println("Apocalipsis pausado");
     }
     @Override
     public synchronized void reanudar() throws RemoteException {
         pausado = false;
         notifyAll();
-        System.out.println("Apiicalipsis reanudado");
+        System.out.println("Apocalipsis reanudado");
     }
 
     @Override
-    public boolean estaPausado() throws RemoteException {
+    public synchronized boolean estaPausado() throws RemoteException {
         return pausado;
     }
 
