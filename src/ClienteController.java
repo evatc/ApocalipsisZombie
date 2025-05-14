@@ -5,7 +5,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-import java.awt.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.Naming;
@@ -16,6 +15,7 @@ import java.util.ResourceBundle;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
@@ -49,7 +49,7 @@ public class ClienteController implements Initializable {
     @FXML
     private Label labelTop3;
     @FXML
-    private TextField txtTop3;
+    private TextArea txtTop3;
     @FXML
     private Button botonPausar;
     @FXML
@@ -63,7 +63,7 @@ public class ClienteController implements Initializable {
         try {
             apocalipsis = (InterfazApocalipsis) Naming.lookup("//127.0.0.1/ObjetoApocalipsis");
 
-            //No se hacer esto de otra manera
+            //No se hacer esto de otra manera si no le ponemos en la memoria que lo hemos buscado en internet porque esto no lo hemos dado en clase
             //Actualiza los datos cada medio segundo
             timeline = new Timeline(new KeyFrame(Duration.seconds(0.5), e -> actualizarDatos()));
             timeline.setCycleCount(Animation.INDEFINITE);
@@ -92,7 +92,7 @@ public class ClienteController implements Initializable {
             labelRiesgoZ3.setText(String.valueOf(apocalipsis.getZombiesZonaRiesgo(3)));
             labelRiesgoZ4.setText(String.valueOf(apocalipsis.getZombiesZonaRiesgo(4)));
 
-            labelTop3.setText(String.valueOf(apocalipsis.getTop3()));
+            txtTop3.setText(apocalipsis.getTop3());
 
 
         }catch (RemoteException e){}

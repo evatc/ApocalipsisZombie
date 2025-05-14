@@ -1,319 +1,1517 @@
-[14/05/2025 14:01:07] Zombie Z0000 iniciado.
-[14/05/2025 14:01:07] El zombie Z0000 ha entrado a la zona 2
-[14/05/2025 14:01:07] Humano H0001 iniciado.
-[14/05/2025 14:01:07] El humano H0001 está en el área común
-[14/05/2025 14:01:08] Humano H0002 iniciado.
-[14/05/2025 14:01:08] El humano H0002 está en el área común
-[14/05/2025 14:01:08] El humano H0001 ha elegido el tunel 3
-[14/05/2025 14:01:08] El humano H0001 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:09] El zombie Z0000 ha salido de la zona 2
-[14/05/2025 14:01:09] El zombie Z0000 ha entrado a la zona 1
-[14/05/2025 14:01:09] El humano H0002 ha elegido el tunel 3
-[14/05/2025 14:01:09] El humano H0002 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:10] Humano H0003 iniciado.
-[14/05/2025 14:01:10] El humano H0003 está en el área común
-[14/05/2025 14:01:11] Humano H0004 iniciado.
-[14/05/2025 14:01:11] El humano H0004 está en el área común
-[14/05/2025 14:01:11] El humano H0003 ha elegido el tunel 4
-[14/05/2025 14:01:11] El humano H0003 está esperando en la barrera del túnel 4.
-[14/05/2025 14:01:12] El zombie Z0000 ha salido de la zona 1
-[14/05/2025 14:01:12] El zombie Z0000 ha entrado a la zona 4
-[14/05/2025 14:01:12] El humano H0004 ha elegido el tunel 3
-[14/05/2025 14:01:12] El humano H0004 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:12] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:12] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:12] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:12] El humano H0004 está atravesando el túnel 3.
-[14/05/2025 14:01:12] El humano H0001 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:12] El humano H0002 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:13] Humano H0005 iniciado.
-[14/05/2025 14:01:13] El humano H0005 está en el área común
-[14/05/2025 14:01:13] El humano H0004 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:13] El humano H0001 está atravesando el túnel 3.
-[14/05/2025 14:01:13] Humano H0006 iniciado.
-[14/05/2025 14:01:13] El humano H0006 está en el área común
-[14/05/2025 14:01:14] El humano H0005 ha elegido el tunel 3
-[14/05/2025 14:01:14] El humano H0005 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:14] Humano H0007 iniciado.
-[14/05/2025 14:01:14] El humano H0007 está en el área común
-[14/05/2025 14:01:14] El humano H0001 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:14] El humano H0002 está atravesando el túnel 3.
-[14/05/2025 14:01:15] El zombie Z0000 ha salido de la zona 4
-[14/05/2025 14:01:15] El zombie Z0000 ha entrado a la zona 4
-[14/05/2025 14:01:15] El humano H0002 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:15] El humano H0006 ha elegido el tunel 1
-[14/05/2025 14:01:15] El humano H0006 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:16] Humano H0008 iniciado.
-[14/05/2025 14:01:16] El humano H0008 está en el área común
-[14/05/2025 14:01:16] El humano H0007 ha elegido el tunel 3
-[14/05/2025 14:01:16] El humano H0007 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:17] El zombie Z0000 ha salido de la zona 4
-[14/05/2025 14:01:17] El zombie Z0000 ha entrado a la zona 4
-[14/05/2025 14:01:17] Humano H0009 iniciado.
-[14/05/2025 14:01:17] El humano H0009 está en el área común
-[14/05/2025 14:01:17] El humano H0008 ha elegido el tunel 4
-[14/05/2025 14:01:17] El humano H0008 está esperando en la barrera del túnel 4.
-[14/05/2025 14:01:18] Humano H0010 iniciado.
-[14/05/2025 14:01:18] El humano H0010 está en el área común
-[14/05/2025 14:01:19] El humano H0009 ha elegido el tunel 3
-[14/05/2025 14:01:19] El humano H0009 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:19] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:19] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:19] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:19] El humano H0009 está atravesando el túnel 3.
-[14/05/2025 14:01:19] El humano H0005 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:19] El humano H0007 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:19] El humano H0004 ha salido de la zona de riesgo 3
-[14/05/2025 14:01:19] El humano H0004 está esperando a poder entrar en el túnel 3 para ir al refugio.
-[14/05/2025 14:01:19] El humano H0001 ha salido de la zona de riesgo 3
-[14/05/2025 14:01:19] El humano H0001 está esperando a poder entrar en el túnel 3 para ir al refugio.
-[14/05/2025 14:01:19] El zombie Z0000 ha salido de la zona 4
-[14/05/2025 14:01:19] El zombie Z0000 ha entrado a la zona 2
-[14/05/2025 14:01:20] El humano H0009 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:20] El humano H0005 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:20] El humano H0004 está atravesando el túnel 3.
-[14/05/2025 14:01:20] Humano H0011 iniciado.
-[14/05/2025 14:01:20] El humano H0011 está en el área común
-[14/05/2025 14:01:20] El humano H0010 ha elegido el tunel 4
-[14/05/2025 14:01:20] El humano H0010 está esperando en la barrera del túnel 4.
-[14/05/2025 14:01:20] El túnel 4 tiene ya 3 humanos.
-[14/05/2025 14:01:20] El túnel 4 tiene ya 3 humanos.
-[14/05/2025 14:01:20] El túnel 4 tiene ya 3 humanos.
-[14/05/2025 14:01:20] El humano H0010 está atravesando el túnel 4.
-[14/05/2025 14:01:20] El humano H0003 está esperando a poder entrar en la zona de riesgo 4.
-[14/05/2025 14:01:20] El humano H0008 está esperando a poder entrar en la zona de riesgo 4.
-[14/05/2025 14:01:21] El humano H0002 ha salido de la zona de riesgo 3
-[14/05/2025 14:01:21] El humano H0004 ha entrado en el refugio
-[14/05/2025 14:01:21] El humano H0002 está atravesando el túnel 3.
-[14/05/2025 14:01:21] El humano H0004 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:21] El humano H0001 está esperando a poder entrar en el túnel 3 para ir al refugio.
-[14/05/2025 14:01:21] El humano H0007 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:21] El humano H0004 está en el área de descanso
-[14/05/2025 14:01:21] H0004 ha dejado 2 comidas. Comida total: 2.
-[14/05/2025 14:01:21] Humano H0012 iniciado.
-[14/05/2025 14:01:21] El humano H0012 está en el área común
-[14/05/2025 14:01:21] El humano H0010 ha entrado en la zona de riesgo 4.
-[14/05/2025 14:01:21] El humano H0003 está atravesando el túnel 4.
-[14/05/2025 14:01:22] El zombie Z0000 ha salido de la zona 2
-[14/05/2025 14:01:22] El zombie Z0000 ha entrado a la zona 3
-[14/05/2025 14:01:22] El ataque entre el zombie Z0000 y el humano H0009 se está produciendo
-[14/05/2025 14:01:22] El humano H0011 ha elegido el tunel 3
-[14/05/2025 14:01:22] El humano H0011 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:22] Humano H0013 iniciado.
-[14/05/2025 14:01:22] El humano H0013 está en el área común
-[14/05/2025 14:01:22] El humano H0002 ha entrado en el refugio
-[14/05/2025 14:01:22] El humano H0002 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:22] El humano H0005 está esperando a poder entrar en la zona de riesgo 3.[14/05/2025 14:01:22] El humano H0001 está atravesando el túnel 3.
+[14/05/2025 18:24:47] Zombie Z0000 iniciado.
+[14/05/2025 18:24:47] El zombie Z0000 ha entrado a la zona 2
+[14/05/2025 18:24:47] Humano H0001 iniciado.
+[14/05/2025 18:24:47] El humano H0001 está en el área común
+[14/05/2025 18:24:49] Humano H0002 iniciado.
+[14/05/2025 18:24:49] El humano H0002 está en el área común
+[14/05/2025 18:24:49] El humano H0001 ha elegido el tunel 2
+[14/05/2025 18:24:49] El humano H0001 está esperando en la barrera del túnel 2.
+[14/05/2025 18:24:50] Humano H0003 iniciado.
+[14/05/2025 18:24:50] El humano H0003 está en el área común
+[14/05/2025 18:24:50] El zombie Z0000 ha salido de la zona 2
+[14/05/2025 18:24:50] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:24:51] El humano H0002 ha elegido el tunel 1
+[14/05/2025 18:24:51] El humano H0002 está esperando en la barrera del túnel 1.
+[14/05/2025 18:24:51] El humano H0003 ha elegido el tunel 1
+[14/05/2025 18:24:51] El humano H0003 está esperando en la barrera del túnel 1.
+[14/05/2025 18:24:51] Humano H0004 iniciado.
+[14/05/2025 18:24:51] El humano H0004 está en el área común
+[14/05/2025 18:24:52] Humano H0005 iniciado.
+[14/05/2025 18:24:52] El humano H0005 está en el área común
+[14/05/2025 18:24:52] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:24:52] El zombie Z0000 ha entrado a la zona 3
+[14/05/2025 18:24:52] Humano H0006 iniciado.
+[14/05/2025 18:24:52] El humano H0006 está en el área común
+[14/05/2025 18:24:53] El humano H0005 ha elegido el tunel 2
+[14/05/2025 18:24:53] El humano H0005 está esperando en la barrera del túnel 2.
+[14/05/2025 18:24:53] El humano H0004 ha elegido el tunel 4
+[14/05/2025 18:24:53] El humano H0004 está esperando en la barrera del túnel 4.
+[14/05/2025 18:24:54] El humano H0006 ha elegido el tunel 4
+[14/05/2025 18:24:54] El humano H0006 está esperando en la barrera del túnel 4.
+[14/05/2025 18:24:54] Humano H0007 iniciado.
+[14/05/2025 18:24:54] El humano H0007 está en el área común
+[14/05/2025 18:24:54] El zombie Z0000 ha salido de la zona 3
+[14/05/2025 18:24:54] El zombie Z0000 ha entrado a la zona 3
+[14/05/2025 18:24:55] Humano H0008 iniciado.
+[14/05/2025 18:24:55] El humano H0008 está en el área común
+[14/05/2025 18:24:56] El humano H0007 ha elegido el tunel 3
+[14/05/2025 18:24:56] El humano H0007 está esperando en la barrera del túnel 3.
+[14/05/2025 18:24:56] Humano H0009 iniciado.
+[14/05/2025 18:24:56] El humano H0009 está en el área común
+[14/05/2025 18:24:57] El zombie Z0000 ha salido de la zona 3
+[14/05/2025 18:24:57] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:24:57] Humano H0010 iniciado.
+[14/05/2025 18:24:57] El humano H0010 está en el área común
+[14/05/2025 18:24:57] El humano H0008 ha elegido el tunel 2
+[14/05/2025 18:24:57] El humano H0009 ha elegido el tunel 2
+[14/05/2025 18:24:57] El humano H0008 está esperando en la barrera del túnel 2.
+[14/05/2025 18:24:57] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:24:57] El humano H0009 está esperando en la barrera del túnel 2.
+[14/05/2025 18:24:57] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:24:57] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:24:57] El humano H0008 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:24:57] El humano H0001 está atravesando el túnel 2.
+[14/05/2025 18:24:57] El humano H0005 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:24:58] Humano H0011 iniciado.
+[14/05/2025 18:24:58] El humano H0011 está en el área común
+[14/05/2025 18:24:58] El humano H0001 ha entrado en la zona de riesgo 2
+[14/05/2025 18:24:58] El humano H0008 está atravesando el túnel 2.
+[14/05/2025 18:24:58] El humano H0010 ha elegido el tunel 1
+[14/05/2025 18:24:58] El humano H0010 está esperando en la barrera del túnel 1.
+[14/05/2025 18:24:58] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:24:58] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:24:58] El humano H0002 está atravesando el túnel 1.
+[14/05/2025 18:24:58] El humano H0003 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:24:58] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:24:58] El humano H0010 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:24:59] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:24:59] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:24:59] El humano H0008 ha entrado en la zona de riesgo 2
+[14/05/2025 18:24:59] El humano H0005 está atravesando el túnel 2.
+[14/05/2025 18:24:59] El humano H0002 ha entrado en la zona de riesgo 1
+[14/05/2025 18:24:59] El humano H0003 está atravesando el túnel 1.
+[14/05/2025 18:25:00] Humano H0012 iniciado.
+[14/05/2025 18:25:00] El humano H0012 está en el área común
+[14/05/2025 18:25:00] El humano H0011 ha elegido el tunel 2
+[14/05/2025 18:25:00] El humano H0011 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:00] El humano H0005 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:00] El humano H0003 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:00] El humano H0010 está atravesando el túnel 1.
+[14/05/2025 18:25:01] Humano H0013 iniciado.
+[14/05/2025 18:25:01] El humano H0013 está en el área común
+[14/05/2025 18:25:01] El humano H0010 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:01] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:25:01] El zombie Z0000 ha entrado a la zona 4
+[14/05/2025 18:25:01] El humano H0012 ha elegido el tunel 3
+[14/05/2025 18:25:01] El humano H0012 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:02] El humano H0013 ha elegido el tunel 3
+[14/05/2025 18:25:02] El humano H0013 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:02] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:02] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:02] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:02] El humano H0012 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:02] El humano H0013 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:02] El humano H0007 está atravesando el túnel 3.
+[14/05/2025 18:25:03] Humano H0014 iniciado.
+[14/05/2025 18:25:03] El humano H0014 está en el área común
+[14/05/2025 18:25:03] El humano H0007 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:03] El humano H0012 está atravesando el túnel 3.
+[14/05/2025 18:25:04] El zombie Z0000 ha salido de la zona 4
+[14/05/2025 18:25:04] El zombie Z0000 ha entrado a la zona 4
+[14/05/2025 18:25:04] Humano H0015 iniciado.
+[14/05/2025 18:25:04] El humano H0015 está en el área común
+[14/05/2025 18:25:04] El humano H0012 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:04] El humano H0013 está atravesando el túnel 3.
+[14/05/2025 18:25:05] El humano H0014 ha elegido el tunel 2
+[14/05/2025 18:25:05] El humano H0014 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:05] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:05] El humano H0009 está atravesando el túnel 2.
+[14/05/2025 18:25:05] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:05] El humano H0011 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:05] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:05] El humano H0014 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:05] El humano H0001 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:05] El humano H0001 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:05] El humano H0008 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:05] El humano H0008 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:05] El humano H0002 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:05] El humano H0002 está atravesando el túnel 1.
+[14/05/2025 18:25:05] Humano H0016 iniciado.
+[14/05/2025 18:25:05] El humano H0016 está en el área común
+[14/05/2025 18:25:05] El humano H0013 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:06] El humano H0009 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:06] El humano H0011 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:06] El humano H0001 está atravesando el túnel 2.
+[14/05/2025 18:25:06] El zombie Z0000 ha salido de la zona 4
+[14/05/2025 18:25:06] El zombie Z0000 ha entrado a la zona 2
+[14/05/2025 18:25:06] El ataque entre el zombie Z0000 y el humano H0009 se está produciendo
+[14/05/2025 18:25:06] El humano H0002 ha entrado en el refugio
+[14/05/2025 18:25:06] El humano H0002 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:06] El humano H0002 está en el área de descanso
+[14/05/2025 18:25:06] H0002 ha dejado 2 comidas. Comida total: 2.
+[14/05/2025 18:25:06] El humano H0015 ha elegido el tunel 4
+[14/05/2025 18:25:06] El humano H0015 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:06] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:06] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:06] El humano H0004 está atravesando el túnel 4.
+[14/05/2025 18:25:06] El humano H0006 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:06] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:06] El humano H0015 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:06] Humano H0017 iniciado.
+[14/05/2025 18:25:06] El humano H0017 está en el área común
+[14/05/2025 18:25:06] El humano H0009 ha sido matado por el zombie Z0000.
+[14/05/2025 18:25:06] Número de muertes de Z0000: 1.
+[14/05/2025 18:25:06] El humano H0009 se ha convertido en zombie
+[14/05/2025 18:25:06] Zombie Z0009 iniciado.
+[14/05/2025 18:25:06] El zombie Z0009 ha entrado a la zona 2
+[14/05/2025 18:25:06] El ataque entre el zombie Z0009 y el humano H0005 se está produciendo
+[14/05/2025 18:25:07] El humano H0001 ha entrado en el refugio
+[14/05/2025 18:25:07] El humano H0008 está atravesando el túnel 2.
+[14/05/2025 18:25:07] El humano H0001 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:07] El humano H0014 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:07] El humano H0001 está en el área de descanso
+[14/05/2025 18:25:07] H0001 ha dejado 2 comidas. Comida total: 4.
+[14/05/2025 18:25:07] El humano H0010 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:07] El humano H0010 está atravesando el túnel 1.
+[14/05/2025 18:25:07] El humano H0016 ha elegido el tunel 1
+[14/05/2025 18:25:07] El humano H0016 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:07] El humano H0003 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:07] El humano H0003 está esperando a poder entrar en el túnel 1 para ir al refugio.
+[14/05/2025 18:25:07] El humano H0004 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:07] El humano H0006 está atravesando el túnel 4.
+[14/05/2025 18:25:07] El humano H0005 ha sido matado por el zombie Z0009.
+[14/05/2025 18:25:07] Número de muertes de Z0009: 1.
+[14/05/2025 18:25:07] El humano H0005 se ha convertido en zombie
+[14/05/2025 18:25:07] Humano H0005 terminado
+[14/05/2025 18:25:07] Zombie Z0005 iniciado.
+[14/05/2025 18:25:07] El zombie Z0005 ha entrado a la zona 2
+[14/05/2025 18:25:07] El humano H0017 ha elegido el tunel 1
+[14/05/2025 18:25:07] El humano H0017 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:08] El humano H0008 ha entrado en el refugio
+[14/05/2025 18:25:08] El humano H0011 está atravesando el túnel 2.
+[14/05/2025 18:25:08] El humano H0008 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:08] El humano H0008 está en el área de descanso
+[14/05/2025 18:25:08] H0008 ha dejado 2 comidas. Comida total: 6.
+[14/05/2025 18:25:08] El humano H0010 ha entrado en el refugio
+[14/05/2025 18:25:08] El humano H0003 está atravesando el túnel 1.
+[14/05/2025 18:25:08] El humano H0010 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:08] El humano H0010 está en el área de descanso
+[14/05/2025 18:25:08] H0010 ha dejado 2 comidas. Comida total: 8.
+[14/05/2025 18:25:08] Humano H0018 iniciado.
+[14/05/2025 18:25:08] El humano H0018 está en el área común
+[14/05/2025 18:25:08] El humano H0006 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:08] El humano H0015 está atravesando el túnel 4.
+[14/05/2025 18:25:09] El humano H0011 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:09] El humano H0014 está atravesando el túnel 2.
+[14/05/2025 18:25:09] El humano H0003 ha entrado en el refugio
+[14/05/2025 18:25:09] El humano H0003 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:09] El humano H0003 está en el área de descanso
+[14/05/2025 18:25:09] El humano H0001 está en el comedor
+[14/05/2025 18:25:09] H0003 ha dejado 2 comidas. Comida total: 10.
+[14/05/2025 18:25:09] H0001 ha comido. Comida total: 9.
+[14/05/2025 18:25:09] Humano H0019 iniciado.
+[14/05/2025 18:25:09] El humano H0019 está en el área común
+[14/05/2025 18:25:09] El zombie Z0000 ha salido de la zona 2
+[14/05/2025 18:25:09] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:25:09] El humano H0015 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:09] El humano H0012 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:09] El humano H0012 está atravesando el túnel 3.
+[14/05/2025 18:25:10] El humano H0007 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:10] El humano H0007 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:10] El humano H0014 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:10] El humano H0002 está en el comedor
+[14/05/2025 18:25:10] H0002 ha comido. Comida total: 8.
+[14/05/2025 18:25:10] El zombie Z0005 ha salido de la zona 2
+[14/05/2025 18:25:10] El zombie Z0005 ha entrado a la zona 3
+[14/05/2025 18:25:10] El ataque entre el zombie Z0005 y el humano H0013 se está produciendo
+[14/05/2025 18:25:10] El humano H0018 ha elegido el tunel 2
+[14/05/2025 18:25:10] El humano H0018 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:10] El zombie Z0009 ha salido de la zona 2
+[14/05/2025 18:25:10] El zombie Z0009 ha entrado a la zona 4
+[14/05/2025 18:25:10] El ataque entre el zombie Z0009 y el humano H0004 se está produciendo
+[14/05/2025 18:25:10] Humano H0020 iniciado.
+[14/05/2025 18:25:10] El humano H0020 está en el área común
+[14/05/2025 18:25:10] El humano H0012 ha entrado en el refugio
+[14/05/2025 18:25:10] El humano H0012 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:10] El humano H0007 está atravesando el túnel 3.
+[14/05/2025 18:25:10] El humano H0012 está en el área de descanso
+[14/05/2025 18:25:10] H0012 ha dejado 2 comidas. Comida total: 10.
+[14/05/2025 18:25:10] El humano H0019 ha elegido el tunel 3
+[14/05/2025 18:25:10] El humano H0019 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:11] Humano H0009 terminado
+[14/05/2025 18:25:11] El humano H0013 ha sido matado por el zombie Z0005.
+[14/05/2025 18:25:11] Número de muertes de Z0005: 1.
+[14/05/2025 18:25:11] El humano H0013 se ha convertido en zombie
+[14/05/2025 18:25:11] Zombie Z0013 iniciado.
+[14/05/2025 18:25:11] El zombie Z0013 ha entrado a la zona 3
+[14/05/2025 18:25:11] El humano H0004 ha sido herido
+[14/05/2025 18:25:11] El humano H0004 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:11] Humano H0013 terminado
+[14/05/2025 18:25:11] El humano H0010 está en el comedor
+[14/05/2025 18:25:11] H0010 ha comido. Comida total: 9.
+[14/05/2025 18:25:11] El humano H0007 ha entrado en el refugio
+[14/05/2025 18:25:11] El humano H0007 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:11] El humano H0007 está en el área de descanso
+[14/05/2025 18:25:11] H0007 ha dejado 2 comidas. Comida total: 11.
+[14/05/2025 18:25:11] El humano H0003 está en el comedor
+[14/05/2025 18:25:11] H0003 ha comido. Comida total: 10.
+[14/05/2025 18:25:11] El humano H0008 está en el comedor
+[14/05/2025 18:25:11] H0008 ha comido. Comida total: 9.
+[14/05/2025 18:25:11] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:25:11] El zombie Z0000 ha entrado a la zona 3
+[14/05/2025 18:25:12] Humano H0021 iniciado.
+[14/05/2025 18:25:12] El humano H0021 está en el área común
+[14/05/2025 18:25:12] El humano H0020 ha elegido el tunel 3
+[14/05/2025 18:25:12] El humano H0020 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:13] Humano H0022 iniciado.
+[14/05/2025 18:25:13] El humano H0022 está en el área común
+[14/05/2025 18:25:13] El humano H0012 está en el comedor
+[14/05/2025 18:25:13] H0012 ha comido. Comida total: 8.
+[14/05/2025 18:25:13] El humano H0001 está en el área común
+[14/05/2025 18:25:13] El zombie Z0013 ha salido de la zona 3
+[14/05/2025 18:25:13] El zombie Z0013 ha entrado a la zona 3
+[14/05/2025 18:25:13] El zombie Z0009 ha salido de la zona 4
+[14/05/2025 18:25:13] El zombie Z0009 ha entrado a la zona 1
+[14/05/2025 18:25:13] El humano H0004 está atravesando el túnel 4.
+[14/05/2025 18:25:13] El humano H0002 está en el área común
+[14/05/2025 18:25:13] El humano H0021 ha elegido el tunel 4
+[14/05/2025 18:25:13] El humano H0021 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:13] Humano H0023 iniciado.
+[14/05/2025 18:25:13] El humano H0023 está en el área común
+[14/05/2025 18:25:14] El zombie Z0000 ha salido de la zona 3
+[14/05/2025 18:25:14] El zombie Z0000 ha entrado a la zona 3
+[14/05/2025 18:25:14] El zombie Z0005 ha salido de la zona 3
+[14/05/2025 18:25:14] El zombie Z0005 ha entrado a la zona 3
+[14/05/2025 18:25:14] El humano H0006 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:14] El humano H0006 está esperando a poder entrar en el túnel 4 para ir al refugio.
+[14/05/2025 18:25:14] El humano H0001 ha elegido el tunel 4
+[14/05/2025 18:25:14] El humano H0001 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:14] Humano H0024 iniciado.
+[14/05/2025 18:25:14] El humano H0024 está en el área común
+[14/05/2025 18:25:14] El humano H0004 ha entrado en el refugio
+[14/05/2025 18:25:14] El humano H0006 está atravesando el túnel 4.
+[14/05/2025 18:25:14] El humano H0004 está en el área de descanso
+[14/05/2025 18:25:15] El humano H0008 está en el área común
+[14/05/2025 18:25:15] El humano H0022 ha elegido el tunel 1
+[14/05/2025 18:25:15] El humano H0022 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:15] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:15] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:15] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:15] El humano H0016 está atravesando el túnel 1.
+[14/05/2025 18:25:15] El humano H0017 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:15] El humano H0022 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:15] El humano H0011 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:15] El humano H0011 está atravesando el túnel 2.
+[14/05/2025 18:25:15] El humano H0007 está en el comedor
+[14/05/2025 18:25:15] El humano H0003 está en el área común
+[14/05/2025 18:25:15] H0007 ha comido. Comida total: 7.
+[14/05/2025 18:25:15] El humano H0002 ha elegido el tunel 3
+[14/05/2025 18:25:15] El humano H0002 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:15] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:15] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:15] El humano H0002 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:15] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:15] El humano H0019 está atravesando el túnel 3.
+[14/05/2025 18:25:15] El humano H0020 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:15] El zombie Z0013 ha salido de la zona 3
+[14/05/2025 18:25:15] El zombie Z0013 ha entrado a la zona 1
+[14/05/2025 18:25:15] El humano H0023 ha elegido el tunel 2
+[14/05/2025 18:25:15] El humano H0023 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:15] El humano H0006 ha entrado en el refugio
+[14/05/2025 18:25:15] El humano H0006 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:15] El humano H0006 está en el área de descanso
+[14/05/2025 18:25:15] H0006 ha dejado 2 comidas. Comida total: 9.
+[14/05/2025 18:25:16] El humano H0014 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:16] El humano H0014 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:16] El humano H0024 ha elegido el tunel 2
+[14/05/2025 18:25:16] El humano H0024 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:16] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:16] El humano H0018 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:16] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:16] El humano H0023 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:16] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:16] El humano H0024 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:16] El humano H0016 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:16] El humano H0017 está atravesando el túnel 1.
+[14/05/2025 18:25:16] El humano H0008 ha elegido el tunel 1
+[14/05/2025 18:25:16] El humano H0008 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:16] El humano H0011 ha entrado en el refugio
+[14/05/2025 18:25:16] El humano H0011 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:16] El humano H0018 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:16] El humano H0014 está atravesando el túnel 2.
+[14/05/2025 18:25:16] El humano H0011 está en el área de descanso
+[14/05/2025 18:25:16] H0011 ha dejado 2 comidas. Comida total: 11.
+[14/05/2025 18:25:16] Humano H0025 iniciado.
+[14/05/2025 18:25:16] El humano H0025 está en el área común
+[14/05/2025 18:25:16] El humano H0010 está en el área común
+[14/05/2025 18:25:16] El zombie Z0009 ha salido de la zona 1
+[14/05/2025 18:25:16] El zombie Z0009 ha entrado a la zona 1
+[14/05/2025 18:25:16] El ataque entre el zombie Z0009 y el humano H0016 se está produciendo
+[14/05/2025 18:25:16] El humano H0015 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:16] El humano H0015 está atravesando el túnel 4.
+[14/05/2025 18:25:16] El humano H0019 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:16] El humano H0002 está atravesando el túnel 3.
+[14/05/2025 18:25:16] El humano H0012 está en el área común
+[14/05/2025 18:25:16] El zombie Z0005 ha salido de la zona 3
+[14/05/2025 18:25:16] El zombie Z0005 ha entrado a la zona 4
+[14/05/2025 18:25:16] El zombie Z0000 ha salido de la zona 3
+[14/05/2025 18:25:16] El zombie Z0000 ha entrado a la zona 2
+[14/05/2025 18:25:16] Humano H0026 iniciado.
+[14/05/2025 18:25:16] El humano H0026 está en el área común
+[14/05/2025 18:25:17] El humano H0017 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:17] El humano H0022 está atravesando el túnel 1.
+[14/05/2025 18:25:17] El humano H0014 ha entrado en el refugio
+[14/05/2025 18:25:17] El humano H0023 está atravesando el túnel 2.
+[14/05/2025 18:25:17] El humano H0014 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:17] El humano H0014 está en el área de descanso
+[14/05/2025 18:25:17] H0014 ha dejado 2 comidas. Comida total: 13.
+[14/05/2025 18:25:17] El humano H0003 ha elegido el tunel 3
+[14/05/2025 18:25:17] El humano H0003 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:17] El humano H0016 ha sido matado por el zombie Z0009.
+[14/05/2025 18:25:17] Número de muertes de Z0009: 2.
+[14/05/2025 18:25:17] El humano H0016 se ha convertido en zombie
+[14/05/2025 18:25:17] Zombie Z0016 iniciado.
+[14/05/2025 18:25:17] El zombie Z0016 ha entrado a la zona 1
+[14/05/2025 18:25:17] El ataque entre el zombie Z0016 y el humano H0017 se está produciendo
+[14/05/2025 18:25:17] El humano H0015 ha entrado en el refugio
+[14/05/2025 18:25:17] El humano H0015 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:17] El humano H0015 está en el área de descanso
+[14/05/2025 18:25:17] H0015 ha dejado 2 comidas. Comida total: 15.
+[14/05/2025 18:25:17] El humano H0002 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:17] El humano H0020 está atravesando el túnel 3.
+[14/05/2025 18:25:17] El humano H0017 ha sido herido
+[14/05/2025 18:25:17] El humano H0017 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:17] El humano H0012 ha elegido el tunel 4
+[14/05/2025 18:25:17] El humano H0012 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:17] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:17] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:17] El humano H0021 está atravesando el túnel 4.
+[14/05/2025 18:25:17] El humano H0001 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:17] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:17] El humano H0012 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:18] El humano H0022 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:18] El humano H0025 ha elegido el tunel 3
+[14/05/2025 18:25:18] El humano H0025 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:18] El humano H0023 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:18] El humano H0024 está atravesando el túnel 2.
+[14/05/2025 18:25:18] El zombie Z0013 ha salido de la zona 1
+[14/05/2025 18:25:18] El zombie Z0013 ha entrado a la zona 1
+[14/05/2025 18:25:18] El ataque entre el zombie Z0013 y el humano H0022 se está produciendo
+[14/05/2025 18:25:18] El humano H0004 está en el comedor
+[14/05/2025 18:25:18] H0004 ha comido. Comida total: 14.
+[14/05/2025 18:25:18] El humano H0010 ha elegido el tunel 1
+[14/05/2025 18:25:18] El humano H0010 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:18] El humano H0011 está en el comedor
+[14/05/2025 18:25:18] H0011 ha comido. Comida total: 13.
+[14/05/2025 18:25:18] El humano H0026 ha elegido el tunel 4
+[14/05/2025 18:25:18] El humano H0026 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:18] El humano H0020 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:18] Humano H0027 iniciado.
+[14/05/2025 18:25:18] El humano H0027 está en el área común
+[14/05/2025 18:25:18] El humano H0022 ha sido herido
+[14/05/2025 18:25:18] El humano H0022 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:18] El humano H0021 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:18] El humano H0001 está atravesando el túnel 4.
+[14/05/2025 18:25:18] El humano H0006 está en el comedor
+[14/05/2025 18:25:18] H0006 ha comido. Comida total: 12.
+[14/05/2025 18:25:19] El zombie Z0005 ha salido de la zona 4
+[14/05/2025 18:25:19] El zombie Z0005 ha entrado a la zona 4
+[14/05/2025 18:25:19] El ataque entre el zombie Z0005 y el humano H0021 se está produciendo
+[14/05/2025 18:25:19] El humano H0024 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:19] El humano H0018 está atravesando el túnel 2.
+[14/05/2025 18:25:19] El humano H0007 está en el área común
+[14/05/2025 18:25:19] El humano H0015 está en el comedor
+[14/05/2025 18:25:19] H0015 ha comido. Comida total: 11.
+[14/05/2025 18:25:19] Humano H0028 iniciado.
+[14/05/2025 18:25:19] El humano H0028 está en el área común
+[14/05/2025 18:25:19] El humano H0014 está en el comedor
+[14/05/2025 18:25:19] H0014 ha comido. Comida total: 10.
+[14/05/2025 18:25:19] El zombie Z0000 ha salido de la zona 2
+[14/05/2025 18:25:19] El zombie Z0000 ha entrado a la zona 2
+[14/05/2025 18:25:19] El ataque entre el zombie Z0000 y el humano H0023 se está produciendo
+[14/05/2025 18:25:19] El humano H0001 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:19] El humano H0012 está atravesando el túnel 4.
+[14/05/2025 18:25:20] El zombie Z0009 ha salido de la zona 1
+[14/05/2025 18:25:20] El zombie Z0009 ha entrado a la zona 1
+[14/05/2025 18:25:20] El zombie Z0016 ha salido de la zona 1
+[14/05/2025 18:25:20] El zombie Z0016 ha entrado a la zona 2
+[14/05/2025 18:25:20] El humano H0018 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:20] El humano H0021 ha sido matado por el zombie Z0005.
+[14/05/2025 18:25:20] Número de muertes de Z0005: 2.
+[14/05/2025 18:25:20] El humano H0021 se ha convertido en zombie
+[14/05/2025 18:25:20] Zombie Z0021 iniciado.
+[14/05/2025 18:25:20] El zombie Z0021 ha entrado a la zona 4
+[14/05/2025 18:25:20] El ataque entre el zombie Z0021 y el humano H0001 se está produciendo
+[14/05/2025 18:25:20] El humano H0023 ha sido matado por el zombie Z0000.
+[14/05/2025 18:25:20] Número de muertes de Z0000: 2.
+[14/05/2025 18:25:20] El humano H0023 se ha convertido en zombie
+[14/05/2025 18:25:20] El ataque entre el zombie Z0016 y el humano H0024 se está produciendo
+[14/05/2025 18:25:20] Zombie Z0023 iniciado.
+[14/05/2025 18:25:20] El zombie Z0023 ha entrado a la zona 2
+[14/05/2025 18:25:20] El humano H0007 ha elegido el tunel 1
+[14/05/2025 18:25:20] El humano H0007 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:20] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:20] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:20] El humano H0007 está atravesando el túnel 1.
+[14/05/2025 18:25:20] El humano H0008 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:20] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:20] El humano H0010 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:20] El humano H0027 ha elegido el tunel 3
+[14/05/2025 18:25:20] El humano H0027 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:20] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:20] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:20] El humano H0003 está atravesando el túnel 3.[14/05/2025 18:25:20] El humano H0025 está esperando a poder entrar en la zona de riesgo 3.
 
-[14/05/2025 14:01:22] El humano H0002 está en el área de descanso
-[14/05/2025 14:01:22] H0002 ha dejado 2 comidas. Comida total: 4.
-[14/05/2025 14:01:22] El humano H0003 ha entrado en la zona de riesgo 4.
-[14/05/2025 14:01:22] El humano H0008 está atravesando el túnel 4.
-[14/05/2025 14:01:22] El humano H0012 ha elegido el tunel 1
-[14/05/2025 14:01:22] El humano H0012 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:23] El humano H0009 ha sido herido
-[14/05/2025 14:01:23] El humano H0009 ha salido de la zona de riesgo 3
-[14/05/2025 14:01:23] El humano H0001 ha entrado en el refugio
-[14/05/2025 14:01:23] El humano H0001 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:23] El humano H0001 está en el área de descanso
-[14/05/2025 14:01:23] El humano H0007 está atravesando el túnel 3.
-[14/05/2025 14:01:23] H0001 ha dejado 2 comidas. Comida total: 6.
-[14/05/2025 14:01:23] Humano H0014 iniciado.
-[14/05/2025 14:01:23] El humano H0014 está en el área común
-[14/05/2025 14:01:23] El humano H0008 ha entrado en la zona de riesgo 4.
-[14/05/2025 14:01:23] El humano H0013 ha elegido el tunel 3
-[14/05/2025 14:01:23] El humano H0013 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:24] El humano H0007 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:24] El humano H0005 está atravesando el túnel 3.
-[14/05/2025 14:01:25] El humano H0014 ha elegido el tunel 1
-[14/05/2025 14:01:25] El humano H0014 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:25] El túnel 1 tiene ya 3 humanos.
-[14/05/2025 14:01:25] El túnel 1 tiene ya 3 humanos.
-[14/05/2025 14:01:25] El túnel 1 tiene ya 3 humanos.
-[14/05/2025 14:01:25] El humano H0014 está atravesando el túnel 1.
-[14/05/2025 14:01:25] El humano H0012 está esperando a poder entrar en la zona de riesgo 1.
-[14/05/2025 14:01:25] El humano H0006 está esperando a poder entrar en la zona de riesgo 1.
-[14/05/2025 14:01:25] El humano H0004 está en el comedor
-[14/05/2025 14:01:25] H0004 ha comido. Comida total: 5.
-[14/05/2025 14:01:25] Humano H0015 iniciado.
-[14/05/2025 14:01:25] El humano H0015 está en el área común
-[14/05/2025 14:01:25] El humano H0005 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:25] El humano H0002 está en el comedor
-[14/05/2025 14:01:25] H0002 ha comido. Comida total: 4.
-[14/05/2025 14:01:25] El zombie Z0000 ha salido de la zona 3
-[14/05/2025 14:01:25] El zombie Z0000 ha entrado a la zona 1
-[14/05/2025 14:01:26] El humano H0014 ha entrado en la zona de riesgo 1
-[14/05/2025 14:01:26] El humano H0012 está atravesando el túnel 1.
-[14/05/2025 14:01:26] El humano H0009 está atravesando el túnel 3.
-[14/05/2025 14:01:26] El humano H0015 ha elegido el tunel 4
-[14/05/2025 14:01:26] El humano H0015 está esperando en la barrera del túnel 4.
-[14/05/2025 14:01:27] El humano H0012 ha entrado en la zona de riesgo 1
-[14/05/2025 14:01:27] El humano H0006 está atravesando el túnel 1.
-[14/05/2025 14:01:27] El humano H0001 está en el comedor
-[14/05/2025 14:01:27] H0001 ha comido. Comida total: 3.
-[14/05/2025 14:01:27] Humano H0016 iniciado.
-[14/05/2025 14:01:27] El humano H0016 está en el área común
-[14/05/2025 14:01:27] El humano H0009 ha entrado en el refugio
-[14/05/2025 14:01:27] El humano H0009 está en el área de descanso
-[14/05/2025 14:01:27] El humano H0010 ha salido de la zona de riesgo 4
-[14/05/2025 14:01:27] El humano H0010 está atravesando el túnel 4.
-[14/05/2025 14:01:28] El humano H0006 ha entrado en la zona de riesgo 1
-[14/05/2025 14:01:28] El zombie Z0000 ha salido de la zona 1
-[14/05/2025 14:01:28] El zombie Z0000 ha entrado a la zona 1
-[14/05/2025 14:01:28] El ataque entre el zombie Z0000 y el humano H0012 se está produciendo
-[14/05/2025 14:01:28] El humano H0016 ha elegido el tunel 1
-[14/05/2025 14:01:28] El humano H0016 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:28] El humano H0010 ha entrado en el refugio
-[14/05/2025 14:01:28] El humano H0010 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:28] El humano H0010 está en el área de descanso
-[14/05/2025 14:01:28] H0010 ha dejado 2 comidas. Comida total: 5.
-[14/05/2025 14:01:28] Humano H0017 iniciado.
-[14/05/2025 14:01:28] El humano H0017 está en el área común
-[14/05/2025 14:01:29] El humano H0003 ha salido de la zona de riesgo 4
-[14/05/2025 14:01:29] El humano H0003 está atravesando el túnel 4.
-[14/05/2025 14:01:29] El humano H0004 está en el área común
-[14/05/2025 14:01:29] El humano H0012 ha sido matado por el zombie Z0000.
-[14/05/2025 14:01:29] Número de muertes de Z0000: 1.
-[14/05/2025 14:01:29] El humano H0012 se ha convertido en zombie
-[14/05/2025 14:01:29] Zombie Z0012 iniciado.
-[14/05/2025 14:01:29] El zombie Z0012 ha entrado a la zona 1
-[14/05/2025 14:01:29] El ataque entre el zombie Z0012 y el humano H0006 se está produciendo
-[14/05/2025 14:01:30] El humano H0002 está en el área común
-[14/05/2025 14:01:30] El humano H0007 ha salido de la zona de riesgo 3
-[14/05/2025 14:01:30] El humano H0007 está atravesando el túnel 3.
-[14/05/2025 14:01:30] Humano H0018 iniciado.
-[14/05/2025 14:01:30] El humano H0018 está en el área común
-[14/05/2025 14:01:30] El humano H0009 está en el comedor
-[14/05/2025 14:01:30] H0009 ha comido. Comida total: 4.
-[14/05/2025 14:01:30] El humano H0003 ha entrado en el refugio
-[14/05/2025 14:01:30] El humano H0003 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:30] El humano H0003 está en el área de descanso
-[14/05/2025 14:01:30] H0003 ha dejado 2 comidas. Comida total: 6.
-[14/05/2025 14:01:30] El humano H0017 ha elegido el tunel 3
-[14/05/2025 14:01:30] El humano H0017 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:30] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:30] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:30] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:30] El humano H0017 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:30] El humano H0011 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:30] El humano H0013 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:30] El humano H0008 ha salido de la zona de riesgo 4
-[14/05/2025 14:01:30] El humano H0008 está atravesando el túnel 4.
-[14/05/2025 14:01:30] El humano H0004 ha elegido el tunel 4
-[14/05/2025 14:01:30] El humano H0004 está esperando en la barrera del túnel 4.
-[14/05/2025 14:01:30] El humano H0006 ha sido herido
-[14/05/2025 14:01:30] El humano H0006 ha salido de la zona de riesgo 1
-[14/05/2025 14:01:31] El humano H0005 ha salido de la zona de riesgo 3
-[14/05/2025 14:01:31] El humano H0005 está esperando a poder entrar en el túnel 3 para ir al refugio.
-[14/05/2025 14:01:31] El humano H0002 ha elegido el tunel 3
-[14/05/2025 14:01:31] El humano H0002 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:31] El humano H0007 ha entrado en el refugio
-[14/05/2025 14:01:31] El humano H0007 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:31] El humano H0007 está en el área de descanso[14/05/2025 14:01:31] El humano H0017 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:20] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:20] El humano H0027 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:20] El humano H0012 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:21] El humano H0024 ha sido herido
+[14/05/2025 18:25:21] El humano H0024 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:21] El ataque entre el zombie Z0023 y el humano H0018 se está produciendo
+[14/05/2025 18:25:21] El humano H0001 ha sido herido
+[14/05/2025 18:25:21] El humano H0001 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:21] El humano H0028 ha elegido el tunel 1
+[14/05/2025 18:25:21] El humano H0028 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:21] Humano H0029 iniciado.
+[14/05/2025 18:25:21] El humano H0029 está en el área común
+[14/05/2025 18:25:21] El zombie Z0013 ha salido de la zona 1
+[14/05/2025 18:25:21] El zombie Z0013 ha entrado a la zona 4
+[14/05/2025 18:25:21] El ataque entre el zombie Z0013 y el humano H0012 se está produciendo
+[14/05/2025 18:25:21] El humano H0007 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:21] El humano H0008 está atravesando el túnel 1.
+[14/05/2025 18:25:21] El humano H0003 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:21] El humano H0025 está atravesando el túnel 3.
+[14/05/2025 18:25:21] El humano H0018 ha sido herido
+[14/05/2025 18:25:21] El humano H0018 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:21] Humano H0016 terminado
+[14/05/2025 18:25:22] El humano H0006 está en el área común
+[14/05/2025 18:25:22] El zombie Z0005 ha salido de la zona 4
+[14/05/2025 18:25:22] El zombie Z0005 ha entrado a la zona 4
+[14/05/2025 18:25:22] El humano H0008 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:22] El humano H0010 está atravesando el túnel 1.
+[14/05/2025 18:25:22] El zombie Z0009 ha salido de la zona 1
+[14/05/2025 18:25:22] El zombie Z0009 ha entrado a la zona 4
+[14/05/2025 18:25:22] El humano H0025 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:22] El humano H0027 está atravesando el túnel 3.
+[14/05/2025 18:25:22] El humano H0015 está en el área común
+[14/05/2025 18:25:22] El humano H0019 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:22] El humano H0019 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:22] El humano H0017 está esperando a poder entrar en el túnel 1 para ir al refugio.
+[14/05/2025 18:25:22] El humano H0011 está en el área común
+[14/05/2025 18:25:22] El humano H0029 ha elegido el tunel 3
+[14/05/2025 18:25:22] El humano H0029 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:22] El humano H0012 ha sido herido
+[14/05/2025 18:25:22] El humano H0012 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:22] El humano H0014 está en el área común
+[14/05/2025 18:25:23] Humano H0030 iniciado.
+[14/05/2025 18:25:23] El humano H0030 está en el área común
+[14/05/2025 18:25:23] El humano H0004 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:23] El zombie Z0000 ha salido de la zona 2
+[14/05/2025 18:25:23] El zombie Z0000 ha entrado a la zona 2
+[14/05/2025 18:25:23] El humano H0010 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:23] El humano H0017 está atravesando el túnel 1.
+[14/05/2025 18:25:23] El humano H0027 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:23] El humano H0019 está atravesando el túnel 3.
+[14/05/2025 18:25:23] El zombie Z0016 ha salido de la zona 2
+[14/05/2025 18:25:23] El zombie Z0016 ha entrado a la zona 1
+[14/05/2025 18:25:23] El ataque entre el zombie Z0016 y el humano H0008 se está produciendo
+[14/05/2025 18:25:23] El humano H0002 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:23] El humano H0002 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:24] El humano H0006 ha elegido el tunel 4
+[14/05/2025 18:25:24] El humano H0006 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:24] El zombie Z0021 ha salido de la zona 4
+[14/05/2025 18:25:24] El zombie Z0021 ha entrado a la zona 1
+[14/05/2025 18:25:24] El humano H0015 ha elegido el tunel 4
+[14/05/2025 18:25:24] El humano H0015 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:24] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:24] El humano H0026 está atravesando el túnel 4.
+[14/05/2025 18:25:24] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:24] El humano H0006 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:24] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:24] El humano H0015 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:24] El humano H0014 ha elegido el tunel 4
+[14/05/2025 18:25:24] El humano H0014 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:24] El humano H0020 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:24] El humano H0020 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:24] Humano H0023 terminado
+[14/05/2025 18:25:24] El humano H0017 ha entrado en el refugio
+[14/05/2025 18:25:24] El humano H0017 está en el área de descanso
+[14/05/2025 18:25:24] El humano H0022 está atravesando el túnel 1.
+[14/05/2025 18:25:24] Humano H0031 iniciado.
+[14/05/2025 18:25:24] El humano H0031 está en el área común
+[14/05/2025 18:25:24] El humano H0019 ha entrado en el refugio
+[14/05/2025 18:25:24] El humano H0019 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:24] El humano H0019 está en el área de descanso
+[14/05/2025 18:25:24] El humano H0002 está atravesando el túnel 3.
+[14/05/2025 18:25:24] H0019 ha dejado 2 comidas. Comida total: 12.
+[14/05/2025 18:25:24] El humano H0011 ha elegido el tunel 3
+[14/05/2025 18:25:24] El humano H0011 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:24] Humano H0021 terminado
+[14/05/2025 18:25:24] El zombie Z0009 ha salido de la zona 4
+[14/05/2025 18:25:24] El zombie Z0009 ha entrado a la zona 1
+[14/05/2025 18:25:24] El zombie Z0023 ha salido de la zona 2
+[14/05/2025 18:25:24] El zombie Z0023 ha entrado a la zona 2
+[14/05/2025 18:25:24] El humano H0030 ha elegido el tunel 2
+[14/05/2025 18:25:24] El humano H0030 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:25] El zombie Z0013 ha salido de la zona 4
+[14/05/2025 18:25:25] El zombie Z0013 ha entrado a la zona 1
+[14/05/2025 18:25:25] El humano H0008 ha sido herido
+[14/05/2025 18:25:25] El humano H0008 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:25] El ataque entre el zombie Z0021 y el humano H0007 se está produciendo
+[14/05/2025 18:25:25] Humano H0032 iniciado.
+[14/05/2025 18:25:25] El humano H0032 está en el área común
+[14/05/2025 18:25:25] El humano H0026 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:25] El humano H0006 está atravesando el túnel 4.
+[14/05/2025 18:25:25] El humano H0024 está atravesando el túnel 2.
+[14/05/2025 18:25:25] El humano H0001 está esperando a poder entrar en el túnel 4 para ir al refugio.
+[14/05/2025 18:25:25] El zombie Z0000 ha salido de la zona 2
+[14/05/2025 18:25:25] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:25:25] El humano H0018 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:25] El humano H0022 ha entrado en el refugio
+[14/05/2025 18:25:25] El humano H0022 está en el área de descanso
+[14/05/2025 18:25:25] El humano H0007 ha sido herido
+[14/05/2025 18:25:25] El humano H0007 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:25] El ataque entre el zombie Z0009 y el humano H0010 se está produciendo
+[14/05/2025 18:25:25] El humano H0002 ha entrado en el refugio
+[14/05/2025 18:25:25] El humano H0020 está atravesando el túnel 3.
+[14/05/2025 18:25:25] El humano H0002 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:25] El humano H0002 está en el área de descanso
+[14/05/2025 18:25:25] H0002 ha dejado 2 comidas. Comida total: 14.
+[14/05/2025 18:25:25] El zombie Z0005 ha salido de la zona 4
+[14/05/2025 18:25:25] El zombie Z0005 ha entrado a la zona 1
+[14/05/2025 18:25:26] El humano H0031 ha elegido el tunel 1
+[14/05/2025 18:25:26] El humano H0031 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:26] El humano H0006 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:26] El humano H0001 está atravesando el túnel 4.
+[14/05/2025 18:25:26] El humano H0015 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:26] El humano H0032 ha elegido el tunel 1
+[14/05/2025 18:25:26] El humano H0032 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:26] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:26] El humano H0028 está atravesando el túnel 1.
+[14/05/2025 18:25:26] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:26] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:26] El humano H0031 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:26] El humano H0032 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:26] Humano H0033 iniciado.
+[14/05/2025 18:25:26] El humano H0033 está en el área común
+[14/05/2025 18:25:26] El humano H0024 ha entrado en el refugio
+[14/05/2025 18:25:26] El humano H0018 está atravesando el túnel 2.
+[14/05/2025 18:25:26] El humano H0024 está en el área de descanso
+[14/05/2025 18:25:26] El humano H0010 ha sido matado por el zombie Z0009.
+[14/05/2025 18:25:26] Número de muertes de Z0009: 3.
+[14/05/2025 18:25:26] El humano H0010 se ha convertido en zombie
+[14/05/2025 18:25:26] Zombie Z0010 iniciado.
+[14/05/2025 18:25:26] El zombie Z0010 ha entrado a la zona 1
+[14/05/2025 18:25:26] El humano H0020 ha entrado en el refugio
+[14/05/2025 18:25:26] El humano H0020 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:26] El humano H0020 está en el área de descanso
+[14/05/2025 18:25:26] H0020 ha dejado 2 comidas. Comida total: 16.
+[14/05/2025 18:25:26] El humano H0012 está esperando a poder entrar en el túnel 4 para ir al refugio.
+[14/05/2025 18:25:26] El zombie Z0023 ha salido de la zona 2
+[14/05/2025 18:25:26] El zombie Z0023 ha entrado a la zona 3
+[14/05/2025 18:25:26] El ataque entre el zombie Z0023 y el humano H0027 se está produciendo
+[14/05/2025 18:25:26] Humano H0034 iniciado.
+[14/05/2025 18:25:26] El humano H0034 está en el área común
+[14/05/2025 18:25:27] El zombie Z0016 ha salido de la zona 1
+[14/05/2025 18:25:27] El zombie Z0016 ha entrado a la zona 3
+[14/05/2025 18:25:27] El humano H0001 ha entrado en el refugio
+[14/05/2025 18:25:27] El humano H0012 está atravesando el túnel 4.
+[14/05/2025 18:25:27] El humano H0015 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:27] El humano H0001 está en el área de descanso
+[14/05/2025 18:25:27] El humano H0017 está en el comedor
+[14/05/2025 18:25:27] H0017 ha comido. Comida total: 15.
+[14/05/2025 18:25:27] El humano H0028 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:27] El humano H0031 está atravesando el túnel 1.
+[14/05/2025 18:25:27] El humano H0018 ha entrado en el refugio
+[14/05/2025 18:25:27] El humano H0018 está en el área de descanso
+[14/05/2025 18:25:27] El humano H0002 está en el comedor
+[14/05/2025 18:25:27] H0002 ha comido. Comida total: 14.
+[14/05/2025 18:25:27] El humano H0003 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:27] El humano H0003 está atravesando el túnel 3.
+[14/05/2025 18:25:27] El humano H0027 ha sido herido
+[14/05/2025 18:25:27] El humano H0027 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:27] El ataque entre el zombie Z0016 y el humano H0025 se está produciendo
+[14/05/2025 18:25:27] El zombie Z0021 ha salido de la zona 1
+[14/05/2025 18:25:27] El zombie Z0021 ha entrado a la zona 1
+[14/05/2025 18:25:27] El ataque entre el zombie Z0021 y el humano H0028 se está produciendo
+[14/05/2025 18:25:28] El humano H0004 está en el área común
+[14/05/2025 18:25:28] El humano H0034 ha elegido el tunel 3
+[14/05/2025 18:25:28] El humano H0034 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:28] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:28] El humano H0029 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:28] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:28] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:28] El humano H0034 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:28] El humano H0011 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:28] El humano H0033 ha elegido el tunel 4
+[14/05/2025 18:25:28] El humano H0033 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:28] El humano H0012 ha entrado en el refugio
+[14/05/2025 18:25:28] El humano H0012 está en el área de descanso
+[14/05/2025 18:25:28] El humano H0015 está atravesando el túnel 4.
+[14/05/2025 18:25:28] El humano H0019 está en el comedor
+[14/05/2025 18:25:28] H0019 ha comido. Comida total: 13.
+[14/05/2025 18:25:28] El humano H0031 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:28] El humano H0032 está atravesando el túnel 1.
+[14/05/2025 18:25:28] El humano H0007 está esperando a poder entrar en el túnel 1 para ir al refugio.
+[14/05/2025 18:25:28] Humano H0035 iniciado.
+[14/05/2025 18:25:28] El humano H0035 está en el área común
+[14/05/2025 18:25:28] El humano H0022 está en el comedor
+[14/05/2025 18:25:28] H0022 ha comido. Comida total: 12.
+[14/05/2025 18:25:28] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:25:28] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:25:28] El zombie Z0010 ha salido de la zona 1
+[14/05/2025 18:25:28] El zombie Z0010 ha entrado a la zona 1
+[14/05/2025 18:25:28] El humano H0028 ha sido matado por el zombie Z0021.
+[14/05/2025 18:25:28] Número de muertes de Z0021: 1.
+[14/05/2025 18:25:28] El humano H0028 se ha convertido en zombie
+[14/05/2025 18:25:28] El ataque entre el zombie Z0000 y el humano H0031 se está produciendo
+[14/05/2025 18:25:28] Zombie Z0028 iniciado.
+[14/05/2025 18:25:28] El zombie Z0028 ha entrado a la zona 1
+[14/05/2025 18:25:28] El humano H0025 ha sido herido
+[14/05/2025 18:25:28] El humano H0025 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:28] El humano H0025 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:28] Humano H0010 terminado
+[14/05/2025 18:25:28] El humano H0003 ha entrado en el refugio
+[14/05/2025 18:25:28] El humano H0025 está atravesando el túnel 3.
+[14/05/2025 18:25:28] El humano H0029 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:28] El humano H0003 ha recolectado 2 piezas de comida
+[14/05/2025 18:25:28] El humano H0003 está en el área de descanso
+[14/05/2025 18:25:28] H0003 ha dejado 2 comidas. Comida total: 14.
+[14/05/2025 18:25:29] El humano H0015 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:29] El zombie Z0013 ha salido de la zona 1
+[14/05/2025 18:25:29] El zombie Z0013 ha entrado a la zona 2
+[14/05/2025 18:25:29] El humano H0032 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:29] El humano H0007 está atravesando el túnel 1.
+[14/05/2025 18:25:29] El humano H0004 ha elegido el tunel 3
+[14/05/2025 18:25:29] El humano H0004 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:29] El humano H0031 ha sido matado por el zombie Z0000.
+[14/05/2025 18:25:29] Número de muertes de Z0000: 3.
+[14/05/2025 18:25:29] El humano H0031 se ha convertido en zombie
+[14/05/2025 18:25:29] El ataque entre el zombie Z0010 y el humano H0032 se está produciendo
+[14/05/2025 18:25:29] Zombie Z0031 iniciado.
+[14/05/2025 18:25:29] El zombie Z0031 ha entrado a la zona 1
+[14/05/2025 18:25:29] El zombie Z0009 ha salido de la zona 1
+[14/05/2025 18:25:29] El zombie Z0009 ha entrado a la zona 1
+[14/05/2025 18:25:29] El humano H0008 está esperando a poder entrar en el túnel 1 para ir al refugio.
+[14/05/2025 18:25:29] El zombie Z0005 ha salido de la zona 1
+[14/05/2025 18:25:29] El zombie Z0005 ha entrado a la zona 4
+[14/05/2025 18:25:29] El ataque entre el zombie Z0005 y el humano H0015 se está produciendo
+[14/05/2025 18:25:29] El humano H0024 está en el comedor
+[14/05/2025 18:25:29] H0024 ha comido. Comida total: 13.
+[14/05/2025 18:25:29] El humano H0035 ha elegido el tunel 3
+[14/05/2025 18:25:29] El humano H0035 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:29] El humano H0025 ha entrado en el refugio
+[14/05/2025 18:25:29] El humano H0034 está atravesando el túnel 3.
+[14/05/2025 18:25:29] El humano H0025 está en el área de descanso
+[14/05/2025 18:25:29] El humano H0001 está en el comedor
+[14/05/2025 18:25:29] H0001 ha comido. Comida total: 12.
+[14/05/2025 18:25:29] Humano H0036 iniciado.
+[14/05/2025 18:25:29] El humano H0036 está en el área común
+[14/05/2025 18:25:30] El humano H0015 ha sido matado por el zombie Z0005.
+[14/05/2025 18:25:30] Número de muertes de Z0005: 3.
+[14/05/2025 18:25:30] El humano H0015 se ha convertido en zombie
+[14/05/2025 18:25:30] Zombie Z0015 iniciado.
+[14/05/2025 18:25:30] El zombie Z0015 ha entrado a la zona 4
+[14/05/2025 18:25:30] El ataque entre el zombie Z0015 y el humano H0026 se está produciendo
+[14/05/2025 18:25:30] El humano H0027 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:30] El humano H0032 ha sido herido
+[14/05/2025 18:25:30] El humano H0032 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:30] El humano H0007 ha entrado en el refugio
+[14/05/2025 18:25:30] El humano H0008 está atravesando el túnel 1.
+[14/05/2025 18:25:30] El humano H0007 está en el área de descanso
+[14/05/2025 18:25:30] El humano H0017 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:30] El zombie Z0023 ha salido de la zona 3
+[14/05/2025 18:25:30] El zombie Z0023 ha entrado a la zona 1
+[14/05/2025 18:25:30] El humano H0020 está en el comedor
+[14/05/2025 18:25:30] H0020 ha comido. Comida total: 11.
+[14/05/2025 18:25:30] El humano H0012 está en el comedor
+[14/05/2025 18:25:30] H0012 ha comido. Comida total: 10.
+[14/05/2025 18:25:30] Humano H0037 iniciado.
+[14/05/2025 18:25:30] El humano H0037 está en el área común
+[14/05/2025 18:25:30] El zombie Z0016 ha salido de la zona 3
+[14/05/2025 18:25:30] El zombie Z0016 ha entrado a la zona 3
+[14/05/2025 18:25:30] El humano H0034 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:30] El humano H0027 está atravesando el túnel 3.
+[14/05/2025 18:25:30] El humano H0011 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:31] El humano H0026 ha sido matado por el zombie Z0015.
+[14/05/2025 18:25:31] Número de muertes de Z0015: 1.
+[14/05/2025 18:25:31] El humano H0026 se ha convertido en zombie
+[14/05/2025 18:25:31] Zombie Z0026 iniciado.
+[14/05/2025 18:25:31] El zombie Z0026 ha entrado a la zona 4
+[14/05/2025 18:25:31] El ataque entre el zombie Z0026 y el humano H0006 se está produciendo
+[14/05/2025 18:25:31] El humano H0008 ha entrado en el refugio
+[14/05/2025 18:25:31] El humano H0008 está en el área de descanso
+[14/05/2025 18:25:31] El humano H0018 está en el comedor
+[14/05/2025 18:25:31] H0018 ha comido. Comida total: 9.
+[14/05/2025 18:25:31] El humano H0019 está en el área común
+[14/05/2025 18:25:31] El humano H0036 ha elegido el tunel 2
+[14/05/2025 18:25:31] El humano H0036 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:31] El zombie Z0013 ha salido de la zona 2
+[14/05/2025 18:25:31] El zombie Z0013 ha entrado a la zona 1
+[14/05/2025 18:25:31] Humano H0026 terminado
+[14/05/2025 18:25:31] El zombie Z0021 ha salido de la zona 1
+[14/05/2025 18:25:31] El zombie Z0021 ha entrado a la zona 2
+[14/05/2025 18:25:31] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:25:31] El zombie Z0000 ha entrado a la zona 3
+[14/05/2025 18:25:31] El ataque entre el zombie Z0000 y el humano H0034 se está produciendo
+[14/05/2025 18:25:31] El humano H0003 está en el comedor
+[14/05/2025 18:25:31] H0003 ha comido. Comida total: 8.
+[14/05/2025 18:25:31] El humano H0002 está en el área común
+[14/05/2025 18:25:31] El humano H0027 ha entrado en el refugio
+[14/05/2025 18:25:31] El humano H0027 está en el área de descanso
+[14/05/2025 18:25:31] El humano H0029 está atravesando el túnel 3.
+[14/05/2025 18:25:31] El humano H0022 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:32] El humano H0025 está en el comedor
+[14/05/2025 18:25:32] H0025 ha comido. Comida total: 7.
+[14/05/2025 18:25:32] El zombie Z0005 ha salido de la zona 4
+[14/05/2025 18:25:32] El zombie Z0005 ha entrado a la zona 3
+[14/05/2025 18:25:32] El humano H0007 está en el comedor
+[14/05/2025 18:25:32] H0007 ha comido. Comida total: 6.
+[14/05/2025 18:25:32] El humano H0006 ha sido matado por el zombie Z0026.
+[14/05/2025 18:25:32] Número de muertes de Z0026: 1.
+[14/05/2025 18:25:32] El humano H0006 se ha convertido en zombie
+[14/05/2025 18:25:32] Humano H0006 terminado
+[14/05/2025 18:25:32] Zombie Z0006 iniciado.
+[14/05/2025 18:25:32] El zombie Z0006 ha entrado a la zona 4
+[14/05/2025 18:25:32] El zombie Z0028 ha salido de la zona 1
+[14/05/2025 18:25:32] El zombie Z0028 ha entrado a la zona 1
+[14/05/2025 18:25:32] El zombie Z0031 ha salido de la zona 1
+[14/05/2025 18:25:32] El zombie Z0031 ha entrado a la zona 2
+[14/05/2025 18:25:32] El zombie Z0009 ha salido de la zona 1
+[14/05/2025 18:25:32] El zombie Z0009 ha entrado a la zona 4
+[14/05/2025 18:25:32] El zombie Z0010 ha salido de la zona 1
+[14/05/2025 18:25:32] El zombie Z0010 ha entrado a la zona 3
+[14/05/2025 18:25:32] El humano H0019 ha elegido el tunel 2
+[14/05/2025 18:25:32] El humano H0019 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:32] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:32] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:32] El humano H0030 está atravesando el túnel 2.
+[14/05/2025 18:25:32] El humano H0036 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:32] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:32] El humano H0019 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:32] El humano H0037 ha elegido el tunel 2
+[14/05/2025 18:25:32] El humano H0037 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:32] El humano H0024 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:32] Humano H0038 iniciado.
+[14/05/2025 18:25:32] El humano H0038 está en el área común
+[14/05/2025 18:25:32] El humano H0029 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:32] El humano H0011 está atravesando el túnel 3.
+[14/05/2025 18:25:33] El humano H0002 ha elegido el tunel 2
+[14/05/2025 18:25:33] El humano H0002 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:33] El zombie Z0016 ha salido de la zona 3
+[14/05/2025 18:25:33] El zombie Z0016 ha entrado a la zona 1
+[14/05/2025 18:25:33] El humano H0034 ha sido herido
+[14/05/2025 18:25:33] El humano H0034 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:33] El ataque entre el zombie Z0005 y el humano H0029 se está produciendo
+[14/05/2025 18:25:33] El zombie Z0023 ha salido de la zona 1
+[14/05/2025 18:25:33] El zombie Z0023 ha entrado a la zona 3
+[14/05/2025 18:25:33] Humano H0031 terminado
+[14/05/2025 18:25:33] El humano H0008 está en el comedor
+[14/05/2025 18:25:33] H0008 ha comido. Comida total: 5.
+[14/05/2025 18:25:33] El zombie Z0013 ha salido de la zona 1
+[14/05/2025 18:25:33] El zombie Z0013 ha entrado a la zona 2
+[14/05/2025 18:25:33] El humano H0030 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:33] El humano H0036 está atravesando el túnel 2.
+[14/05/2025 18:25:33] El zombie Z0015 ha salido de la zona 4
+[14/05/2025 18:25:33] El zombie Z0015 ha entrado a la zona 3
+[14/05/2025 18:25:33] Humano H0028 terminado
+[14/05/2025 18:25:33] El humano H0011 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:34] El zombie Z0021 ha salido de la zona 2
+[14/05/2025 18:25:34] El zombie Z0021 ha entrado a la zona 1
+[14/05/2025 18:25:34] El humano H0029 ha sido herido
+[14/05/2025 18:25:34] El humano H0029 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:34] El ataque entre el zombie Z0010 y el humano H0011 se está produciendo
+[14/05/2025 18:25:34] El humano H0018 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:34] El zombie Z0026 ha salido de la zona 4
+[14/05/2025 18:25:34] El zombie Z0026 ha entrado a la zona 3
+[14/05/2025 18:25:34] Humano H0039 iniciado.
+[14/05/2025 18:25:34] El humano H0039 está en el área común
+[14/05/2025 18:25:34] El zombie Z0031 ha salido de la zona 2
+[14/05/2025 18:25:34] El zombie Z0031 ha entrado a la zona 3
+[14/05/2025 18:25:34] El humano H0032 está atravesando el túnel 1.
+[14/05/2025 18:25:34] El zombie Z0006 ha salido de la zona 4
+[14/05/2025 18:25:34] El zombie Z0006 ha entrado a la zona 3
+[14/05/2025 18:25:34] El humano H0038 ha elegido el tunel 3
+[14/05/2025 18:25:34] El humano H0038 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:34] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:34] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:34] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:34] El humano H0038 está atravesando el túnel 3.
+[14/05/2025 18:25:34] El humano H0004 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:34] El humano H0035 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:34] El humano H0036 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:34] El humano H0019 está atravesando el túnel 2.
+[14/05/2025 18:25:34] El humano H0001 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:35] El humano H0012 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:35] El humano H0017 está en el área común
+[14/05/2025 18:25:35] El zombie Z0000 ha salido de la zona 3
+[14/05/2025 18:25:35] El zombie Z0000 ha entrado a la zona 4
+[14/05/2025 18:25:35] El zombie Z0009 ha salido de la zona 4
+[14/05/2025 18:25:35] El zombie Z0009 ha entrado a la zona 3
+[14/05/2025 18:25:35] El humano H0025 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:35] El zombie Z0028 ha salido de la zona 1
+[14/05/2025 18:25:35] El zombie Z0028 ha entrado a la zona 1
+[14/05/2025 18:25:35] El humano H0027 está en el comedor
+[14/05/2025 18:25:35] H0027 ha comido. Comida total: 4.
+[14/05/2025 18:25:35] El humano H0020 está en el área común
+[14/05/2025 18:25:35] El zombie Z0016 ha salido de la zona 1
+[14/05/2025 18:25:35] El zombie Z0016 ha entrado a la zona 4
+[14/05/2025 18:25:35] El humano H0003 está en el área común
+[14/05/2025 18:25:35] El humano H0032 ha entrado en el refugio
+[14/05/2025 18:25:35] El humano H0032 está en el área de descanso
+[14/05/2025 18:25:35] El humano H0011 ha sido herido
+[14/05/2025 18:25:35] El humano H0011 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:35] El humano H0022 está en el área común
+[14/05/2025 18:25:35] El humano H0038 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:35] El humano H0004 está atravesando el túnel 3.
+[14/05/2025 18:25:35] El humano H0019 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:35] Humano H0015 terminado
+[14/05/2025 18:25:36] Humano H0040 iniciado.
+[14/05/2025 18:25:36] El humano H0040 está en el área común
+[14/05/2025 18:25:36] El zombie Z0013 ha salido de la zona 2
+[14/05/2025 18:25:36] El zombie Z0013 ha entrado a la zona 2
+[14/05/2025 18:25:36] El ataque entre el zombie Z0013 y el humano H0030 se está produciendo
+[14/05/2025 18:25:36] El humano H0024 está en el área común
+[14/05/2025 18:25:36] El humano H0039 ha elegido el tunel 2
+[14/05/2025 18:25:36] El humano H0039 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:36] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:36] El humano H0039 está atravesando el túnel 2.
+[14/05/2025 18:25:36] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:36] El humano H0037 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:36] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:36] El humano H0002 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:36] El zombie Z0005 ha salido de la zona 3
+[14/05/2025 18:25:36] El zombie Z0005 ha entrado a la zona 1
+[14/05/2025 18:25:36] El humano H0017 ha elegido el tunel 2
+[14/05/2025 18:25:36] El humano H0017 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:36] El humano H0020 ha elegido el tunel 4
+[14/05/2025 18:25:36] El humano H0020 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:36] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:36] El humano H0014 está atravesando el túnel 4.
+[14/05/2025 18:25:36] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:36] El humano H0033 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:36] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:36] El humano H0020 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:36] El humano H0034 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:36] El humano H0004 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:36] El humano H0034 está atravesando el túnel 3.
+[14/05/2025 18:25:36] El humano H0035 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:36] El humano H0022 ha elegido el tunel 1
+[14/05/2025 18:25:36] El humano H0022 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:36] El humano H0003 ha elegido el tunel 3
+[14/05/2025 18:25:36] El humano H0003 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:36] El zombie Z0021 ha salido de la zona 1
+[14/05/2025 18:25:36] El zombie Z0021 ha entrado a la zona 3
+[14/05/2025 18:25:36] El ataque entre el zombie Z0021 y el humano H0004 se está produciendo
+[14/05/2025 18:25:37] El humano H0007 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:37] El humano H0040 ha elegido el tunel 1
+[14/05/2025 18:25:37] El humano H0040 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:37] El humano H0030 ha sido herido
+[14/05/2025 18:25:37] El humano H0030 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:37] El humano H0039 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:37] El humano H0037 está atravesando el túnel 2.
+[14/05/2025 18:25:37] El humano H0008 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:37] El humano H0024 ha elegido el tunel 1
+[14/05/2025 18:25:37] El humano H0024 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:37] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:37] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:37] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:37] El humano H0022 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:37] El humano H0040 está atravesando el túnel 1.
+[14/05/2025 18:25:37] El humano H0024 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:37] Humano H0041 iniciado.
+[14/05/2025 18:25:37] El humano H0041 está en el área común
+[14/05/2025 18:25:37] El zombie Z0028 ha salido de la zona 1
+[14/05/2025 18:25:37] El zombie Z0028 ha entrado a la zona 1
+[14/05/2025 18:25:37] El zombie Z0016 ha salido de la zona 4
+[14/05/2025 18:25:37] El zombie Z0016 ha entrado a la zona 4
+[14/05/2025 18:25:37] El humano H0014 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:37] El humano H0033 está atravesando el túnel 4.
+[14/05/2025 18:25:37] El humano H0034 ha entrado en el refugio
+[14/05/2025 18:25:37] El humano H0034 está en el área de descanso
+[14/05/2025 18:25:37] El humano H0035 está atravesando el túnel 3.
+[14/05/2025 18:25:37] El zombie Z0010 ha salido de la zona 3
+[14/05/2025 18:25:37] El zombie Z0010 ha entrado a la zona 3
+[14/05/2025 18:25:37] El zombie Z0026 ha salido de la zona 3
+[14/05/2025 18:25:37] El zombie Z0026 ha entrado a la zona 3
+[14/05/2025 18:25:37] El humano H0004 ha sido herido
+[14/05/2025 18:25:37] El humano H0004 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:37] El ataque entre el zombie Z0010 y el humano H0038 se está produciendo
+[14/05/2025 18:25:37] El zombie Z0015 ha salido de la zona 3
+[14/05/2025 18:25:37] El zombie Z0015 ha entrado a la zona 2
+[14/05/2025 18:25:37] El ataque entre el zombie Z0015 y el humano H0036 se está produciendo
+[14/05/2025 18:25:38] El zombie Z0009 ha salido de la zona 3
+[14/05/2025 18:25:38] El zombie Z0009 ha entrado a la zona 2
+[14/05/2025 18:25:38] El humano H0029 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:38] El zombie Z0023 ha salido de la zona 3
+[14/05/2025 18:25:38] El zombie Z0023 ha entrado a la zona 2
+[14/05/2025 18:25:38] El zombie Z0000 ha salido de la zona 4
+[14/05/2025 18:25:38] El zombie Z0000 ha entrado a la zona 2
+[14/05/2025 18:25:38] El humano H0001 está en el área común
+[14/05/2025 18:25:38] El humano H0037 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:38] El humano H0002 está atravesando el túnel 2.
+[14/05/2025 18:25:38] El humano H0040 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:38] El humano H0022 está atravesando el túnel 1.
+[14/05/2025 18:25:38] El zombie Z0031 ha salido de la zona 3
+[14/05/2025 18:25:38] El zombie Z0031 ha entrado a la zona 1
+[14/05/2025 18:25:38] El ataque entre el zombie Z0031 y el humano H0040 se está produciendo
+[14/05/2025 18:25:38] El zombie Z0005 ha salido de la zona 1
+[14/05/2025 18:25:38] El zombie Z0005 ha entrado a la zona 3
+[14/05/2025 18:25:38] El zombie Z0006 ha salido de la zona 3
+[14/05/2025 18:25:38] El zombie Z0006 ha entrado a la zona 3
+[14/05/2025 18:25:38] El humano H0033 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:38] El humano H0020 está atravesando el túnel 4.
+[14/05/2025 18:25:38] El humano H0038 ha sido herido
+[14/05/2025 18:25:38] El humano H0038 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:38] El humano H0035 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:38] El humano H0029 está atravesando el túnel 3.
+[14/05/2025 18:25:38] Humano H0042 iniciado.
+[14/05/2025 18:25:38] El humano H0042 está en el área común
+[14/05/2025 18:25:39] El humano H0018 está en el área común
+[14/05/2025 18:25:39] El humano H0032 está en el comedor
+[14/05/2025 18:25:39] H0032 ha comido. Comida total: 3.
+[14/05/2025 18:25:39] El humano H0002 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:39] El zombie Z0013 ha salido de la zona 2
+[14/05/2025 18:25:39] El zombie Z0013 ha entrado a la zona 2
+[14/05/2025 18:25:39] El humano H0036 ha sido herido
+[14/05/2025 18:25:39] El humano H0036 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:39] El ataque entre el zombie Z0009 y el humano H0039 se está produciendo
+[14/05/2025 18:25:39] El humano H0041 ha elegido el tunel 3
+[14/05/2025 18:25:39] El humano H0041 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:39] El humano H0022 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:39] El humano H0024 está atravesando el túnel 1.
+[14/05/2025 18:25:39] El humano H0040 ha sido matado por el zombie Z0031.
+[14/05/2025 18:25:39] Número de muertes de Z0031: 1.
+[14/05/2025 18:25:39] El humano H0040 se ha convertido en zombie
+[14/05/2025 18:25:39] Zombie Z0040 iniciado.
+[14/05/2025 18:25:39] El zombie Z0040 ha entrado a la zona 1
+[14/05/2025 18:25:39] El ataque entre el zombie Z0040 y el humano H0022 se está produciendo
+[14/05/2025 18:25:39] El humano H0025 está en el área común
+[14/05/2025 18:25:39] El humano H0012 está en el área común
+[14/05/2025 18:25:39] El zombie Z0016 ha salido de la zona 4
+[14/05/2025 18:25:39] El zombie Z0016 ha entrado a la zona 2
+[14/05/2025 18:25:39] El humano H0020 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:39] El humano H0029 ha entrado en el refugio
+[14/05/2025 18:25:39] El humano H0029 está en el área de descanso
+[14/05/2025 18:25:39] El humano H0001 ha elegido el tunel 1
+[14/05/2025 18:25:39] El humano H0001 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:39] El humano H0011 está atravesando el túnel 3.
+[14/05/2025 18:25:39] El humano H0036 está atravesando el túnel 2.
+[14/05/2025 18:25:39] El zombie Z0028 ha salido de la zona 1
+[14/05/2025 18:25:39] El zombie Z0028 ha entrado a la zona 1
+[14/05/2025 18:25:40] El humano H0042 ha elegido el tunel 3
+[14/05/2025 18:25:40] El humano H0042 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:40] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:40] El humano H0003 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:40] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:40] El humano H0042 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:40] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:40] El humano H0041 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:40] El humano H0027 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:40] Humano H0043 iniciado.
+[14/05/2025 18:25:40] El humano H0043 está en el área común
+[14/05/2025 18:25:40] El humano H0039 ha sido herido
+[14/05/2025 18:25:40] El humano H0039 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:40] El ataque entre el zombie Z0023 y el humano H0037 se está produciendo
+[14/05/2025 18:25:40] El zombie Z0021 ha salido de la zona 3
+[14/05/2025 18:25:40] El zombie Z0021 ha entrado a la zona 3
+[14/05/2025 18:25:40] El ataque entre el zombie Z0021 y el humano H0035 se está produciendo
+[14/05/2025 18:25:40] El humano H0024 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:40] El humano H0030 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:40] El humano H0012 ha elegido el tunel 2
+[14/05/2025 18:25:40] El humano H0012 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:40] El zombie Z0005 ha salido de la zona 3
+[14/05/2025 18:25:40] El zombie Z0005 ha entrado a la zona 1
+[14/05/2025 18:25:40] El humano H0034 está en el comedor
+[14/05/2025 18:25:40] H0034 ha comido. Comida total: 2.
+[14/05/2025 18:25:40] El humano H0011 ha entrado en el refugio
+[14/05/2025 18:25:40] El humano H0011 está en el área de descanso
+[14/05/2025 18:25:40] El humano H0003 está atravesando el túnel 3.
+[14/05/2025 18:25:40] El humano H0025 ha elegido el tunel 2
+[14/05/2025 18:25:40] El humano H0025 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:40] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:40] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:40] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:40] El humano H0025 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:40] El humano H0012 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:40] El humano H0017 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:40] El humano H0018 ha elegido el tunel 4
+[14/05/2025 18:25:40] El humano H0036 ha entrado en el refugio
+[14/05/2025 18:25:40] El humano H0036 está en el área de descanso
+[14/05/2025 18:25:40] El humano H0025 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:40] El humano H0030 está atravesando el túnel 2.
+[14/05/2025 18:25:40] El humano H0018 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:40] El humano H0022 ha sido herido
+[14/05/2025 18:25:40] El humano H0022 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:40] El ataque entre el zombie Z0028 y el humano H0024 se está produciendo
+[14/05/2025 18:25:40] Humano H0044 iniciado.
+[14/05/2025 18:25:40] El humano H0044 está en el área común
+[14/05/2025 18:25:41] El zombie Z0006 ha salido de la zona 3
+[14/05/2025 18:25:41] El zombie Z0006 ha entrado a la zona 1
+[14/05/2025 18:25:41] El zombie Z0010 ha salido de la zona 3
+[14/05/2025 18:25:41] El zombie Z0010 ha entrado a la zona 3
+[14/05/2025 18:25:41] El zombie Z0026 ha salido de la zona 3
+[14/05/2025 18:25:41] El zombie Z0026 ha entrado a la zona 2
+[14/05/2025 18:25:41] El humano H0037 ha sido herido
+[14/05/2025 18:25:41] El humano H0037 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:41] El ataque entre el zombie Z0000 y el humano H0019 se está produciendo
+[14/05/2025 18:25:41] El zombie Z0031 ha salido de la zona 1
+[14/05/2025 18:25:41] El zombie Z0031 ha entrado a la zona 4
+[14/05/2025 18:25:41] El ataque entre el zombie Z0031 y el humano H0014 se está produciendo
+[14/05/2025 18:25:41] El zombie Z0015 ha salido de la zona 2
+[14/05/2025 18:25:41] El zombie Z0015 ha entrado a la zona 3
+[14/05/2025 18:25:41] El humano H0003 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:41] El humano H0042 está atravesando el túnel 3.
+[14/05/2025 18:25:41] El humano H0024 ha sido matado por el zombie Z0028.
+[14/05/2025 18:25:41] Número de muertes de Z0028: 1.
+[14/05/2025 18:25:41] El humano H0024 se ha convertido en zombie
+[14/05/2025 18:25:41] El humano H0008 está en el área común
+[14/05/2025 18:25:41] Zombie Z0024 iniciado.
+[14/05/2025 18:25:41] El zombie Z0024 ha entrado a la zona 1
+[14/05/2025 18:25:41] El humano H0030 ha entrado en el refugio
+[14/05/2025 18:25:41] El humano H0030 está en el área de descanso
+[14/05/2025 18:25:41] El humano H0012 está atravesando el túnel 2.
+[14/05/2025 18:25:41] El humano H0035 ha sido matado por el zombie Z0021.
+[14/05/2025 18:25:41] Número de muertes de Z0021: 2.
+[14/05/2025 18:25:41] El humano H0035 se ha convertido en zombie
+[14/05/2025 18:25:41] El ataque entre el zombie Z0010 y el humano H0003 se está produciendo
+[14/05/2025 18:25:41] Zombie Z0035 iniciado.
+[14/05/2025 18:25:41] El zombie Z0035 ha entrado a la zona 3
+[14/05/2025 18:25:41] El humano H0029 está en el comedor
+[14/05/2025 18:25:41] H0029 ha comido. Comida total: 1.
+[14/05/2025 18:25:41] Humano H0045 iniciado.
+[14/05/2025 18:25:41] El humano H0045 está en el área común
+[14/05/2025 18:25:41] El humano H0007 está en el área común
+[14/05/2025 18:25:42] El humano H0043 ha elegido el tunel 3
+[14/05/2025 18:25:42] El humano H0043 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:42] El humano H0014 ha sido matado por el zombie Z0031.
+[14/05/2025 18:25:42] Número de muertes de Z0031: 2.
+[14/05/2025 18:25:42] El humano H0014 se ha convertido en zombie
+[14/05/2025 18:25:42] Zombie Z0014 iniciado.
+[14/05/2025 18:25:42] El zombie Z0014 ha entrado a la zona 4
+[14/05/2025 18:25:42] El ataque entre el zombie Z0014 y el humano H0033 se está produciendo
+[14/05/2025 18:25:42] El humano H0038 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:42] El humano H0044 ha elegido el tunel 4
+[14/05/2025 18:25:42] El humano H0044 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:42] El humano H0042 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:42] El humano H0038 está atravesando el túnel 3.
+[14/05/2025 18:25:42] El humano H0041 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:42] El humano H0011 está en el comedor
+[14/05/2025 18:25:42] El humano H0012 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:42] El humano H0017 está atravesando el túnel 2.
+[14/05/2025 18:25:42] H0011 ha comido. Comida total: 0.
+[14/05/2025 18:25:42] El humano H0033 ha sido herido
+[14/05/2025 18:25:42] El humano H0033 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:42] El humano H0004 está esperando a poder entrar en el túnel 3 para ir al refugio.
+[14/05/2025 18:25:42] El humano H0003 ha sido matado por el zombie Z0010.
+[14/05/2025 18:25:42] Número de muertes de Z0010: 1.
+[14/05/2025 18:25:42] El humano H0003 se ha convertido en zombie
+[14/05/2025 18:25:42] El ataque entre el zombie Z0015 y el humano H0042 se está produciendo
+[14/05/2025 18:25:42] Zombie Z0003 iniciado.
+[14/05/2025 18:25:42] El zombie Z0003 ha entrado a la zona 3
+[14/05/2025 18:25:42] El humano H0008 ha elegido el tunel 3
+[14/05/2025 18:25:42] El humano H0008 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:43] El humano H0019 ha sido herido
+[14/05/2025 18:25:43] El humano H0019 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:43] El humano H0019 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:43] El ataque entre el zombie Z0013 y el humano H0012 se está produciendo
+[14/05/2025 18:25:43] El humano H0032 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:43] El zombie Z0009 ha salido de la zona 2
+[14/05/2025 18:25:43] El zombie Z0009 ha entrado a la zona 1
+[14/05/2025 18:25:43] El humano H0045 ha elegido el tunel 2
+[14/05/2025 18:25:43] El humano H0045 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:43] Humano H0046 iniciado.
+[14/05/2025 18:25:43] El humano H0046 está en el área común
+[14/05/2025 18:25:43] El zombie Z0040 ha salido de la zona 1
+[14/05/2025 18:25:43] El zombie Z0040 ha entrado a la zona 1
+[14/05/2025 18:25:43] El humano H0039 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:43] El humano H0007 ha elegido el tunel 4
+[14/05/2025 18:25:43] El humano H0007 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:43] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:43] El humano H0018 está atravesando el túnel 4.
+[14/05/2025 18:25:43] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:43] El humano H0044 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:43] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:43] El humano H0007 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:43] El humano H0038 ha entrado en el refugio
+[14/05/2025 18:25:43] El humano H0004 está atravesando el túnel 3.
+[14/05/2025 18:25:43] El humano H0038 está en el área de descanso
+[14/05/2025 18:25:43] El humano H0041 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:43] El humano H0042 ha sido herido
+[14/05/2025 18:25:43] El humano H0033 está esperando a poder entrar en el túnel 4 para ir al refugio.
+[14/05/2025 18:25:43] El humano H0042 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:43] El zombie Z0023 ha salido de la zona 2
+[14/05/2025 18:25:43] El zombie Z0023 ha entrado a la zona 3
+[14/05/2025 18:25:43] Humano H0035 terminado
+[14/05/2025 18:25:43] El humano H0017 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:43] El humano H0019 está atravesando el túnel 2.
+[14/05/2025 18:25:43] El humano H0025 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:43] El humano H0036 está en el comedor
+[14/05/2025 18:25:43] Humano H0047 iniciado.
+[14/05/2025 18:25:43] El humano H0047 está en el área común
+[14/05/2025 18:25:43] El humano H0012 ha sido herido
+[14/05/2025 18:25:43] El humano H0012 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:43] El ataque entre el zombie Z0016 y el humano H0002 se está produciendo
+[14/05/2025 18:25:43] El zombie Z0006 ha salido de la zona 1
+[14/05/2025 18:25:43] El zombie Z0006 ha entrado a la zona 1
+[14/05/2025 18:25:44] El zombie Z0021 ha salido de la zona 3
+[14/05/2025 18:25:44] El zombie Z0021 ha entrado a la zona 1
+[14/05/2025 18:25:44] El humano H0037 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:44] El humano H0027 está en el área común
+[14/05/2025 18:25:44] El zombie Z0024 ha salido de la zona 1
+[14/05/2025 18:25:44] El zombie Z0024 ha entrado a la zona 4
+[14/05/2025 18:25:44] El ataque entre el zombie Z0024 y el humano H0020 se está produciendo
+[14/05/2025 18:25:44] El humano H0034 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:44] El zombie Z0005 ha salido de la zona 1
+[14/05/2025 18:25:44] El zombie Z0005 ha entrado a la zona 2
+[14/05/2025 18:25:44] Humano H0040 terminado
+[14/05/2025 18:25:44] El humano H0030 está en el comedor
+[14/05/2025 18:25:44] El zombie Z0028 ha salido de la zona 1
+[14/05/2025 18:25:44] El zombie Z0028 ha entrado a la zona 2
+[14/05/2025 18:25:44] Humano H0014 terminado
+[14/05/2025 18:25:44] El humano H0018 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:44] El humano H0033 está atravesando el túnel 4.
+[14/05/2025 18:25:44] El humano H0044 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:44] El humano H0046 ha elegido el tunel 3
+[14/05/2025 18:25:44] El humano H0046 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:44] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:44] El humano H0043 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:44] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:44] El humano H0008 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:44] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:44] El humano H0046 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:44] El humano H0004 ha entrado en el refugio
+[14/05/2025 18:25:44] El humano H0004 está en el área de descanso
+[14/05/2025 18:25:44] El humano H0041 está atravesando el túnel 3.
+[14/05/2025 18:25:44] El humano H0019 ha entrado en el refugio
+[14/05/2025 18:25:44] El humano H0019 está en el área de descanso
+[14/05/2025 18:25:44] El humano H0039 está atravesando el túnel 2.
+[14/05/2025 18:25:44] El humano H0025 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:44] El zombie Z0014 ha salido de la zona 4
+[14/05/2025 18:25:44] El zombie Z0014 ha entrado a la zona 1
+[14/05/2025 18:25:45] El zombie Z0031 ha salido de la zona 4
+[14/05/2025 18:25:45] El zombie Z0031 ha entrado a la zona 4
+[14/05/2025 18:25:45] El zombie Z0009 ha salido de la zona 1
+[14/05/2025 18:25:45] El zombie Z0009 ha entrado a la zona 2
+[14/05/2025 18:25:45] El humano H0002 ha sido herido
+[14/05/2025 18:25:45] El humano H0002 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:45] El humano H0002 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:45] El ataque entre el zombie Z0026 y el humano H0017 se está produciendo
+[14/05/2025 18:25:45] El humano H0047 ha elegido el tunel 3
+[14/05/2025 18:25:45] El humano H0047 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:45] El zombie Z0010 ha salido de la zona 3
+[14/05/2025 18:25:45] El zombie Z0010 ha entrado a la zona 2
+[14/05/2025 18:25:45] Humano H0048 iniciado.
+[14/05/2025 18:25:45] El humano H0048 está en el área común
+[14/05/2025 18:25:45] El humano H0020 ha sido matado por el zombie Z0024.
+[14/05/2025 18:25:45] Número de muertes de Z0024: 1.
+[14/05/2025 18:25:45] El humano H0020 se ha convertido en zombie
+[14/05/2025 18:25:45] El ataque entre el zombie Z0031 y el humano H0018 se está produciendo
+[14/05/2025 18:25:45] Zombie Z0020 iniciado.
+[14/05/2025 18:25:45] El zombie Z0020 ha entrado a la zona 4
+[14/05/2025 18:25:45] El humano H0033 ha entrado en el refugio
+[14/05/2025 18:25:45] El humano H0007 está atravesando el túnel 4.[14/05/2025 18:25:45] El humano H0033 está en el área de descanso
 
-[14/05/2025 14:01:31] El humano H0005 está atravesando el túnel 3.
-[14/05/2025 14:01:31] H0007 ha dejado 2 comidas. Comida total: 8.
-[14/05/2025 14:01:31] El humano H0018 ha elegido el tunel 1
-[14/05/2025 14:01:31] El humano H0018 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:31] El humano H0014 ha salido de la zona de riesgo 1
-[14/05/2025 14:01:31] El humano H0001 está en el área común
-[14/05/2025 14:01:31] El humano H0014 está atravesando el túnel 1.
-[14/05/2025 14:01:31] El humano H0008 ha entrado en el refugio
-[14/05/2025 14:01:31] El humano H0008 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:31] El humano H0008 está en el área de descanso
-[14/05/2025 14:01:31] H0008 ha dejado 2 comidas. Comida total: 10.
-[14/05/2025 14:01:32] Humano H0019 iniciado.
-[14/05/2025 14:01:32] El humano H0019 está en el área común
-[14/05/2025 14:01:32] El humano H0005 ha entrado en el refugio
-[14/05/2025 14:01:32] El humano H0005 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:32] El humano H0005 está en el área de descanso
-[14/05/2025 14:01:32] El humano H0011 está atravesando el túnel 3.
-[14/05/2025 14:01:32] H0005 ha dejado 2 comidas. Comida total: 12.
-[14/05/2025 14:01:32] El zombie Z0000 ha salido de la zona 1
-[14/05/2025 14:01:32] El zombie Z0000 ha entrado a la zona 4
-[14/05/2025 14:01:32] El humano H0010 está en el comedor
-[14/05/2025 14:01:32] H0010 ha comido. Comida total: 11.
-[14/05/2025 14:01:32] El humano H0014 ha entrado en el refugio
-[14/05/2025 14:01:32] El humano H0014 ha recolectado 2 piezas de comida
-[14/05/2025 14:01:32] El humano H0014 está en el área de descanso
-[14/05/2025 14:01:32] H0014 ha dejado 2 comidas. Comida total: 13.
-[14/05/2025 14:01:33] El humano H0011 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:33] El humano H0013 está atravesando el túnel 3.
-[14/05/2025 14:01:33] El zombie Z0012 ha salido de la zona 1
-[14/05/2025 14:01:33] El zombie Z0012 ha entrado a la zona 1
-[14/05/2025 14:01:33] El humano H0001 ha elegido el tunel 3
-[14/05/2025 14:01:33] El humano H0001 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:33] Humano H0020 iniciado.
-[14/05/2025 14:01:33] El humano H0020 está en el área común
-[14/05/2025 14:01:33] Humano H0012 terminado
-[14/05/2025 14:01:34] Humano H0021 iniciado.
-[14/05/2025 14:01:34] El humano H0021 está en el área común
-[14/05/2025 14:01:34] El humano H0019 ha elegido el tunel 4
-[14/05/2025 14:01:34] El humano H0019 está esperando en la barrera del túnel 4.
-[14/05/2025 14:01:34] El túnel 4 tiene ya 3 humanos.
-[14/05/2025 14:01:34] El túnel 4 tiene ya 3 humanos.
-[14/05/2025 14:01:34] El humano H0019 está atravesando el túnel 4.
-[14/05/2025 14:01:34] El humano H0015 está esperando a poder entrar en la zona de riesgo 4.
-[14/05/2025 14:01:34] El túnel 4 tiene ya 3 humanos.
-[14/05/2025 14:01:34] El humano H0004 está esperando a poder entrar en la zona de riesgo 4.
-[14/05/2025 14:01:34] El humano H0013 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:34] El humano H0017 está atravesando el túnel 3.
-[14/05/2025 14:01:34] El humano H0009 ha vuelto al área de descanso para curar sus heridas
-[14/05/2025 14:01:34] El humano H0003 está en el comedor
-[14/05/2025 14:01:34] H0003 ha comido. Comida total: 12.
-[14/05/2025 14:01:34] El humano H0007 está en el comedor
-[14/05/2025 14:01:34] H0007 ha comido. Comida total: 11.
-[14/05/2025 14:01:34] Humano H0022 iniciado.
-[14/05/2025 14:01:34] El humano H0022 está en el área común
-[14/05/2025 14:01:34] El humano H0008 está en el comedor
-[14/05/2025 14:01:34] H0008 ha comido. Comida total: 10.
-[14/05/2025 14:01:34] El zombie Z0000 ha salido de la zona 4
-[14/05/2025 14:01:34] El zombie Z0000 ha entrado a la zona 4
-[14/05/2025 14:01:34] El humano H0006 está atravesando el túnel 1.
-[14/05/2025 14:01:35] El humano H0005 está en el comedor
-[14/05/2025 14:01:35] H0005 ha comido. Comida total: 9.
-[14/05/2025 14:01:35] El humano H0019 ha entrado en la zona de riesgo 4.
-[14/05/2025 14:01:35] El humano H0015 está atravesando el túnel 4.
-[14/05/2025 14:01:35] El humano H0017 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:35] El humano H0020 ha elegido el tunel 1
-[14/05/2025 14:01:35] El humano H0020 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:35] El túnel 1 tiene ya 3 humanos.
-[14/05/2025 14:01:35] El humano H0016 está esperando a poder entrar en la zona de riesgo 1.
-[14/05/2025 14:01:35] El túnel 1 tiene ya 3 humanos.
-[14/05/2025 14:01:35] El humano H0020 está esperando a poder entrar en la zona de riesgo 1.
-[14/05/2025 14:01:35] El túnel 1 tiene ya 3 humanos.
-[14/05/2025 14:01:35] El humano H0018 está esperando a poder entrar en la zona de riesgo 1.
-[14/05/2025 14:01:35] El humano H0014 está en el comedor
-[14/05/2025 14:01:35] H0014 ha comido. Comida total: 8.
-[14/05/2025 14:01:35] El zombie Z0012 ha salido de la zona 1
-[14/05/2025 14:01:35] El zombie Z0012 ha entrado a la zona 4
-[14/05/2025 14:01:35] El ataque entre el zombie Z0012 y el humano H0019 se está produciendo
-[14/05/2025 14:01:35] El humano H0021 ha elegido el tunel 3
-[14/05/2025 14:01:35] El humano H0021 está esperando en la barrera del túnel 3.
-[14/05/2025 14:01:35] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:35] El humano H0021 está atravesando el túnel 3.
-[14/05/2025 14:01:35] El humano H0022 ha elegido el tunel 1
-[14/05/2025 14:01:35] El humano H0022 está esperando en la barrera del túnel 1.
-[14/05/2025 14:01:35] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:35] El humano H0002 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:35] El túnel 3 tiene ya 3 humanos.
-[14/05/2025 14:01:35] El humano H0001 está esperando a poder entrar en la zona de riesgo 3.
-[14/05/2025 14:01:35] Humano H0023 iniciado.
-[14/05/2025 14:01:35] El humano H0023 está en el área común
-[14/05/2025 14:01:35] El humano H0006 ha entrado en el refugio
-[14/05/2025 14:01:35] El humano H0016 está atravesando el túnel 1.
-[14/05/2025 14:01:35] El humano H0006 está en el área de descanso
-[14/05/2025 14:01:36] El humano H0015 ha entrado en la zona de riesgo 4.
-[14/05/2025 14:01:36] El humano H0004 está atravesando el túnel 4.
-[14/05/2025 14:01:36] El humano H0021 ha entrado en la zona de riesgo 3
-[14/05/2025 14:01:36] El humano H0002 está atravesando el túnel 3.
-[14/05/2025 14:01:36] El zombie Z0000 ha salido de la zona 4
-[14/05/2025 14:01:36] El zombie Z0000 ha entrado a la zona 1
-[14/05/2025 14:01:36] El humano H0023 ha elegido el tunel 2
-[14/05/2025 14:01:36] El humano H0023 está esperando en la barrera del túnel 2.
-[14/05/2025 14:01:36] El humano H0016 ha entrado en la zona de riesgo 1
-[14/05/2025 14:01:36] El humano H0020 está atravesando el túnel 1.
-[14/05/2025 14:01:37] El humano H0019 ha sido herido
-[14/05/2025 14:01:37] El humano H0019 ha salido de la zona de riesgo 4
-[14/05/2025 14:01:37] El humano H0010 está en el área común
-[14/05/2025 14:01:37] El humano H0004 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:45] El humano H0041 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:45] El humano H0043 está atravesando el túnel 3.
+[14/05/2025 18:25:45] Humano H0024 terminado
+[14/05/2025 18:25:45] El zombie Z0003 ha salido de la zona 3
+[14/05/2025 18:25:45] El zombie Z0003 ha entrado a la zona 4
+[14/05/2025 18:25:45] El humano H0039 ha entrado en el refugio
+[14/05/2025 18:25:45] El humano H0039 está en el área de descanso
+[14/05/2025 18:25:45] El humano H0037 está atravesando el túnel 2.
+[14/05/2025 18:25:45] El humano H0025 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:45] El humano H0027 ha elegido el tunel 2
+[14/05/2025 18:25:45] El humano H0027 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:45] El humano H0029 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:46] El zombie Z0000 ha salido de la zona 2
+[14/05/2025 18:25:46] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:25:46] El zombie Z0040 ha salido de la zona 1
+[14/05/2025 18:25:46] El zombie Z0040 ha entrado a la zona 2
+[14/05/2025 18:25:46] El humano H0011 ha vuelto al área de descanso para curar sus heridas
+[14/05/2025 18:25:46] El zombie Z0021 ha salido de la zona 1
+[14/05/2025 18:25:46] El zombie Z0021 ha entrado a la zona 1
+[14/05/2025 18:25:46] El zombie Z0015 ha salido de la zona 3
+[14/05/2025 18:25:46] El zombie Z0015 ha entrado a la zona 1
+[14/05/2025 18:25:46] Humano H0049 iniciado.
+[14/05/2025 18:25:46] El humano H0049 está en el área común
+[14/05/2025 18:25:46] El humano H0022 está atravesando el túnel 1.
+[14/05/2025 18:25:46] El humano H0017 ha sido herido
+[14/05/2025 18:25:46] El humano H0017 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:46] Humano H0020 terminado
+[14/05/2025 18:25:46] El zombie Z0013 ha salido de la zona 2
+[14/05/2025 18:25:46] El zombie Z0013 ha entrado a la zona 1
+[14/05/2025 18:25:46] El zombie Z0035 ha salido de la zona 3
+[14/05/2025 18:25:46] El zombie Z0035 ha entrado a la zona 3
+[14/05/2025 18:25:46] El ataque entre el zombie Z0035 y el humano H0041 se está produciendo
+[14/05/2025 18:25:46] El zombie Z0006 ha salido de la zona 1
+[14/05/2025 18:25:46] El zombie Z0006 ha entrado a la zona 1
+[14/05/2025 18:25:46] El zombie Z0023 ha salido de la zona 3
+[14/05/2025 18:25:46] El zombie Z0023 ha entrado a la zona 3
+[14/05/2025 18:25:46] El humano H0048 ha elegido el tunel 4
+[14/05/2025 18:25:46] El humano H0048 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:46] El humano H0007 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:46] El humano H0044 está atravesando el túnel 4.
+[14/05/2025 18:25:46] El humano H0043 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:46] El humano H0008 está atravesando el túnel 3.
+[14/05/2025 18:25:46] El humano H0018 ha sido herido
+[14/05/2025 18:25:46] El humano H0018 ha salido de la zona de riesgo 4
+[14/05/2025 18:25:46] El ataque entre el zombie Z0020 y el humano H0007 se está produciendo
+[14/05/2025 18:25:46] El humano H0037 ha entrado en el refugio
+[14/05/2025 18:25:46] El humano H0002 está atravesando el túnel 2.
+[14/05/2025 18:25:46] El humano H0025 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:46] El humano H0037 está en el área de descanso
+[14/05/2025 18:25:46] El humano H0019 está en el comedor
+[14/05/2025 18:25:47] El humano H0032 está en el área común
+[14/05/2025 18:25:47] El zombie Z0014 ha salido de la zona 1
+[14/05/2025 18:25:47] El zombie Z0014 ha entrado a la zona 2
+[14/05/2025 18:25:47] El humano H0038 está en el comedor
+[14/05/2025 18:25:47] El humano H0041 ha sido matado por el zombie Z0035.
+[14/05/2025 18:25:47] Número de muertes de Z0035: 1.
+[14/05/2025 18:25:47] El humano H0041 se ha convertido en zombie
+[14/05/2025 18:25:47] El ataque entre el zombie Z0023 y el humano H0043 se está produciendo
+[14/05/2025 18:25:47] Zombie Z0041 iniciado.
+[14/05/2025 18:25:47] El zombie Z0041 ha entrado a la zona 3
+[14/05/2025 18:25:47] El humano H0022 ha entrado en el refugio
+[14/05/2025 18:25:47] El humano H0022 está en el área de descanso
+[14/05/2025 18:25:47] Humano H0050 iniciado.
+[14/05/2025 18:25:47] El humano H0050 está en el área común
+[14/05/2025 18:25:47] El humano H0044 ha entrado en la zona de riesgo 4.
+[14/05/2025 18:25:47] El humano H0008 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:47] El humano H0046 está atravesando el túnel 3.
+[14/05/2025 18:25:47] El humano H0002 ha entrado en el refugio
+[14/05/2025 18:25:47] El humano H0025 está atravesando el túnel 2.
+[14/05/2025 18:25:47] El humano H0002 está en el área de descanso
+[14/05/2025 18:25:47] El humano H0007 ha sido matado por el zombie Z0020.
+[14/05/2025 18:25:47] Número de muertes de Z0020: 1.
+[14/05/2025 18:25:47] El humano H0007 se ha convertido en zombie
+[14/05/2025 18:25:47] El ataque entre el zombie Z0003 y el humano H0044 se está produciendo
+[14/05/2025 18:25:47] Zombie Z0007 iniciado.
+[14/05/2025 18:25:47] El zombie Z0007 ha entrado a la zona 4
+[14/05/2025 18:25:47] El humano H0034 está en el área común
+[14/05/2025 18:25:47] El humano H0043 ha sido matado por el zombie Z0023.
+[14/05/2025 18:25:47] Número de muertes de Z0023: 1.
+[14/05/2025 18:25:47] El humano H0043 se ha convertido en zombie
+[14/05/2025 18:25:47] El ataque entre el zombie Z0041 y el humano H0008 se está produciendo
+[14/05/2025 18:25:47] Zombie Z0043 iniciado.
+[14/05/2025 18:25:47] El zombie Z0043 ha entrado a la zona 3
+[14/05/2025 18:25:47] El humano H0049 ha elegido el tunel 1
+[14/05/2025 18:25:47] El humano H0049 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:47] El zombie Z0024 ha salido de la zona 4
+[14/05/2025 18:25:47] El zombie Z0024 ha entrado a la zona 4
+[14/05/2025 18:25:48] El humano H0039 está en el comedor
+[14/05/2025 18:25:48] El zombie Z0016 ha salido de la zona 2
+[14/05/2025 18:25:48] El zombie Z0016 ha entrado a la zona 3
+[14/05/2025 18:25:48] El humano H0033 está en el comedor
+[14/05/2025 18:25:48] El zombie Z0010 ha salido de la zona 2
+[14/05/2025 18:25:48] El zombie Z0010 ha entrado a la zona 1
+[14/05/2025 18:25:48] El humano H0004 está en el comedor
+[14/05/2025 18:25:48] Humano H0051 iniciado.
+[14/05/2025 18:25:48] El humano H0051 está en el área común
+[14/05/2025 18:25:48] El zombie Z0026 ha salido de la zona 2
+[14/05/2025 18:25:48] El zombie Z0026 ha entrado a la zona 1
+[14/05/2025 18:25:48] El humano H0050 ha elegido el tunel 1
+[14/05/2025 18:25:48] El humano H0050 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:48] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:48] El humano H0001 está atravesando el túnel 1.
+[14/05/2025 18:25:48] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:48] El humano H0049 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:48] El túnel 1 tiene ya 3 humanos.
+[14/05/2025 18:25:48] El humano H0050 está esperando a poder entrar en la zona de riesgo 1.
+[14/05/2025 18:25:48] El humano H0032 ha elegido el tunel 1
+[14/05/2025 18:25:48] El humano H0032 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:48] Humano H0003 terminado
+[14/05/2025 18:25:48] El zombie Z0006 ha salido de la zona 1
+[14/05/2025 18:25:48] El zombie Z0006 ha entrado a la zona 2
+[14/05/2025 18:25:48] El humano H0046 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:48] El humano H0025 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:48] El zombie Z0005 ha salido de la zona 2
+[14/05/2025 18:25:48] El zombie Z0005 ha entrado a la zona 1
+[14/05/2025 18:25:48] El zombie Z0013 ha salido de la zona 1
+[14/05/2025 18:25:48] El zombie Z0013 ha entrado a la zona 2
+[14/05/2025 18:25:48] El ataque entre el zombie Z0013 y el humano H0025 se está produciendo
+[14/05/2025 18:25:48] El humano H0042 está atravesando el túnel 3.
+[14/05/2025 18:25:48] El zombie Z0021 ha salido de la zona 1
+[14/05/2025 18:25:48] El zombie Z0021 ha entrado a la zona 1
+[14/05/2025 18:25:48] El zombie Z0000 ha salido de la zona 1
+[14/05/2025 18:25:48] El zombie Z0000 ha entrado a la zona 3
+[14/05/2025 18:25:48] El zombie Z0031 ha salido de la zona 4
+[14/05/2025 18:25:48] El zombie Z0015 ha salido de la zona 1
+[14/05/2025 18:25:48] El zombie Z0031 ha entrado a la zona 1
+[14/05/2025 18:25:48] El zombie Z0015 ha entrado a la zona 3
+[14/05/2025 18:25:48] El zombie Z0040 ha salido de la zona 2
+[14/05/2025 18:25:48] El zombie Z0040 ha entrado a la zona 1
+[14/05/2025 18:25:48] El humano H0008 ha sido matado por el zombie Z0041.
+[14/05/2025 18:25:48] Número de muertes de Z0041: 1.
+[14/05/2025 18:25:48] El humano H0008 se ha convertido en zombie
+[14/05/2025 18:25:48] El ataque entre el zombie Z0043 y el humano H0046 se está produciendo
+[14/05/2025 18:25:48] Zombie Z0008 iniciado.
+[14/05/2025 18:25:48] El zombie Z0008 ha entrado a la zona 3
+[14/05/2025 18:25:49] El humano H0012 está atravesando el túnel 2.
+[14/05/2025 18:25:49] El zombie Z0009 ha salido de la zona 2
+[14/05/2025 18:25:49] El zombie Z0009 ha entrado a la zona 2
+[14/05/2025 18:25:49] El zombie Z0028 ha salido de la zona 2
+[14/05/2025 18:25:49] El zombie Z0028 ha entrado a la zona 4
+[14/05/2025 18:25:49] El humano H0044 ha sido matado por el zombie Z0003.
+[14/05/2025 18:25:49] Número de muertes de Z0003: 1.
+[14/05/2025 18:25:49] El humano H0044 se ha convertido en zombie
+[14/05/2025 18:25:49] Zombie Z0044 iniciado.
+[14/05/2025 18:25:49] El zombie Z0044 ha entrado a la zona 4
+[14/05/2025 18:25:49] El humano H0034 ha elegido el tunel 3
+[14/05/2025 18:25:49] El humano H0034 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:49] El zombie Z0035 ha salido de la zona 3
+[14/05/2025 18:25:49] El zombie Z0035 ha entrado a la zona 1
+[14/05/2025 18:25:49] El humano H0025 ha sido herido
+[14/05/2025 18:25:49] El humano H0025 ha salido de la zona de riesgo 2
+[14/05/2025 18:25:49] El humano H0051 ha elegido el tunel 3
+[14/05/2025 18:25:49] El humano H0051 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:49] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:49] El humano H0047 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:49] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:49] El humano H0034 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:49] El túnel 3 tiene ya 3 humanos.
+[14/05/2025 18:25:49] El humano H0051 está esperando a poder entrar en la zona de riesgo 3.
+[14/05/2025 18:25:49] El humano H0011 está en el área común
+[14/05/2025 18:25:49] El humano H0001 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:49] El humano H0049 está atravesando el túnel 1.
+[14/05/2025 18:25:49] El humano H0017 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:49] El humano H0042 ha entrado en el refugio
+[14/05/2025 18:25:49] El humano H0047 está atravesando el túnel 3.
+[14/05/2025 18:25:49] El humano H0042 está en el área de descanso
+[14/05/2025 18:25:49] Humano H0052 iniciado.
+[14/05/2025 18:25:49] El humano H0052 está en el área común
+[14/05/2025 18:25:49] El zombie Z0014 ha salido de la zona 2
+[14/05/2025 18:25:49] El zombie Z0014 ha entrado a la zona 3
+[14/05/2025 18:25:50] El humano H0012 ha entrado en el refugio
+[14/05/2025 18:25:50] El humano H0017 está atravesando el túnel 2.
+[14/05/2025 18:25:50] El humano H0012 está en el área de descanso
+[14/05/2025 18:25:50] El zombie Z0023 ha salido de la zona 3
+[14/05/2025 18:25:50] El zombie Z0023 ha entrado a la zona 4
+[14/05/2025 18:25:50] El humano H0002 está en el comedor
+[14/05/2025 18:25:50] El humano H0046 ha sido herido
+[14/05/2025 18:25:50] El humano H0046 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:50] El humano H0022 está en el comedor
+[14/05/2025 18:25:50] El zombie Z0026 ha salido de la zona 1
+[14/05/2025 18:25:50] El zombie Z0026 ha entrado a la zona 3
+[14/05/2025 18:25:50] El humano H0049 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:50] El humano H0050 está atravesando el túnel 1.
+[14/05/2025 18:25:50] El humano H0037 está en el comedor
+[14/05/2025 18:25:50] El zombie Z0020 ha salido de la zona 4
+[14/05/2025 18:25:50] El zombie Z0020 ha entrado a la zona 4
+[14/05/2025 18:25:50] El humano H0047 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:50] El humano H0034 está atravesando el túnel 3.
+[14/05/2025 18:25:50] El zombie Z0010 ha salido de la zona 1
+[14/05/2025 18:25:50] El zombie Z0010 ha entrado a la zona 2
+[14/05/2025 18:25:50] El zombie Z0006 ha salido de la zona 2
+[14/05/2025 18:25:50] El zombie Z0006 ha entrado a la zona 3
+[14/05/2025 18:25:50] El ataque entre el zombie Z0006 y el humano H0047 se está produciendo
+[14/05/2025 18:25:50] El humano H0018 está atravesando el túnel 4.
+[14/05/2025 18:25:50] El humano H0029 está en el área común
+[14/05/2025 18:25:51] El humano H0017 ha entrado en el refugio
+[14/05/2025 18:25:51] El humano H0017 está en el área de descanso
+[14/05/2025 18:25:51] El zombie Z0005 ha salido de la zona 1
+[14/05/2025 18:25:51] El zombie Z0005 ha entrado a la zona 4
+[14/05/2025 18:25:51] El humano H0052 ha elegido el tunel 1
+[14/05/2025 18:25:51] El humano H0052 está esperando en la barrera del túnel 1.
+[14/05/2025 18:25:51] El humano H0011 ha elegido el tunel 4
+[14/05/2025 18:25:51] El humano H0011 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:51] El zombie Z0021 ha salido de la zona 1
+[14/05/2025 18:25:51] El zombie Z0021 ha entrado a la zona 4
+[14/05/2025 18:25:51] El zombie Z0007 ha salido de la zona 4
+[14/05/2025 18:25:51] El zombie Z0007 ha entrado a la zona 1
+[14/05/2025 18:25:51] El ataque entre el zombie Z0007 y el humano H0001 se está produciendo
+[14/05/2025 18:25:51] El zombie Z0031 ha salido de la zona 1
+[14/05/2025 18:25:51] El zombie Z0031 ha entrado a la zona 1
+[14/05/2025 18:25:51] El zombie Z0035 ha salido de la zona 1
+[14/05/2025 18:25:51] El zombie Z0035 ha entrado a la zona 3
+[14/05/2025 18:25:51] Humano H0053 iniciado.
+[14/05/2025 18:25:51] El humano H0053 está en el área común
+[14/05/2025 18:25:51] El zombie Z0040 ha salido de la zona 1
+[14/05/2025 18:25:51] El zombie Z0040 ha entrado a la zona 4
+[14/05/2025 18:25:51] El zombie Z0028 ha salido de la zona 4
+[14/05/2025 18:25:51] El zombie Z0028 ha entrado a la zona 2
+[14/05/2025 18:25:51] El humano H0050 ha entrado en la zona de riesgo 1
+[14/05/2025 18:25:51] El zombie Z0044 ha salido de la zona 4
+[14/05/2025 18:25:51] El zombie Z0044 ha entrado a la zona 3
+[14/05/2025 18:25:51] El zombie Z0024 ha salido de la zona 4
+[14/05/2025 18:25:51] El zombie Z0024 ha entrado a la zona 3
+[14/05/2025 18:25:51] El zombie Z0041 ha salido de la zona 3
+[14/05/2025 18:25:51] El zombie Z0041 ha entrado a la zona 1
+[14/05/2025 18:25:51] Humano H0007 terminado
+[14/05/2025 18:25:51] El humano H0034 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:51] El humano H0051 está atravesando el túnel 3.
+[14/05/2025 18:25:51] El humano H0018 ha entrado en el refugio
+[14/05/2025 18:25:51] El humano H0018 está en el área de descanso
+[14/05/2025 18:25:51] El zombie Z0009 ha salido de la zona 2
+[14/05/2025 18:25:51] El zombie Z0009 ha entrado a la zona 3
+[14/05/2025 18:25:51] El zombie Z0003 ha salido de la zona 4
+[14/05/2025 18:25:51] El zombie Z0003 ha entrado a la zona 1
+[14/05/2025 18:25:52] Humano H0041 terminado
+[14/05/2025 18:25:52] El humano H0029 ha elegido el tunel 3
+[14/05/2025 18:25:52] El humano H0029 está esperando en la barrera del túnel 3.
+[14/05/2025 18:25:52] El zombie Z0043 ha salido de la zona 3
+[14/05/2025 18:25:52] El zombie Z0043 ha entrado a la zona 3
+[14/05/2025 18:25:52] El zombie Z0013 ha salido de la zona 2
+[14/05/2025 18:25:52] El zombie Z0013 ha entrado a la zona 4
+[14/05/2025 18:25:52] El humano H0047 ha sido herido
+[14/05/2025 18:25:52] El humano H0047 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:52] El ataque entre el zombie Z0035 y el humano H0034 se está produciendo
+[14/05/2025 18:25:52] El humano H0001 ha sido herido
+[14/05/2025 18:25:52] El humano H0001 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:52] El ataque entre el zombie Z0031 y el humano H0050 se está produciendo
+[14/05/2025 18:25:52] El zombie Z0000 ha salido de la zona 3
+[14/05/2025 18:25:52] El zombie Z0000 ha entrado a la zona 1
+[14/05/2025 18:25:52] Humano H0054 iniciado.
+[14/05/2025 18:25:52] El humano H0054 está en el área común
+[14/05/2025 18:25:52] El zombie Z0023 ha salido de la zona 4
+[14/05/2025 18:25:52] El zombie Z0023 ha entrado a la zona 2
+[14/05/2025 18:25:52] El humano H0051 ha entrado en la zona de riesgo 3
+[14/05/2025 18:25:52] Humano H0008 terminado
+[14/05/2025 18:25:52] El zombie Z0015 ha salido de la zona 3
+[14/05/2025 18:25:52] El zombie Z0015 ha entrado a la zona 4
+[14/05/2025 18:25:52] El zombie Z0016 ha salido de la zona 3
+[14/05/2025 18:25:52] El zombie Z0016 ha entrado a la zona 3
+[14/05/2025 18:25:53] El zombie Z0010 ha salido de la zona 2
+[14/05/2025 18:25:53] El zombie Z0010 ha entrado a la zona 3
+[14/05/2025 18:25:53] Humano H0043 terminado
+[14/05/2025 18:25:53] El zombie Z0014 ha salido de la zona 3
+[14/05/2025 18:25:53] El zombie Z0014 ha entrado a la zona 1
+[14/05/2025 18:25:53] El zombie Z0020 ha salido de la zona 4
+[14/05/2025 18:25:53] El zombie Z0020 ha entrado a la zona 4
+[14/05/2025 18:25:53] El zombie Z0026 ha salido de la zona 3
+[14/05/2025 18:25:53] El zombie Z0026 ha entrado a la zona 1
+[14/05/2025 18:25:53] El zombie Z0008 ha salido de la zona 3
+[14/05/2025 18:25:53] El zombie Z0008 ha entrado a la zona 1
+[14/05/2025 18:25:53] El humano H0042 está en el comedor
+[14/05/2025 18:25:53] El humano H0012 está en el comedor
+[14/05/2025 18:25:53] Humano H0044 terminado
+[14/05/2025 18:25:53] El humano H0053 ha elegido el tunel 2
+[14/05/2025 18:25:53] El humano H0053 está esperando en la barrera del túnel 2.
+[14/05/2025 18:25:53] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:53] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:53] El túnel 2 tiene ya 3 humanos.
+[14/05/2025 18:25:53] El humano H0053 está atravesando el túnel 2.
+[14/05/2025 18:25:53] El humano H0045 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:53] El humano H0027 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:53] El humano H0034 ha sido herido
+[14/05/2025 18:25:53] El humano H0034 ha salido de la zona de riesgo 3
+[14/05/2025 18:25:53] El ataque entre el zombie Z0044 y el humano H0051 se está produciendo
+[14/05/2025 18:25:53] El zombie Z0040 ha salido de la zona 4
+[14/05/2025 18:25:53] El zombie Z0040 ha entrado a la zona 1
+[14/05/2025 18:25:53] El zombie Z0021 ha salido de la zona 4
+[14/05/2025 18:25:53] El zombie Z0021 ha entrado a la zona 2
+[14/05/2025 18:25:53] El humano H0050 ha sido herido
+[14/05/2025 18:25:53] El humano H0050 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:53] El ataque entre el zombie Z0041 y el humano H0049 se está produciendo
+[14/05/2025 18:25:53] Humano H0055 iniciado.
+[14/05/2025 18:25:53] El humano H0055 está en el área común
+[14/05/2025 18:25:53] El zombie Z0005 ha salido de la zona 4
+[14/05/2025 18:25:53] El zombie Z0005 ha entrado a la zona 2
+[14/05/2025 18:25:53] El humano H0025 está esperando a poder entrar en el túnel 2 para ir al refugio.
+[14/05/2025 18:25:54] El humano H0054 ha elegido el tunel 4
+[14/05/2025 18:25:54] El humano H0054 está esperando en la barrera del túnel 4.
+[14/05/2025 18:25:54] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:54] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:54] El humano H0054 está atravesando el túnel 4.
+[14/05/2025 18:25:54] El humano H0048 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:54] El túnel 4 tiene ya 3 humanos.
+[14/05/2025 18:25:54] El humano H0011 está esperando a poder entrar en la zona de riesgo 4.
+[14/05/2025 18:25:54] El zombie Z0028 ha salido de la zona 2
+[14/05/2025 18:25:54] El zombie Z0028 ha entrado a la zona 3
+[14/05/2025 18:25:54] El humano H0017 está en el comedor
+[14/05/2025 18:25:54] El humano H0049 ha sido herido
+[14/05/2025 18:25:54] El humano H0049 ha salido de la zona de riesgo 1
+[14/05/2025 18:25:54] El zombie Z0013 ha salido de la zona 4
+[14/05/2025 18:25:54] El zombie Z0013 ha entrado a la zona 4
+[14/05/2025 18:25:54] El humano H0046 está atravesando el túnel 3.
+[14/05/2025 18:25:54] El humano H0053 ha entrado en la zona de riesgo 2
+[14/05/2025 18:25:54] El humano H0025 está atravesando el túnel 2.
+[14/05/2025 18:25:54] El humano H0045 está esperando a poder entrar en la zona de riesgo 2.
+[14/05/2025 18:25:54] El humano H0018 está en el comedor
+[14/05/2025 18:25:54] El zombie Z0007 ha salido de la zona 1
+[14/05/2025 18:25:54] El zombie Z0007 ha entrado a la zona 1
+[14/05/2025 18:25:54] El humano H0051 ha sido matado por el zombie Z0044.
+[14/05/2025 18:25:54] Número de muertes de Z0044: 1.
+[14/05/2025 18:25:54] El humano H0051 se ha convertido en zombie
+[14/05/2025 18:25:54] Zombie Z0051 iniciado.
+[14/05/2025 18:25:54] El zombie Z0051 ha entrado a la zona 3

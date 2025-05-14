@@ -10,5 +10,7 @@ public interface InterfazApocalipsis extends Remote {
     String getTop3() throws RemoteException;
     void pausar() throws RemoteException;
     void reanudar() throws RemoteException;
+    boolean estaPausado() throws RemoteException;
+    void esperarSiPausado() throws RemoteException;
 
 }

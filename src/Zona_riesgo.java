@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -36,6 +37,8 @@ public class Zona_riesgo implements Serializable {
     private Semaphore tiempo_ataque3;
     private Semaphore tiempo_ataque4;
     private Logs log;
+    private InterfazApocalipsis apocalipsis;
+    private ArrayList<Zombie> topMuertes = new ArrayList<>();
 
     public Zona_riesgo(TextField c1, TextField c2, TextField c3, TextField c4,
                        TextField c5, TextField c6, TextField c7, TextField c8,
@@ -69,6 +72,11 @@ public class Zona_riesgo implements Serializable {
     }
 
     public void entrar_humano(Humano humano,int zona){
+        /*try {
+            apocalipsis.esperarSiPausado();
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }*/
         if(zona == 1){
             try {
                 riesgoHumanos1.meterh(humano);
@@ -92,6 +100,11 @@ public class Zona_riesgo implements Serializable {
         }
     }
     public void entrar_zombie(Zombie zombie, int zona){
+        /*try {
+            apocalipsis.esperarSiPausado();
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }*/
         if(zona == 1){
             riesgoZombies1.meterz(zombie);
             lz1.add(zombie);
@@ -111,6 +124,11 @@ public class Zona_riesgo implements Serializable {
         }
     }
     public void salir_humano(Humano humano, int zona){
+        /*try {
+            apocalipsis.esperarSiPausado();
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }*/
         if(zona == 1){
             riesgoHumanos1.sacarh(humano);
             lh1.remove(humano);
@@ -134,6 +152,11 @@ public class Zona_riesgo implements Serializable {
         }
     }
     public void salir_zombie(Zombie zombie, int zona){
+        /*try {
+            apocalipsis.esperarSiPausado();
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }*/
         if(zona == 1){
             riesgoZombies1.sacarz(zombie);
             lz1.remove(zombie);
@@ -155,6 +178,7 @@ public class Zona_riesgo implements Serializable {
 
     public void ataque(Zombie zombie, int zona){
         try{
+            //apocalipsis.esperarSiPausado();
             if (zona == 1){
                 cerrojo1.lock();
                 try{
@@ -347,7 +371,7 @@ public class Zona_riesgo implements Serializable {
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-        }
+        }//catch (RemoteException r){}
     }
    private Humano seleccionarHumano(ConcurrentLinkedQueue<Humano> cola) {
        if (cola.isEmpty()) {
@@ -400,6 +424,10 @@ public class Zona_riesgo implements Serializable {
         } else{
             return riesgoZombies4.sizez();
         }
+    }
+
+    public ArrayList<Zombie> getTopMuertes() {
+        return topMuertes;
     }
 
 }

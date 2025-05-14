@@ -13,6 +13,8 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
     private Refugio refugio;
     private Tunel tunel;
     private Zona_riesgo zonaRiesgo;
+    private boolean pausado;
+
     public ObjetoApocalipsis(Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo) throws RemoteException {
         this.refugio = refugio;
         this.tunel = tunel;
@@ -42,18 +44,55 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
 
     @Override
     public String getTop3() throws RemoteException {
-        return null;
+        ArrayList<Zombie> muertes = zonaRiesgo.getTopMuertes();
+        //Ordena la lista de zombies del que más a matado al que menos
+        muertes.sort(Comparator.comparingInt(Zombie::getCont_muertes).reversed());
+
+        String contenido="";
+        int zombies;
+        if (muertes.size()<3){
+            zombies = muertes.size();
+        }else {
+            zombies = 3;
+        }
+        for(int i=0; i<zombies; i++)
+        {
+            String id = muertes.get(i).getzombieId();
+            int n_muertes = muertes.get(i).getCont_muertes();
+            contenido += id + " - " + n_muertes + " muertes\n";
+        }
+        final String textoImprimir = contenido.toString();
+        return textoImprimir;
     }
 
 
 
     @Override
     public void pausar() throws RemoteException {
-
+        pausado = true;
+        System.out.println("Apiicalipsis pausado");
+    }
+    @Override
+    public synchronized void reanudar() throws RemoteException {
+        pausado = false;
+        notifyAll();
+        System.out.println("Apiicalipsis reanudado");
     }
 
     @Override
-    public void reanudar() throws RemoteException {
-
+    public boolean estaPausado() throws RemoteException {
+        return pausado;
     }
+
+    @Override
+    public synchronized void esperarSiPausado() throws RemoteException {
+        while (pausado){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
 }
