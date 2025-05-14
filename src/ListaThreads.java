@@ -77,38 +77,6 @@ public class ListaThreads {
     public synchronized int sizez(){
         return listaz.size();
     }
-    public synchronized void meterTop(Zombie zombie){
-        listaz.add(zombie);
-    }
-
-    public synchronized void ordenartop(Zombie zombie){
-        //Ordena la lista de zombies del que más a matado al que menos
-        listaz.sort(Comparator.comparingInt(Zombie::getCont_muertes).reversed());
-        imprimirtop();
-    }
-    public synchronized void imprimirtop()
-    {
-        String contenido="";
-        int zombies;
-        if (listaz.size()<3){
-            zombies = listaz.size();
-        }else {
-            zombies = 3;
-        }
-        for(int i=0; i<zombies; i++)
-        {
-            String id = listaz.get(i).getzombieId();
-            int muertes = listaz.get(i).getCont_muertes();
-            contenido = id + " - " + muertes + "muertes\n";
-        }
-        final String textoImprimir = contenido.toString();
-
-        Platform.runLater(() -> {
-            txtfield.setText(textoImprimir);
-        });
-
-    }
-
 
 }
 
