@@ -111,6 +111,11 @@ public class VentanaController implements Initializable {
                 tunel.setZonaRiesgo(zonaRiesgo);
                 zonaRiesgo.setTunel(tunel);
 
+                ObjetoApocalipsis obj = new ObjetoApocalipsis(refugio,tunel,zonaRiesgo);
+                Registry registry = LocateRegistry.createRegistry(1099);
+                Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
+                System.out.println("Servidor RMI listo.");
+
                 // Zombie
                 Zombie zombie = new Zombie("Z0000", zonaRiesgo, log);
                 zombie.start();
@@ -128,14 +133,9 @@ public class VentanaController implements Initializable {
                         System.out.println("Error al crear humanos: " + e.getMessage());
                     }
                 }
-                ObjetoApocalipsis obj = new ObjetoApocalipsis(refugio,tunel,zonaRiesgo);
-                Registry registry = LocateRegistry.createRegistry(1099);
-                Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }).start();
     }
-    /*public void actualizarComida() {
-        labelComida.setText(String.valueOf(refugio.getComida));
-    }*/
 }

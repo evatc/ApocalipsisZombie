@@ -4,6 +4,10 @@ import java.rmi.RemoteException;
 import java.rmi.server.RMIClientSocketFactory;
 import java.rmi.server.RMIServerSocketFactory;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazApocalipsis {
     private Refugio refugio;
@@ -37,9 +41,11 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
     }
 
     @Override
-    public Zombie getTop3() throws RemoteException {
+    public String getTop3() throws RemoteException {
         return null;
     }
+
+
 
     @Override
     public void pausar() throws RemoteException {

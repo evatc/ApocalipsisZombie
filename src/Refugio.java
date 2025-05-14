@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import java.io.Serializable;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -18,6 +19,8 @@ public class Refugio implements Serializable {
     //private IntegerProperty comida = new SimpleIntegerProperty(0);
     private AtomicInteger comida = new AtomicInteger(0);
     private ConcurrentLinkedQueue<Humano> filaComedor = new ConcurrentLinkedQueue<>();
+    private ReentrantLock lock = new ReentrantLock();
+    private Condition condicionTurno = lock.newCondition();
     private Logs log;
     private VentanaController ventanaController;
     private Label label;
@@ -33,7 +36,7 @@ public class Refugio implements Serializable {
     }
 
 
-    public void dejarComida(Humano humano) {
+    /*public void dejarComida(Humano humano) {
         int nuevaCantidad = comida.addAndGet(2);
         actualizarComida();
         Platform.runLater(() -> {
@@ -68,6 +71,45 @@ public class Refugio implements Serializable {
                     break;
                 }
             }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }*/
+    public void dejarComida(Humano humano) {
+        int nuevaCantidad = comida.addAndGet(2);
+        actualizarComida();
+        Platform.runLater(() -> {
+            log.escribir(humano.gethumanoId() + " ha dejado 2 comidas. Comida total: " + nuevaCantidad + ".");
+        });
+        lock.lock();
+        try{
+            condicionTurno.signalAll();
+        }finally {
+            lock.unlock();
+        }
+    }
+
+    public void comer(Humano humano) {
+        lock.lock();
+        try {
+            filaComedor.offer(humano);
+            int comidaActual = comida.get();
+            while (comidaActual <= 0 || filaComedor.peek() != humano) {
+                // Si no hay comida o no es nuestro turno, esperar
+                condicionTurno.await();
+                comidaActual = comida.get();
+            }
+            int resto = comida.decrementAndGet();
+            actualizarComida();
+            Platform.runLater(() -> {
+                log.escribir(humano.gethumanoId() + " ha comido. Comida total: " + resto + ".");
+            });
+            filaComedor.poll(); // Salir de la fila
+        }catch (Exception e){
+        }finally {lock.unlock();}
+        try{
+            int tiempoComer = (int)(Math.random()*2000)+3000; // Entre 3 y 5 segundos
+            Thread.sleep(tiempoComer);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

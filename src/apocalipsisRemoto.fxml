@@ -27,7 +27,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafbfc" height="25.0" layoutX="452.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" width="24.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafbfc" height="25.0" layoutX="507.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" width="24.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fefeff" height="86.0" layoutX="63.0" layoutY="277.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Button layoutX="438.0" layoutY="307.0" mnemonicParsing="false" text="Detener" />
+      <Button fx:id="botonPausar" layoutX="358.0" layoutY="307.0" mnemonicParsing="false" onAction="#pausar" text="Pausar" />
       <Label fx:id="labelRefugio" layoutX="348.0" layoutY="60.0" text="   " />
       <Label fx:id="labelTunel1" layoutX="345.0" layoutY="105.0" text="     " />
       <Label fx:id="labelTunel2" layoutX="401.0" layoutY="105.0" text="     " />
@@ -41,7 +41,8 @@
       <Label fx:id="labelRiesgoZ2" layoutX="397.0" layoutY="200.0" text="       " />
       <Label fx:id="labelRiesgoZ3" layoutX="452.0" layoutY="200.0" text="       " />
       <Label fx:id="labelRiesgoZ4" layoutX="507.0" layoutY="200.0" text="       " />
-      <Label layoutX="68.0" layoutY="285.0" prefHeight="70.0" prefWidth="189.0" />
-      <TextField fx:id="txtTop3" layoutX="269.0" layoutY="265.0" prefHeight="98.0" prefWidth="150.0" />
+      <Label fx:id="labelTop3" layoutX="68.0" layoutY="285.0" prefHeight="70.0" prefWidth="189.0" />
+      <TextField fx:id="txtTop3" layoutX="519.0" layoutY="11.0" prefHeight="98.0" prefWidth="71.0" />
+      <Button fx:id="botonReanudar" layoutX="448.0" layoutY="307.0" mnemonicParsing="false" onAction="#reanudar" text="Reanudar" />
    </children>
 </AnchorPane>

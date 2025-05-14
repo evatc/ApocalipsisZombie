@@ -191,6 +191,7 @@ public class Zona_riesgo implements Serializable {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido herido");
+                                salir_humano(humano,1);
                             }
                             humano.setAtaque(false);
                             tiempo_ataque1.release();
@@ -237,6 +238,7 @@ public class Zona_riesgo implements Serializable {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido herido");
+                                salir_humano(humano,2);
                             }
                             humano.setAtaque(false);
                             tiempo_ataque2.release();
@@ -283,6 +285,7 @@ public class Zona_riesgo implements Serializable {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido herido");
+                                salir_humano(humano,3);
                             }
                             humano.setAtaque(false);
                             tiempo_ataque3.release();
@@ -330,6 +333,7 @@ public class Zona_riesgo implements Serializable {
                                 // El humano está herido
                                 humano.setHerido(true);
                                 log.escribir("El humano " + humano.gethumanoId() + " ha sido herido");
+                                salir_humano(humano,4);
                             }
                             humano.setAtaque(false);
                             tiempo_ataque4.release();

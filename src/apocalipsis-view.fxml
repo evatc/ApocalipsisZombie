@@ -104,6 +104,5 @@
          </font>
       </Label>
       <Button layoutX="251.0" layoutY="666.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" text="Reanudar" />
-      <Label layoutX="184.0" layoutY="642.0" text="Apocalipsis pausado." />
    </children>
 </AnchorPane>

@@ -130,47 +130,46 @@ public class Humano extends Thread{
 
                 if (!vivo) {
                     break; // Terminar el hilo si el humano ha muerto
-                } else {//si no le ha matado un zombie sigue con la rutina
+                } else if(!herido){ //Si esta herido llamamos al metodo salir desde la zona riesgo
                     zonaRiesgo.salir_humano(this, n_tunel);
-                    if (n_tunel == 1) {
-                        zonaRiesgo.getLock1().release();
-                        tunel.entrar1_zona_descanso(this);
-                    } else if (n_tunel == 2) {
-                        zonaRiesgo.getLock2().release();
-                        tunel.entrar2_zona_descanso(this);
-                    } else if (n_tunel == 3) {
-                        zonaRiesgo.getLock3().release();
-                        tunel.entrar3_zona_descanso(this);
-                    } else {
-                        zonaRiesgo.getLock4().release();
-                        tunel.entrar4_zona_descanso(this);
-                    }
+                }//si no le ha matado un zombie sigue con la rutina
+                if (n_tunel == 1) {
+                    zonaRiesgo.getLock1().release();
+                    tunel.entrar1_zona_descanso(this);
+                } else if (n_tunel == 2) {
+                    zonaRiesgo.getLock2().release();
+                    tunel.entrar2_zona_descanso(this);
+                } else if (n_tunel == 3) {
+                    zonaRiesgo.getLock3().release();
+                    tunel.entrar3_zona_descanso(this);
+                } else {
+                    zonaRiesgo.getLock4().release();
+                    tunel.entrar4_zona_descanso(this);
+                }
+                refugio.getlDescanso().meterh(this);
+                if (!herido) { //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
+                    log.escribir("El humano " + this.id + " ha recolectado 2 piezas de comida");
+                    refugio.dejarComida(this);
+                }
+                int tiempoEnzonaDescanso = (int) (Math.random() * 2000) + 2000; //Entre 2 y 4 segundos
+                log.escribir("El humano " + this.id + " está en el área de descanso");
+                try {
+                    Thread.sleep(tiempoEnzonaDescanso);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+                refugio.getlDescanso().sacarh(this);
+                refugio.getlComedor().meterh(this);
+                log.escribir("El humano " + this.id + " está en el comedor");
+                refugio.comer(this);
+                refugio.getlComedor().sacarh(this);
+                if (herido) {
                     refugio.getlDescanso().meterh(this);
-                    if (!herido) { //si no ha sido atacado por un zombie pasa por los túneles(herido se va directamente a los tuneles sin pasar por aqui)
-                        //refugio.getlDescanso().meterh(this);
-                        log.escribir("El humano " + this.id + " ha recolectado 2 piezas de comida");
-                        refugio.dejarComida(this);
-                    }
-                    int tiempoEnzonaDescanso = (int) (Math.random() * 2000) + 2000; //Entre 2 y 4 segundos
-                    log.escribir("El humano " + this.id + " está en el área de descanso");
-                    try {
-                        Thread.sleep(tiempoEnzonaDescanso);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                    }
+                    log.escribir("El humano " + this.id + " ha vuelto al área de descanso para curar sus heridas");
+                    int tiempoEnzonaDescanso2 = (int) (Math.random() * 2000) + 3000; // Entre 3 y 5 segundos
+                    Thread.sleep(tiempoEnzonaDescanso2);
                     refugio.getlDescanso().sacarh(this);
-                    refugio.getlComedor().meterh(this);
-                    log.escribir("El humano " + this.id + " está en el comedor");
-                    refugio.comer(this);
-                    refugio.getlComedor().sacarh(this);
-                    if (herido) {
-                        refugio.getlDescanso().meterh(this);
-                        log.escribir("El humano " + this.id + " ha vuelto al área de descanso para curar sus heridas");
-                        int tiempoEnzonaDescanso2 = (int) (Math.random() * 2000) + 3000; // Entre 3 y 5 segundos
-                        Thread.sleep(tiempoEnzonaDescanso2);
-                        refugio.getlDescanso().sacarh(this);
-                        herido = false;
-                    }
+                    herido = false;
                 }
             } catch (Exception e) {
                 throw new RuntimeException(e);
