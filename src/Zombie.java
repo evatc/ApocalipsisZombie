@@ -1,7 +1,5 @@
-import javafx.scene.control.TextField;
 
 import java.rmi.RemoteException;
-import java.util.Scanner;
 
 public class Zombie extends Thread{
     private String id;

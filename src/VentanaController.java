@@ -1,24 +1,17 @@
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.Naming;
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.ResourceBundle;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
 
-import static java.lang.Thread.sleep;
 
 public class VentanaController implements Initializable {
     @FXML
@@ -69,12 +62,10 @@ public class VentanaController implements Initializable {
     private TextField txtRiesgoHumanos4;
     @FXML
     private TextField txtRiesgoZombies4;
-    @FXML
-    private TextField txtcomidah;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Inicializando controlador..."); // Verifica que esto aparece
+        System.out.println("Inicializando controlador...");
         //Logs
         File fichero = new File("apocalipsis.txt");
         Logs log;
@@ -85,7 +76,6 @@ public class VentanaController implements Initializable {
             return;
         }
 
-        // Mueve la lógica pesada a un hilo separado
         new Thread(() -> {
             try {
                 System.out.println("Iniciando simulación...");
@@ -109,7 +99,7 @@ public class VentanaController implements Initializable {
                         tiempo_ataque, tiempo_ataque2, tiempo_ataque3, tiempo_ataque4, log, null);
 
 
-                ObjetoApocalipsis obj = new ObjetoApocalipsis(refugio,tunel,zonaRiesgo);
+                ObjetoApocalipsis obj = new ObjetoApocalipsis(refugio,tunel,zonaRiesgo, log);
                 Registry registry = LocateRegistry.createRegistry(1099);
                 Naming.rebind("//127.0.0.1/ObjetoApocalipsis", obj);
                 System.out.println("Servidor RMI listo.");

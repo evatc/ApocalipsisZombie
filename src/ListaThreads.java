@@ -2,7 +2,6 @@ import javafx.application.Platform;
 import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class ListaThreads {
     private ArrayList<Humano> listah;

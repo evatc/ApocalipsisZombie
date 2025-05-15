@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -28,14 +27,6 @@ public class Tunel implements Serializable {
     private int refugioARiesgo4;
     private int riesgoARefugio4;
 
-    private List<Humano> lzr1 = new ArrayList<>();
-    private List<Humano> lzr2 = new ArrayList<>();
-    private List<Humano> lzr3 = new ArrayList<>();
-    private List<Humano> lzr4 = new ArrayList<>();
-    private List<Humano> lr1 = new ArrayList<>();
-    private List<Humano> lr2 = new ArrayList<>();
-    private List<Humano> lr3 = new ArrayList<>();
-    private List<Humano> lr4 = new ArrayList<>();
     private Lock cerrojo1 = new ReentrantLock();
     private Condition refugio1 = cerrojo1.newCondition();
     private Condition zona_riesgo1 = cerrojo1.newCondition();

@@ -450,9 +450,6 @@ public class Zona_riesgo implements Serializable {
         return topMuertes;
     }
 
-    public InterfazApocalipsis getApocalipsis() {
-        return apocalipsis;
-    }
 
     public void setApocalipsis(InterfazApocalipsis apocalipsis) {
         this.apocalipsis = apocalipsis;

@@ -1,10 +1,4 @@
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
 
 public class Humano extends Thread{
     private String id;
@@ -197,16 +191,9 @@ public class Humano extends Thread{
         }
         log.escribir("Humano " + this.id + " terminado");
     }
-    public boolean isHerido() {
-        return herido;
-    }
 
     public void setHerido(boolean herido) {
         this.herido = herido;
-    }
-
-    public boolean isVivo() {
-        return vivo;
     }
 
     public void setVivo(boolean vivo) {

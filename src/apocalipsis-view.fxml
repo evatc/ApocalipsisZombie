@@ -87,7 +87,6 @@
             <TextField fx:id="txtRiesgoHumanos4" layoutX="33.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
             <TextField fx:id="txtRiesgoZombies4" layoutX="186.0" layoutY="30.0" prefHeight="80.0" prefWidth="135.0" />
          </children></Pane>
-      <Button layoutX="135.0" layoutY="666.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" text="Pausar" />
       <Label layoutX="175.0" layoutY="34.0" prefHeight="43.0" prefWidth="151.0" text="REFUGIO">
          <font>
             <Font size="28.0" />
@@ -103,6 +102,5 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <Button layoutX="251.0" layoutY="666.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" text="Reanudar" />
    </children>
 </AnchorPane>

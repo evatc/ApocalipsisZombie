@@ -1,6 +1,5 @@
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 
 public interface InterfazApocalipsis extends Remote {
     int getHumanosRefugio() throws RemoteException;
@@ -10,7 +9,6 @@ public interface InterfazApocalipsis extends Remote {
     String getTop3() throws RemoteException;
     void pausar() throws RemoteException;
     void reanudar() throws RemoteException;
-    boolean estaPausado() throws RemoteException;
     void esperarSiPausado() throws RemoteException;
 
 }

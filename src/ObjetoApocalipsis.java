@@ -1,24 +1,20 @@
-import javafx.application.Platform;
-
 import java.rmi.RemoteException;
-import java.rmi.server.RMIClientSocketFactory;
-import java.rmi.server.RMIServerSocketFactory;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazApocalipsis {
     private Refugio refugio;
     private Tunel tunel;
     private Zona_riesgo zonaRiesgo;
     private boolean pausado;
+    private Logs log;
 
-    public ObjetoApocalipsis(Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo) throws RemoteException {
+    public ObjetoApocalipsis(Refugio refugio, Tunel tunel, Zona_riesgo zonaRiesgo, Logs log) throws RemoteException {
         this.refugio = refugio;
         this.tunel = tunel;
         this.zonaRiesgo = zonaRiesgo;
+        this.log = log;
     }
 
 
@@ -70,18 +66,13 @@ public class ObjetoApocalipsis extends UnicastRemoteObject implements InterfazAp
     @Override
     public synchronized void pausar() throws RemoteException {
         pausado = true;
-        System.out.println("Apocalipsis pausado");
+        log.escribir("Apocalipsis pausado");
     }
     @Override
     public synchronized void reanudar() throws RemoteException {
         pausado = false;
         notifyAll();
-        System.out.println("Apocalipsis reanudado");
-    }
-
-    @Override
-    public synchronized boolean estaPausado() throws RemoteException {
-        return pausado;
+        log.escribir("Apocalipsis reanudado");
     }
 
     @Override

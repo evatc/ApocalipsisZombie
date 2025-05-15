@@ -1,22 +1,17 @@
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.Naming;
-import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
 public class ClienteController implements Initializable {
@@ -46,8 +41,6 @@ public class ClienteController implements Initializable {
     private Label labelRiesgoZ3;
     @FXML
     private Label labelRiesgoZ4;
-    @FXML
-    private Label labelTop3;
     @FXML
     private TextArea txtTop3;
     @FXML
