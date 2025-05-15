@@ -11,7 +11,7 @@ public class Cliente extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Cliente.class.getResource("apocalipsisRemoto.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Apocalipsis zombie - Remoto");
+        stage.setTitle("Apocalipsips zombie - Remoto");
         stage.setMinWidth(600.0);
         stage.setMinHeight(500.0);
         stage.setWidth(600.0);
