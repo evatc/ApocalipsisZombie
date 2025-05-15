@@ -45,7 +45,7 @@ public class Logs {
         escritor = new BufferedWriter(new FileWriter(fichero, append));
     }
 
-    public void escribir(String contenido) {
+    public synchronized void escribir(String contenido) {
         try {
             if (escritor != null) {
                 formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
