@@ -139,16 +139,12 @@ public class Humano extends Thread{
                 }//si no le ha matado un zombie sigue con la rutina
                 apocalipsis.esperarSiPausado();
                 if (n_tunel == 1) {
-                    zonaRiesgo.getLock1().release();
                     tunel.entrar1_zona_descanso(this);
                 } else if (n_tunel == 2) {
-                    zonaRiesgo.getLock2().release();
                     tunel.entrar2_zona_descanso(this);
                 } else if (n_tunel == 3) {
-                    zonaRiesgo.getLock3().release();
                     tunel.entrar3_zona_descanso(this);
                 } else {
-                    zonaRiesgo.getLock4().release();
                     tunel.entrar4_zona_descanso(this);
                 }
                 apocalipsis.esperarSiPausado();

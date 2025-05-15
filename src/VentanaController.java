@@ -105,7 +105,6 @@ public class VentanaController implements Initializable {
                 System.out.println("Servidor RMI listo.");
 
                 tunel.setZonaRiesgo(zonaRiesgo);
-                zonaRiesgo.setTunel(tunel);
                 zonaRiesgo.setApocalipsis(obj);
                 tunel.setApocalipsis(obj);
 

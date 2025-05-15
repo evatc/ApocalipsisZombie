@@ -27,7 +27,6 @@ public class Zona_riesgo implements Serializable {
     private Lock cerrojo2= new ReentrantLock();
     private Lock cerrojo3= new ReentrantLock();
     private Lock cerrojo4= new ReentrantLock();
-    private Tunel tunel;
     private Semaphore lock1;
     private Semaphore lock2;
     private Semaphore lock3;
@@ -400,11 +399,6 @@ public class Zona_riesgo implements Serializable {
        List<Humano> lista = new ArrayList<>(cola);
        return lista.get(new Random().nextInt(lista.size()));
    }
-
-
-    public void setTunel(Tunel tunel) {
-        this.tunel = tunel;
-    }
 
     public Semaphore getLock1() {
         return lock1;
